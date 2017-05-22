@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="hbox1">
+            <h1>U</h1>
+        </div>
+        <div class="hbox2">
+            <p class="fileName">초고작성 v0.1</p>
+        </div>
+        <div class="hbox3">
+            <ul class="addOnList">
+                <li>
+                    <span>카페글 가져오기</span>
+                </li>
+                <li>
+                    <span>맞춤법 검사</span>
+                </li>
+                <li>
+                    <span>윤문추천</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="aside">
+            <ul>
+                <li>
+                    파일
+                </li>
+                <li>
+                    수정
+                </li>
+                <li>
+                    보기
+                </li>
+                <li>
+                    삽입
+                </li>
+                <li>
+                    레이아웃
+                </li>
+            </ul>
+        </div>
+        <div class="tool">
+            <div class="toolListWrap">
+                <!--파일-->
+                <ul class="toolList toolList0">
+                    <li class="list">새문서</li>
+                    <li class="list">열기</li>
+                    <li class="list">최근파일열기</li>
+                    <li class="list">다른이름으로저장</li>
+                    <li class="list">사본만들기</li>
+                    <li class="list">문서세부정보</li>
+                    <li class="list">페이지설정</li>
+                </ul>
+                <!--//파일-->
+                <!--수정-->
+                <ul class="toolList toolList1">
+                    <li class="list">실행취소</li>
+                    <li class="list">다시실행</li>
+                    <li class="list">잘라내기</li>
+                    <li class="list">복사</li>
+                    <li class="list">붙여넣기</li>
+                    <li class="list">서식없이붙어넣기</li>
+                    <li class="list">서식복사</li>
+                    <li class="list">서식지우기</li>
+                    <li class="list">모두선택</li>
+                    <li class="list">글꼴</li>
+                    <li class="list">정렬</li>
+                    <li class="list">줄간격</li>
+                    <li class="list">목록</li>
+                    <li class="list">인쇄되지 않는 문자 표시/숨김</li>
+                    <li class="list">테두리 및 음영</li>
+                    <li class="list">기타</li>
+                </ul>
+                <!--//수정-->
+                <!--보기-->
+                <ul class="toolList toolList2">
+                    <li class="list">
+                        <p class="subTit">문서레이아웃</p>
+                        <ul class="subList">
+                            <li>페이지보기</li>
+                            <li>웹보기</li>
+                        </ul>
+                    </li>
+                    <li class="list">모드</li>
+                    <li class="list">
+                        <p class="subTit">변경추적</p>
+                        <ul class="subList">
+                            <li>모든마크업</li>
+                            <li>마크업없음</li>
+                            <li>원본</li>
+                        </ul>
+                    </li>
+                    <li class="list">
+                        <p class="subTit">표시</p>
+                        <ul class="subList">
+                            <li>눈금자표시</li>
+                            <li>조판부호</li>
+                            <li>문단부호</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--//보기-->
+                <!--삽입-->
+                <ul class="toolList toolList3">
+                    <li class="list">
+                        <p class="subTit">그림및표</p>
+                        <ul class="subList">
+                            <li>이미지</li>
+                            <li>표</li>
+                            <li>기호&#40;특수문자&#41;</li>
+                        </ul>
+                    </li>
+                    <li class="list">
+                        <p class="subTit">섹션및페이지</p>
+                        <ul class="subList">
+                            <li>머리글</li>
+                            <li>마닥글</li>
+                            <li>빈페이지</li>
+                            <li>Break</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--//삽입-->
+                <!--레이아웃-->
+                <ul class="toolList toolList4">
+                    <li class="list">
+                        <p class="subTit">페이지설정</p>
+                        <ul class="subList">
+                            <li>페이지크기</li>
+                            <li>페이지방향</li>
+                        </ul>
+                    </li>
+                    <li class="list">
+                        <p class="subTit">페이지배경</p>
+                        <ul class="subList">
+                            <li>페이지색상</li>
+                        </ul>
+                    </li>
+                    <li class="list">
+                        <p class="subTit">컬럼</p>
+                        <ul class="subList">
+                            <li>1단</li>
+                            <li>2단</li>
+                            <li>3단</li>
+                            <li>왼쪽</li>
+                            <li>오른쪽</li>
+                            <li>기타</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--/레이아웃-->
+            </div>
+        </div>
+        <section class="content">
+            <div class="editor"></div>
+            <div class="addOnWrap">
+                <div class="addOn addOn0"><!--카페글가져오기--></div>
+                <div class="addOn addOn1"><!--맞춤법검사--></div>
+                <div class="addOn addOn2"><!--윤문추천--></div>
+            </div>
+        </section>
+    </div>
+    <div class="footer">
+        <div class="editor_footer">
+            <div class="pageWrap">
+                <div>
+                    <span>이전</span>
+                </div>
+                <div>
+                    <span>1</span>
+                </div>
+                <div>
+                    <span>다음</span>
+                </div>
+            </div>
+            <div class="saveBtnWrap">
+                <div>
+                    <span>저장</span>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <script type="text/javascript" src="js/libs/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-ui.js"></script>
+    <script>
+        /*click event test*/
+        /*tool*/
+        $(".toolList0").show();
+        $(".aside ul li").on("click",function(){
+            $(this).siblings("li").css({background:"#eee"});
+            $(this).css({background:"#5CAB7D"});
+            var listIndex = $(this).index();
+            $(".toolList").hide();
+            $(".toolList"+listIndex).show();
+        });
+        /*addOn*/
+        $(".addOn0").show();
+        $(".addOnList li").on("click",function(){
+            $(this).siblings("li").css({background:"#ccc"});
+            $(this).css({background:"#5CAB7D"});
+            
+            var listIndex = $(this).index();
+            $(".addOn").hide();
+            $(".addOn"+listIndex).show();
+        });
+        /*hbox2*/
+        /*$(".hbox2").on("click",function(){
+            $(".addOnWrap").hide();
+        });*/
+    </script>
+</body>
+</html>
