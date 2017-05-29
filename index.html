@@ -5,6 +5,7 @@
     <title>Editor</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.quilljs.com/1.2.4/quill.snow.css" rel="stylesheet">
 </head>
 <body>
     <div class="header">
@@ -161,7 +162,13 @@
             </div>
         </div>
         <section class="content">
-            <div class="editor"></div>
+            <!--에디터-->
+            <div class="editorWrap">
+                <div class="test">
+                    <div id="editor"></div>
+                </div>
+            </div>
+            <!--//에디터-->
             <div class="addOnWrap">
                 <div class="addOn addOn0"><!--카페글가져오기--></div>
                 <div class="addOn addOn1"><!--맞춤법검사--></div>
@@ -191,6 +198,14 @@
     </div>
     <script type="text/javascript" src="js/libs/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="js/libs/jquery-ui.js"></script>
+    <!-- Include the Quill library -->
+    <script src="https://cdn.quilljs.com/1.2.4/quill.js"></script>
+    <!-- Initialize Quill editor -->
+    <script>
+        var quill = new Quill('#editor', {
+            theme: 'snow'
+        });
+    </script>
     <script>
         /*click event test*/
         /*tool*/

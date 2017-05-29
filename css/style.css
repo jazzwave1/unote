@@ -122,10 +122,23 @@ body {
     flex: 1 1 auto;
     flex-direction: row;
 }
-
-.editor {
-    flex: 1 0 auto;
-    background: #C5E99B;
+.editorWrap{
+    flex: 1 1 auto;
+    border: 1px solid #ccc;
+}
+.test{
+    width: 100%;
+    height: 100%;
+}
+#editor{
+    height: 100%;
+}
+.ql-container.ql-snow{
+    border: 0px;
+}
+.ql-toolbar.ql-snow{
+    border: 0px;
+    border-bottom: 1px solid #ccc;
 }
 
 .addOnWrap {
