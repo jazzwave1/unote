@@ -170,7 +170,22 @@ body {
     margin-bottom: 20px;
     background: #fff;
 }
+.cafeTit{
+    padding: 10px;
+}
+.cafeTit a{
+    font-size: 14px;
+    font-weight: bold;
+}
 
+.cafeTxt{
+    padding: 0 15px;
+    text-align: justify;
+}
+.addOnList1 ul li,.addOnList2 ul li{
+    font-size: 14px;
+    padding: 10px;
+}
 .footer {
     
     flex: 0 0 60px;
