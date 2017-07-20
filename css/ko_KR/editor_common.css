@@ -1,0 +1,278 @@
+@charset "utf-8";
+/* Reset */
+html,body{width:100%;height:100%; overflow:hidden}
+html{overflow-y:scroll;font-size:10px}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0}
+body,h1,h2,h3,h4,input,button{font-family:Malgun Gothic,'맑은고딕',Helvetica,AppleSDGothicNeo,sans-serif;font-size:12px;color:#555}
+body{background-color:#fff;text-align:center;*word-break:break-all;-ms-word-break:break-all}
+img,fieldset,iframe{border:0 none}
+li{list-style:none}
+input,select,button{vertical-align:middle}
+img{vertical-align:top}
+i,em,address{font-style:normal}
+label,button{cursor:pointer}
+button{margin:0;padding:0}
+a{color:#222;text-decoration:none}
+a:hover{color:#000;text-decoration:none}
+button *{position:relative}
+button img{left:-3px;*left:auto}
+html:first-child select{height:20px;padding-right:6px}
+option{padding-right:6px}
+hr{display:none}
+legend{*width:0;display: none;}
+table{border-collapse:collapse;border-spacing:0}
+input::-ms-clear{display:none}
+input {outline: none;border: 0px;}
+*:focus {outline: none;}
+/* Hidden */
+.blind {position:absolute;left:0;top:-9999em}
+.hide{display: none;}
+/* Clearfix */
+.clearfix {*zoom:1}
+.clearfix:after {content:'';display:block;clear:both}
+
+
+/*::-webkit-scrollbar { 
+    display: none; 
+}*/
+
+#wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+   
+}
+#header {
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 60px;
+    line-height: 60px;
+    /*box-shadow: 1px 1px 1px  #888888;*/
+    background-color: #fff;
+    /*background-color: cadetblue;*/
+    /*background-image: linear-gradient( 135deg, #5EFCE8 0%, #736EFE 100%);*/
+    z-index: 200;
+    border-bottom:1px solid #ccc;
+}
+#header .hinner{
+    position: relative;
+    width: 100%;
+}
+#header div{float: left;}
+#header .hleft{width: 200px;}
+#header .hleft h1 {
+    font-family: 'Fredericka the Great', cursive;
+    /*font-family: 'tvN_Bold';*/
+    text-align: left;
+    /*text-transform: uppercase;*/
+    font-size: 32px;
+    padding-left: 20px;
+    
+}
+#header .hleft h1 a{
+    display: block;
+    color: #4f4f4f;
+    font-weight: normal;
+}
+#header .hcenter{
+    position: absolute;
+    top:0;
+    left: 50%;
+    margin-left: -384px;
+    width: 768px;
+    
+    
+}
+
+#header .hleft .menubar{position: absolute; left: 20px;}
+#header .hright{
+    float: right;
+    padding-right: 20px;
+}
+#header .hright div{
+    height: 59px;
+    line-height: 59px;
+}
+#header .hright .userInfo{
+  
+}
+#header .hright .userInfo .pic{
+    width: 40px;
+    height: 40px;
+    padding-top: 10px; 
+    padding-right: 5px;
+}
+#header .hright .userInfo .pic img{
+    width: 100%;
+    border-radius: 50%;
+}
+#header .hright .userInfo .name{
+    padding-right: 20px;
+}
+#header .hright .userInfo .name a{
+    display: block;
+    
+}
+#header .hright .userInfo .name span{
+    font-weight: bold;
+    font-size: 14px;
+}
+#header .hright .notice,#header .hright .search{
+    width: 30px;
+    height: 100%;
+    /*background-color: #ccc;*/
+}
+#header .hright .notice a, #header .hright .search a{
+    display: block;
+}
+#header .hright .notice a i,#header .hright .search a i{
+    line-height: 59px;
+}
+
+#contents{
+    height: 100%;
+}
+#contents .conInner{
+    width: 100%;
+    height: 100%;
+   /* padding-top: 60px;*/
+}
+
+
+/*layer popup*/
+
+[class^="pop-wrap"] {
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    background: #fff;
+    z-index: 10001;
+    border: 1px solid #896e4a;
+}
+.pop-header {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+   /* padding-left: 25px;*/
+    color: #000;
+    border-top: 3px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.pop-header span{
+   position: absolute;
+   left: 10px;
+   font-weight: bold;
+    font-size:15px; 
+}
+.pop-header i{
+    font-size: 18px;
+}
+.pop-header .btnp-close {
+    position: absolute;
+    right: 10px;
+}
+.pop-cont {
+   /* padding: 25px;*/
+}
+.pop-msg{
+    padding: 20px 0;
+}
+.pop-btn{
+    padding: 10px 0;
+}
+.pop-btn a{padding: 10px 10px;}
+.layer-scroll {
+    overflow:hidden;
+}
+
+
+/*creq-popup*/
+#cReqPop{}
+.sns-tab{
+}
+.sns-tab li{
+    float: left;
+    width: 33%;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+.sns-tab li:first-child{
+    border-left: 0px;
+}
+.sns-tab li a{
+    display: block;
+     padding: 10px 0;
+}
+.sns-tab li.on{
+    background: #ccc;
+}
+.pop-login{
+    text-align: left;
+    padding: 10px;
+}
+.pop-login .tit{
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 5px;    
+}
+.pop-login .notice{
+    padding-bottom: 30px;
+}
+.pop-login .log-form{
+    text-align: center;
+    
+}
+.pop-login .log-form input{
+    display: block;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+
+.pop-login .log-form .log-formBtn{
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    
+}
+.pop-login .log-form .log-formBtn a{
+    color: #fff;
+}
+.pop-login .n-log-form .log-formBtn{
+    background-color: forestgreen;
+}
+.pop-login .d-log-form .log-formBtn{
+    background-color: cornflowerblue;
+}
+.pop-login .f-log-form .log-formBtn{
+    background-color: darkblue;
+}
+.pop-login .log-form .log-notice{
+    padding-bottom: 20px;
+}
+
+/*footer*/
+#footer{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #eaeaea;
+    z-index: 200;
+    
+}
+#footer p{
+ color:#676767;   
+}
