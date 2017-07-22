@@ -31,15 +31,16 @@ input {outline: none;border: 0px;}
 .clearfix {*zoom:1}
 .clearfix:after {content:'';display:block;clear:both}
 
-/*
+
 ::-webkit-scrollbar {
     display: none;
-}*/
+}
 
 #wrap{
     position: relative;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 
 }
 #editorHeader {
@@ -90,16 +91,6 @@ input {outline: none;border: 0px;}
     height: 59px;
     line-height: 59px;
 
-}
-#editorHeader .hright .addOnList{}
-#editorHeader .hright .addOnList ul li{
-    float: left;
-    width: 100px;
-}
-#editorHeader .hright .addOnList ul li.on{
-    height: 55px;
-    line-height: 55px;
-    border-bottom: 5px solid #3170F2
 }
 
 #editorHeader .hright .userInfo{
@@ -155,29 +146,191 @@ input {outline: none;border: 0px;}
     padding-top: 60px;
 }
 /*addOn영역*/
+.addOnList{}
+.addOnList ul li{
+    float: left;
+    width: 33.3%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #eee;
+}
+.addOnList ul li.on{
+
+    /* border-bottom: 5px solid #2980b9
+     */
+    background-color: #2980b9;
+    color:#fff;
+}
+
 #editorCont .right #addOnWrap{
     width: 100%;
 }
-#addOnWrap .addOn{
+#addOnWrap{
+    border-left:1px solid #eee;
+}
+.addOnCon .addOn{
     display: none;
     width: 100%;
     height: 100%;
 }
-#addOnWrap .addOn0{
-    background-color: #F4DEA1;
+.addOnCon .addOn0{
+    /*background-color: #F4DEA1;*/
 }
-#addOnWrap .addOn1{
-    background-color: lightcyan;
+/*맞춤법검사 addOn영역*/
+.splChk{
+
 }
-#addOnWrap .addOn2{
-    background-color: lightpink;
+.splChk .splChkBtn{
+    padding: 20px 0 10px;
+
+}
+.splChk .splChkBtn a{
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #2980b9;
+    border-radius: 5px;
+}
+.splChk .splChkInfo{
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+.splChk .splChkInfo span{
+    color: #2980b9;
+    padding: 0 10px;
+}
+.splChk .splChkBox ul{
+    padding: 0 20px;
+}
+.splChk .splChkBox ul li{
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.splChk .splChkBox .applyBtn{
+    cursor: pointer;
+    color: #2980b9;
+    text-align: right;
+    padding: 10px;
+    font-size: 14px;
+}
+.splChk .splChkBox .resultInfo{
+    text-align: left;
+    padding-left: 20px;
+}
+.splChk .splChkBox .resultInfo p{
+    /**/
+}
+.splChk .splChkBox .resultInfo p.splRight{
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 0;
+}
+.splChk .splChkBox .resultInfo p.expl{
+    font-size: 10px;
+    color: red;
+}
+.addOnCon .addOn1{
+    /*background-color: lightcyan;*/
+}
+.addOnCon .addOn2{
+    /*background-color: lightpink;*/
 }
 .husky_seditor_ui_bold button i.on{
     color:black;
     font-weight: bold;
     font-size: 14px;
-
 }
 .newTit{
     font-size: 32px;
 }
+
+
+/*글감리스트 addOn영역*/
+#bankSub{
+
+
+
+}
+#bankSub .bsinner{
+    padding: 20px 0;
+    border-right: 1px solid #eee;
+}
+
+.subSearch{
+    text-align: left;
+    padding-bottom: 10px;
+
+}
+.subSearch .search-inner{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 5px;
+
+}
+/*add 2017-07-17 검색창 영역 수정*/
+.subSearch .search-inner input{
+    width:90%;
+    padding: 5px 0 5px;
+}
+.subSearch .search-inner a{
+    display: inline-block;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+.bankSubList{
+
+}
+.bankSubList .on{
+    background-color: aliceblue;
+    border-left: 3px solid #2980b9;
+}
+.bankSubList a{
+    display: block;
+    text-align: left;
+}
+/*까페글*/
+.cafeInfo{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0
+}
+.cafeInfo div{
+    float: left;
+}
+.cafeInfo .cafeinner{
+    padding: 0 10px;
+}
+.cafeInfo .cafeLogo{
+    width: 60px;
+    line-height: 60px;
+    height: 100%;
+    background-color: #eee;
+    text-align: center;
+    border-radius: 50%;
+}
+.cafeInfo .cafeTxt{
+    /*width: 180px;*/
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.cafeInfo .cafeTxt .tit{
+    font-weight: bold;
+    display: -webkit-box;
+    /*max-height: px;*/
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    word-wrap:break-word;
+}
+.cafeInfo .cafeTxt .date{
+    font-size: 11px;
+}
+.cafeInfo .cafeTxt p{
+}
+
