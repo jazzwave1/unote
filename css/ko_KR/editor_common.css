@@ -217,6 +217,7 @@ input {outline: none;border: 0px;}
 }
 .splChk .splChkBox .resultInfo{
     text-align: left;
+    padding-top: 20px;
     padding-left: 20px;
 }
 .splChk .splChkBox .resultInfo p{
@@ -251,20 +252,34 @@ input {outline: none;border: 0px;}
     padding-top: 20px;
 }
 .beautiChk .beautiChkBox ul{
-    padding: 0 20px;
+
+}
+.beautiChk .beautiChkBox ul li.beautiBoxList{
+    padding: 20px;
 }
 .beautiChk .beautiChkBox .resultInfo{
     text-align: left;
-    padding-left: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
 }
 
 .beautiChk .beautiChkBox .resultInfo p.getTxt{
     font-weight: bold;
     font-size: 14px;
-    border-bottom: 1px solid #000000;
+
+}
+.beautiChk .beautiChkBox .resultInfo .recomTit{
+    font-weight: bold;
+    background: #2980b9;
+    color: #fff;
+    margin: 10px 0;
+}
+.beautiChk .beautiChkBox .resultInfo .recomTit i{
+    color: #fff;
 }
 .beautiChk .beautiChkBox .resultInfo .recommedTxt {
-    padding: 10px 0 10px 10px;
+
 }
 .beautiChk .beautiChkBox .resultInfo .recommedTxt ul li{
     padding-bottom: 5px;
