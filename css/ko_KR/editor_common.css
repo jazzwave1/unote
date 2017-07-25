@@ -227,7 +227,7 @@ input {outline: none;border: 0px;}
     font-size: 14px;
     padding: 5px 0;
 }
-.splChk .splChkBox .resultInfo p.expl{
+.splChk .splChkBox .resultInfo p.exspl{
     font-size: 10px;
     color: red;
 }
@@ -245,8 +245,30 @@ input {outline: none;border: 0px;}
 .newTit{
     font-size: 32px;
 }
+/*윤문추천 addOn영역*/
+.beautiChk{}
+.beautiChk .beautiChkBox{
+    padding-top: 20px;
+}
+.beautiChk .beautiChkBox ul{
+    padding: 0 20px;
+}
+.beautiChk .beautiChkBox .resultInfo{
+    text-align: left;
+    padding-left: 20px;
+}
 
-
+.beautiChk .beautiChkBox .resultInfo p.getTxt{
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid #000000;
+}
+.beautiChk .beautiChkBox .resultInfo .recommedTxt {
+    padding: 10px 0 10px 10px;
+}
+.beautiChk .beautiChkBox .resultInfo .recommedTxt ul li{
+    padding-bottom: 5px;
+}
 /*글감리스트 addOn영역*/
 #bankSub{
 
