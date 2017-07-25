@@ -249,7 +249,7 @@ input {outline: none;border: 0px;}
 /*윤문추천 addOn영역*/
 .beautiChk{}
 .beautiChk .beautiChkBox{
-    padding-top: 20px;
+    
 }
 .beautiChk .beautiChkBox ul{
 
@@ -275,7 +275,7 @@ input {outline: none;border: 0px;}
     background: #2980b9;
     color: #fff;
     margin: 10px 0;
-    padding: 5px 0;
+    padding: 5px;
 }
 .beautiChk .beautiChkBox .resultInfo .recomTit i{
     color: #fff;
