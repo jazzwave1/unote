@@ -1081,14 +1081,14 @@
         $(this).siblings("li").removeClass("on");
         $(this).addClass("on");
 
-        $(".moveCategBtn").on("click",function () {
-            $(".moveCategBtn").toggleClass("on");
-            $(".selCateg").show();
-        });
+
 
     });
     /*카테고리 아이콘 클릭시 */
-
+    $(".moveCateg").on("click",function () {
+        $(".moveCateg").toggleClass("on");
+        $(".selCateg").show();
+    });
     $(document).mouseup(function (e) {
         var container = $(".selCateg");
         if (!container.is(e.target) && container.has(e.target).length === 0){
