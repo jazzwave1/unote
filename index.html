@@ -100,18 +100,27 @@
 <div id="wrap">
     <!--header-->
     <div id="editorHeader">
-        <div class="hleft">
-            <h1><a href="main.html">Gldong</a></h1>
-        </div>
-
-        <div class="hright">
-
-            <!--userInfo-->
-            <div class="userInfo">
-                <div class="pic"><img src="images/jiyun.jpg"></div>
-                <div class="name"><a href="#"><span>김지윤</span> 님 <i class="fa fa-caret-down" aria-hidden="true"></i></a></div>
+        <div class="edi-hinner clearfix">
+            <div class="edi-left">
+                <h1><a href="javascript:;"><img src="images/editor_logo.png" alt="글동로고"></a></h1>
             </div>
-            <!--//userInfo-->
+            <div class="edi-center">
+                <div class="noteTit"><input type="text" value="제목 없는 문서"></div>
+                <div class="ediBtn"></div>
+            </div>
+            <div class="edi-right addOnList">
+                <ul class="clearfix">
+                    <li class="on">
+                        <span class="addOn-btn"><!--<i class="fa fa-check-square-o" aria-hidden="true"></i>-->맞춤법 검사하기</span>
+                    </li>
+                    <li>
+                        <span class="addOn-btn"><!--<i class="fa fa-comments" aria-hidden="true"></i>-->윤문 추천 받기</span>
+                    </li>
+                    <li>
+                        <span class="addOn-btn"><!--<i class="fa fa-list" aria-hidden="true"></i>-->글감 불러오기</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <!--//header-->
@@ -695,13 +704,7 @@
         </div>
         <div class="right">
             <div id="addOnWrap">
-                <div class="addOnList">
-                    <ul class="clearfix">
-                        <li class="on"><i class="fa fa-check-square-o" aria-hidden="true"></i>맞춤법 검사</li>
-                        <li><i class="fa fa-comments" aria-hidden="true"></i>윤문 추천</li>
-                        <li><i class="fa fa-list" aria-hidden="true"></i>글감 리스트</li>
-                    </ul>
-                </div>
+
                 <!--맞춤법검사/윤문/글감리스트 영역-->
                 <div class="addOnCon">
                     <!--맞춤법검사-->
@@ -919,11 +922,14 @@
         <div class="testBtn clearfix">
             <!--<input type="button" onclick="pasteHTML();" value="본문에 내용 넣기" />-->
             <!--<input type="button" onclick="showHTML();" value="본문 내용 가져오기" />-->
-            <div class="serverBtn" style="display:inline-block">
-                <input type="button" onclick="submitContents();" value="서버로 내용 전송" style="height:60px; line-height:60px; cursor: pointer;"/>
+            <div class="newBtn" style="display:inline-block">
+                <input type="button" value="새노트"/>
             </div>
-            <div class="saveBtn" style="display:inline-block">
-                <input type="button" onclick="" value="저장하기" style="height:60px; line-height:60px; cursor: pointer;"/>
+            <div class="callNoteBtn" style="display:inline-block">
+                <input type="button" value="불러오기"/>
+            </div>
+            <div class="serverBtn" style="display:inline-block">
+                <input type="button" onclick="submitContents();" value="저장하기"/>
             </div>
             <!--<input type="button" onclick="setDefaultFont();" value="기본 폰트 지정하기 (궁서_24)" />-->
         </div>

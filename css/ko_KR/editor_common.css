@@ -43,92 +43,107 @@ input {outline: none;border: 0px;}
     overflow-x: hidden;
 
 }
+/*header css*/
 #editorHeader {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 60px;
-    line-height: 60px;
+    height: 59px;
+    line-height: 59px;
     /*box-shadow: 1px 1px 1px  #888888;*/
     background-color: #fff;
     /*background-color: cadetblue;*/
     /*background-image: linear-gradient( 135deg, #5EFCE8 0%, #736EFE 100%);*/
     z-index: 200;
-    border-bottom:1px solid #ccc;
+    border-bottom:1px solid #eee;
 }
-#editorHeader .hinner{
+#editorHeader .edi-hinner{
     position: relative;
     width: 100%;
 }
-#editorHeader div{
+#editorHeader .edi-hinner>div{
     float: left;
 }
-#editorHeader .hleft{
-    width: 70%;
-}
-#editorHeader .hleft h1 {
-    font-family: 'Fredericka the Great', cursive;
-    /*font-family: 'tvN_Bold';*/
-    text-align: left;
-    /*text-transform: uppercase;*/
-    font-size: 32px;
-    padding-left: 20px;
-
-}
-#editorHeader .hleft h1 a{
-    display: block;
-    color: #4f4f4f;
-    font-weight: normal;
-}
-
-#editorHeader .hright{
-    float: left;
-    width: 30%;
-    /*padding-right: 20px;*/
-}
-#editorHeader .hright div{
-    height: 59px;
-    line-height: 59px;
-
-}
-
-#editorHeader .hright .userInfo{
+#editorHeader .edi-hinner .edi-right{
     float: right;
 }
-#editorHeader .hright .userInfo .pic{
-    width: 40px;
-    height: 40px;
-    padding-top: 10px;
-    padding-right: 5px;
-}
-#editorHeader .hright .userInfo .pic img{
-    width: 100%;
-    border-radius: 50%;
-}
-#editorHeader .hright .userInfo .name{
-    padding-right: 20px;
-}
-#editorHeader .hright .userInfo .name a{
-    display: block;
-
-}
-#editorHeader .hright .userInfo .name span{
-    font-weight: bold;
-    font-size: 14px;
-}
-#editorHeader .hright .notice,#header .hright .search{
-    width: 30px;
-    height: 100%;
-    /*background-color: #ccc;*/
-}
-#editorHeader .hright .notice a, #header .hright .search a{
-    display: block;
-}
-#editorHeader .hright .notice a i,#header .hright .search a i{
+#editorHeader .edi-left h1{
+    width: 60px;
+    height: 59px;
     line-height: 59px;
+    border-right: 1px solid #eee;
+    /*background-color: azure;*/
+}
+#editorHeader .edi-left h1 a{
+    display: block;
+    height: 59px;
+
+}
+#editorHeader .edi-left h1 a img{
+    width: 80%;
+    padding-top: 5px;
+}
+#editorHeader .edi-center{
+
+}
+#editorHeader .edi-center>div{
+    width: 100%;
+}
+#editorHeader .edi-center .noteTit{
+    padding-left: 5px;
+}
+#editorHeader .edi-center .noteTit input{
+    /* width: 500px;*/
+    height: 100%;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    font-style: italic;
+}
+/*#se2_sample{
+    left: 60px;
+    top: 30px;
+    width: 500px;
+    height: 30px;
+}*/
+.newBtn{
+    position: absolute;
+    top:37px;
+    left: -130px;
+    z-index: 201;
+
+}
+.newBtn input{
+    font-weight: bold;
+    background-color: #fff;
 }
 
+.callNoteBtn{
+    position: absolute;
+    top: 37px;
+    left: -80px;
+    z-index: 201;
+
+}
+.callNoteBtn input{
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.serverBtn{
+    position: absolute;
+    top: 37px;
+    left: -20px;
+    z-index: 201;
+
+}
+.serverBtn input{
+    font-weight: bold;
+    background-color: #fff;
+}
+/* //header css*/
 
 #editorCont{
     width: 100%;
@@ -146,13 +161,17 @@ input {outline: none;border: 0px;}
     padding-top: 60px;
 }
 /*addOn영역*/
-.addOnList{}
+.addOnList{
+    padding-top: 15px;
+    margin-right: 10px;
+}
 .addOnList ul li{
     float: left;
-    width: 33.3%;
-    height: 50px;
-    line-height: 50px;
-    border-bottom: 1px solid #eee;
+    display: block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
 }
 .addOnList ul li.on{
 
@@ -161,7 +180,13 @@ input {outline: none;border: 0px;}
     background-color: #2980b9;
     color:#fff;
 }
-
+.addOnList ul li .addOn-btn{
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #2980b9;
+    width: 100%;
+    border-radius:9999em;
+}
 #editorCont .right #addOnWrap{
     width: 100%;
 }
@@ -249,7 +274,7 @@ input {outline: none;border: 0px;}
 /*윤문추천 addOn영역*/
 .beautiChk{}
 .beautiChk .beautiChkBox{
-    
+
 }
 .beautiChk .beautiChkBox ul{
 
