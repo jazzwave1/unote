@@ -173,7 +173,7 @@ input {outline: none;border: 0px;}
     line-height: 30px;
     margin-left: 10px;
 }
-.addOnList ul li.on{
+.addOnList ul li.on .addOn-btn{
 
     /* border-bottom: 5px solid #2980b9
      */
