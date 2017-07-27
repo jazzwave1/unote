@@ -817,7 +817,7 @@
                                                     <a class="bookMarkBtn" href="javascript:;" title="북마크"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a>
                                                     <!--<div>북마크</div>-->
                                                 </li>
-                                                <li class="moveCateg  on">
+                                                <li class="moveCateg">
                                                     <a class="moveCategBtn" href="javascript:;" title="카테고리"><i class="fa fa-clipboard fa-1g" aria-hidden="true"></i></a>
                                                     <!--<div>카테고리 이동</div>-->
                                                     <!--카테고리 이동 안내 창-->
@@ -1063,12 +1063,7 @@
      });
      */
 
-    $("#se2_sample").css({
-        position:'absolute',
-        left:'200px',
-        top:'0',
-        'z-index':'300'
-    });
+
     /*addOn*/
     $(".addOn0").show();
 
@@ -1079,6 +1074,24 @@
         var listIndex = $(this).index();
         $(".addOn").hide();
         $(".addOn"+listIndex).show();
+    });
+
+    /*글감리스트 addOn 아이콘*/
+    $(".search-icon ul li").on("click", function () {
+        $(this).siblings("li").removeClass("on");
+        $(this).addClass("on");
+    });
+    /*카테고리 아이콘 클릭시 */
+    $(".moveCategBtn").on("click",function () {
+        $(".moveCategBtn").toggleClass("on");
+        $(".selCateg").show();
+    });
+    $(document).mouseup(function (e) {
+        var container = $(".selCateg");
+        if (!container.is(e.target) && container.has(e.target).length === 0){
+            container.hide();
+            $(".moveCategBtn").removeClass("on");
+        }
     });
 
     function responsiveView() {

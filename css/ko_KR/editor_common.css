@@ -102,17 +102,18 @@ input {outline: none;border: 0px;}
     padding: 5px 10px;
     font-style: italic;
 }
-/*#se2_sample{
-    left: 60px;
-    top: 30px;
-    width: 500px;
+#se2_sample{
+    position:absolute;
+    left: 70px;
+    top:36px;
+    z-index: 300;
     height: 30px;
-}*/
+}
+#se2_sample .testBtn{
+    text-align: left;
+}
 .newBtn{
-    position: absolute;
-    top:37px;
-    left: -130px;
-    z-index: 201;
+
 
 }
 .newBtn input{
@@ -121,10 +122,7 @@ input {outline: none;border: 0px;}
 }
 
 .callNoteBtn{
-    position: absolute;
-    top: 37px;
-    left: -80px;
-    z-index: 201;
+
 
 }
 .callNoteBtn input{
@@ -133,10 +131,7 @@ input {outline: none;border: 0px;}
 }
 
 .serverBtn{
-    position: absolute;
-    top: 37px;
-    left: -20px;
-    z-index: 201;
+
 
 }
 .serverBtn input{
@@ -403,6 +398,19 @@ input {outline: none;border: 0px;}
 }
 .selCateg{
     display: none;
+    position: absolute;
+    width: 200px;
+    left:50%;
+    top:30px;
+    margin-left: -100px;
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04), -6px 8px 15px rgba(0, 0, 0, 0.04), 6px 8px 15px rgba(0, 0, 0, 0.04);
+    text-align: left;
+}
+.selCateg.on{
+    display: block;
 }
 /*add 2017-07-17 검색창 영역 수정*/
 .subSearch .search-inner{
@@ -446,7 +454,6 @@ input {outline: none;border: 0px;}
     width: 60px;
     line-height: 60px;
     height: 100%;
-    background-color: #eee;
     text-align: center;
     border-radius: 50%;
 }
