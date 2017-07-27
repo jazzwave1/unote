@@ -94,7 +94,7 @@ input {outline: none;border: 0px;}
     padding-left: 5px;
 }
 #editorHeader .edi-center .noteTit input{
-    /* width: 500px;*/
+    width: 500px;
     height: 100%;
     border: 1px solid #eee;
     border-radius: 5px;
@@ -318,23 +318,86 @@ input {outline: none;border: 0px;}
 
 }
 #bankSub .bsinner{
-    padding: 20px 0;
+    padding: 10px 0;
     border-right: 1px solid #eee;
 }
-
+.bankSubTop{
+    padding:0 10px 20px;
+    text-align: left;
+}
+.bankSubTop .bankSub-tit{
+    font-weight: bold;
+    cursor: pointer;
+}
+.bankSubTop .bankSub-categ{
+    padding-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.bankSubTop .bankSub-categ i{
+    padding-right: 10px;
+}
+.bankSubTop .bankSub-categ span{
+    text-decoration: underline;
+}
+.bankSubTop .bankSub-categ span i{
+    padding-right: 5px;
+}
+.bankSubTop .bankSub-total{
+    float: right;
+}
+.bankSubTop .bankSub-total span{
+    font-weight: bold;
+}
+.bankSubTop p{
+    display: inline-block;
+}
 .subSearch{
     text-align: left;
     padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+.subSearch > div{
+    float: left;
+}
+.subSearch .subSearch-left{
+    width: 70%;
+
 
 }
-.subSearch .search-inner{
+.subSearch .subSearch-left .search-inner{
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 0 5px;
     padding: 5px;
-
+}
+.subSearch .subSearch-right{
+    width: 30%;
+}
+.subSearch .subSearch-right .search-icon{
+    padding-top: 2px;
+}
+.subSearch .subSearch-right .search-icon>ul>li{
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    font-size: 18px;
+    padding: 6px 0;
+}
+.subSearch .subSearch-right .search-icon>ul>li.on{
+    background-color: #eee;
+    border-radius: 5px;
+}
+.subSearch .subSearch-right .search-icon>ul>li>a:hover{
+    color: #2980b9;
+}
+.selCateg{
+    display: none;
 }
 /*add 2017-07-17 검색창 영역 수정*/
+.subSearch .search-inner{
+    position: relative;
+}
 .subSearch .search-inner input{
     width:90%;
     padding: 5px 0 5px;
@@ -376,6 +439,12 @@ input {outline: none;border: 0px;}
     background-color: #eee;
     text-align: center;
     border-radius: 50%;
+}
+.cafeInfo .cafeLogo p{
+    padding: 10px;
+}
+.cafeInfo .cafeLogo p img{
+    width: 100%;
 }
 .cafeInfo .cafeTxt{
     /*width: 180px;*/
