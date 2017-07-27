@@ -401,9 +401,8 @@ input {outline: none;border: 0px;}
     display: none;
     position: absolute;
     width: 200px;
-    left:50%;
+    right:0;
     top:30px;
-    margin-left: -100px;
     background: #fff;
     border: 1px solid #ececec;
     border-radius: 6px;
@@ -419,7 +418,7 @@ input {outline: none;border: 0px;}
     font-weight: bold;
 }
 .selCateg .selCateg-inner{
-    padding: 10px 20px 10px;
+    padding: 10px 20px 0;
 }
 
 .selCateg .selList ul li{
@@ -428,6 +427,7 @@ input {outline: none;border: 0px;}
     text-align: left;
     font-weight: bold;
     cursor: pointer;
+    font-size: 14px;
 }
 .selCateg .selList ul li i{
     padding-right: 5px;
