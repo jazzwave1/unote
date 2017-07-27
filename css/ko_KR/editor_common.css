@@ -383,6 +383,7 @@ input {outline: none;border: 0px;}
     padding-top: 2px;
 }
 .subSearch .subSearch-right .search-icon>ul>li{
+    position: relative;
     float: left;
     width: 33.3%;
     text-align: center;
@@ -411,6 +412,25 @@ input {outline: none;border: 0px;}
 }
 .selCateg.on{
     display: block;
+}
+.selCateg .headTit{
+    padding: 5px;
+    background: #eee;
+    font-weight: bold;
+}
+.selCateg .selCateg-inner{
+    padding: 10px 20px 10px;
+}
+
+.selCateg .selList ul li{
+    float: none;
+    padding-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+}
+.selCateg .selList ul li i{
+    padding-right: 5px;
 }
 /*add 2017-07-17 검색창 영역 수정*/
 .subSearch .search-inner{
