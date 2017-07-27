@@ -390,7 +390,7 @@ input {outline: none;border: 0px;}
     font-size: 18px;
     padding: 6px 0;
 }
-.subSearch .subSearch-right .search-icon ul li.moveCateg.on{
+.subSearch .subSearch-right .search-icon>ul>li.moveCateg.on{
     background-color: #eee;
     border-radius: 5px;
 }
