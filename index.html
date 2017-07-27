@@ -1080,12 +1080,15 @@
     $(".search-icon ul li").on("click", function () {
         $(this).siblings("li").removeClass("on");
         $(this).addClass("on");
+
+        $(".moveCategBtn").on("click",function () {
+            $(".moveCategBtn").toggleClass("on");
+            $(".selCateg").show();
+        });
+
     });
     /*카테고리 아이콘 클릭시 */
-    $(".moveCategBtn").on("click",function () {
-        $(".moveCategBtn").toggleClass("on");
-        $(".selCateg").show();
-    });
+
     $(document).mouseup(function (e) {
         var container = $(".selCateg");
         if (!container.is(e.target) && container.has(e.target).length === 0){
