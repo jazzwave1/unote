@@ -273,6 +273,16 @@ input {outline: none;border: 0px;}
 }
 /*윤문추천 addOn영역*/
 .beautiChk{}
+.beautiChk .beautiChkBtn{
+    padding: 20px 0 10px;
+
+}
+.beautiChk .beautiChkBtn a{
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #2980b9;
+    border-radius: 5px;
+}
 .beautiChk .beautiChkBox{
 
 }
