@@ -73,7 +73,7 @@ body,#smart_editor2,#smart_editor2 p,#smart_editor2 h1,#smart_editor2 h2,#smart_
 #smart_editor2 .se2_alert_btns .se2_confirm{background-position:-369px -434px}
 #smart_editor2 .se2_alert_btns .se2_cancel{background-position:-419px -434px}
 /* TEXT_TOOLBAR */
-#smart_editor2 .se2_text_tool{position:relative;clear:both;z-index:30;padding:10px 0 10px;border-bottom: 1px solid #eee;*zoom:1;}
+#smart_editor2 .se2_text_tool{position:relative;clear:both;z-index:30;/*padding:10px 0 10px;*/border-bottom: 1px solid #eee;*zoom:1;}
 #smart_editor2 .se2_text_tool:after{content:"";display:block;clear:both}
 #smart_editor2 .se2_text_tool ul{float:left;display:inline;margin-right:3px;padding-left:1px;white-space:nowrap}
 #smart_editor2 .se2_text_tool li{display:inline;float:left;position:relative;padding: 0 10px; z-index:30}
