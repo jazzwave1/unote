@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
     <script type="text/javascript" src="./js/lib/jindo2.all.js" charset="utf-8"></script>
     <script type="text/javascript" src="./js/lib/jindo_component.js" charset="utf-8"></script>
-    <script type="text/javascript" src="./js/service/SE2M_Configuration.js" charset="utf-8"></script>	<!-- 설정 파일 -->
+    <script type="text/javascript" src="./js/service/SE2M_Configuration.js" charset="utf-8"></script>   <!-- 설정 파일 -->
     <script type="text/javascript" src="./js/service/SE2BasicCreator.js" charset="utf-8"></script>
     <!--HuskyApp JS Start-->
     <!-- 허스키 프레임웍 -->
@@ -68,7 +68,7 @@
     <script type="text/javascript" src="./js_src/util/hp_LazyLoader.js" charset="utf-8"></script>
     <script type="text/javascript" src="./js_src/util/hp_PopupManager.js" charset="utf-8"></script>
     <script type="text/javascript" src="./js_src/util/hp_SE2M_Utils.js"></script>
-    <script type="text/javascript" src="./js_src/util/hp_SE2B_CSSLoader.js" charset="utf-8"></script>		<!-- Basic 버전에서 사용하지 않는 메시지를 제거한 버전 -->
+    <script type="text/javascript" src="./js_src/util/hp_SE2B_CSSLoader.js" charset="utf-8"></script>       <!-- Basic 버전에서 사용하지 않는 메시지를 제거한 버전 -->
     <!-- SE2.0 Open 전용 -->
     <script type="text/javascript" src="./js/service/husky_SE2B_Lang_ko_KR.js" charset="utf-8"></script><!-- Basic 버전에서 사용하는 알림 메시지 -->
     <script type="text/javascript" src="./js/service/husky_SE2B_Lang_en_US.js" charset="utf-8"></script>
@@ -100,18 +100,27 @@
 <div id="wrap">
     <!--header-->
     <div id="editorHeader">
-        <div class="hleft">
-            <h1><a href="main.html">Gldong</a></h1>
-        </div>
-
-        <div class="hright">
-
-            <!--userInfo-->
-            <div class="userInfo">
-                <div class="pic"><img src="images/jiyun.jpg"></div>
-                <div class="name"><a href="#"><span>김지윤</span> 님 <i class="fa fa-caret-down" aria-hidden="true"></i></a></div>
+        <div class="edi-hinner clearfix">
+            <div class="edi-left">
+                <h1><a href="javascript:;"><img src="images/editor_logo.png" alt="글동로고"></a></h1>
             </div>
-            <!--//userInfo-->
+            <div class="edi-center">
+                <div class="noteTit"><input type="text" value="제목 없는 문서"></div>
+                <div class="ediBtn"></div>
+            </div>
+            <div class="edi-right addOnList">
+                <ul class="clearfix">
+                    <li class="on">
+                        <span class="addOn-btn"><!--<i class="fa fa-check-square-o" aria-hidden="true"></i>-->맞춤법 검사하기</span>
+                    </li>
+                    <li>
+                        <span class="addOn-btn"><!--<i class="fa fa-comments" aria-hidden="true"></i>-->윤문 추천 받기</span>
+                    </li>
+                    <li>
+                        <span class="addOn-btn"><!--<i class="fa fa-list" aria-hidden="true"></i>-->글감 불러오기</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <!--//header-->
@@ -695,13 +704,7 @@
         </div>
         <div class="right">
             <div id="addOnWrap">
-                <div class="addOnList">
-                    <ul class="clearfix">
-                        <li class="on"><i class="fa fa-check-square-o" aria-hidden="true"></i>맞춤법 검사</li>
-                        <li><i class="fa fa-comments" aria-hidden="true"></i>윤문 추천</li>
-                        <li><i class="fa fa-list" aria-hidden="true"></i>글감 리스트</li>
-                    </ul>
-                </div>
+
                 <!--맞춤법검사/윤문/글감리스트 영역-->
                 <div class="addOnCon">
                     <!--맞춤법검사-->
@@ -709,51 +712,51 @@
                         <div class="splChk">
                             <div class="splChkBtn">
                                 <a href="javascript:;">재검사</a>
-                                <a href="javascript:;">전체적용</a>
+                                <!--<a href="javascript:;">전체적용</a>-->
                             </div>
-                            <div class="splChkInfo">
+                            <!--<div class="splChkInfo">
                                 <p>총 글자수 : <span>951</span>, 수정<span>0</span>, 제안<span>4</span></p>
-                            </div>
+                            </div>-->
                             <div class="splChkBox">
                                 <ul>
                                     <li>
-                                        <div class="applyBtn">
+                                        <!--<div class="applyBtn">
                                             적용<i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
+                                        </div>-->
                                         <div class="resultInfo">
                                             <p>정규교과로</p>
                                             <p class="splRight">정규 교과로</p>
-                                            <p class="expl">*띄어쓰기 오류</p>
+                                            <p class="exspl">*띄어쓰기 오류</p>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="applyBtn">
+                                       <!-- <div class="applyBtn">
                                             적용<i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
+                                        </div>-->
                                         <div class="resultInfo">
                                             <p>정규교과</p>
                                             <p class="splRight">정규 교과</p>
-                                            <p class="expl">*띄어쓰기 오류</p>
+                                            <p class="exspl">*띄어쓰기 오류</p>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="applyBtn">
+                                        <!--<div class="applyBtn">
                                             적용<i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
+                                        </div>-->
                                         <div class="resultInfo">
                                             <p>만들어낸다.이</p>
                                             <p class="splRight">만들어낸다. 이</p>
-                                            <p class="expl">*띄어쓰기 오류</p>
+                                            <p class="exspl">*띄어쓰기 오류</p>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="applyBtn">
+                                       <!-- <div class="applyBtn">
                                             적용<i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>
+                                        </div>-->
                                         <div class="resultInfo">
                                             <p>문제해결을</p>
                                             <p class="splRight">문제 해결을</p>
-                                            <p class="expl">*띄어쓰기 오류</p>
+                                            <p class="exspl">*띄어쓰기 오류</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -761,7 +764,36 @@
                         </div>
                     </div>
                     <!--윤문추천-->
-                    <div class="addOn addOn1"></div>
+                    <div class="addOn addOn1">
+                        <div class="beautiChk">
+                            <div class="beautiChkBtn">
+                                <a href="javascript:;">재검사</a>
+                                <!--<a href="javascript:;">전체적용</a>-->
+                            </div>
+                           <!-- <div class="beautiChkInfo">
+                                <p>총 글자수 : <span>951</span>, 수정<span>0</span>, 제안<span>4</span></p>
+                            </div>-->
+                            <div class="beautiChkBox">
+                                <ul>
+                                    <li class="beautiBoxList">
+                                        <div class="resultInfo">
+                                            <p class="getTxt">입력 : 우산을 쓰다</p>
+                                            <div class="recommedTxt">
+                                                <p class="recomTit"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 윤문 추천 결과</p>
+                                                <ul>
+                                                    <li>1. 우산을 받치다</li>
+                                                    <li>2. 우산을 접다</li>
+                                                    <li>3. 우산을 펴다</li>
+                                                    <li>4. 우산이 뒤집히다</li>
+                                                    <li>5. 우산이 펼쳐지다.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <!--글감리스트-->
                     <div class="addOn addOn2">
                         <!--sublist-->
@@ -890,16 +922,22 @@
         <div class="testBtn clearfix">
             <!--<input type="button" onclick="pasteHTML();" value="본문에 내용 넣기" />-->
             <!--<input type="button" onclick="showHTML();" value="본문 내용 가져오기" />-->
-            <div class="serverBtn" style="display:inline-block">
-                <input type="button" onclick="submitContents();" value="서버로 내용 전송" style="height:60px; line-height:60px; cursor: pointer;"/>
+            <div class="newBtn" style="display:inline-block">
+                <input type="button" value="새노트"/>
             </div>
-            <div class="saveBtn" style="display:inline-block">
-                <input type="button" onclick="" value="저장하기" style="height:60px; line-height:60px; cursor: pointer;"/>
+            <!--<div class="callNoteBtn" style="display:inline-block">
+                <input type="button" value="불러오기"/>
+            </div>-->
+            <div class="serverBtn" style="display:inline-block">
+                <input type="button" onclick="submitContents();" value="저장하기"/>
             </div>
             <!--<input type="button" onclick="setDefaultFont();" value="기본 폰트 지정하기 (궁서_24)" />-->
         </div>
-        <form action="sample/viewer/index.php" method="post">
-            <textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;">
+        <form id="noteForm" action="/unoteapi/Note/saveNote" method="post">
+            <input type="hidden" name= "title" id= "frmTitle" value=""/>
+            <input type="hidden" name= "sType" id= "sType" value=""/>
+            <input type="hidden" name= "n_idx" id= "n_idx" value=""/>
+            <textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;" placeholder="내용을 입">
             
             </textarea>
             <!--textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;">
@@ -930,24 +968,22 @@ var sContent = "" ;
         /*jindo.$("se2_sample").style.display = "none";*/
     }else{
         var oEditor = createSEditor2(jindo.$("ir1"), {
-            bUseToolbar : true,				// 툴바 사용 여부 (true:사용/ false:사용하지 않음)
-            bUseVerticalResizer : false,		// 입력창 크기 조절바 사용 여부 (true:사용/ false:사용하지 않음)
-            bUseModeChanger : false,			// 모드 탭(Editor | HTML | TEXT) 사용 여부 (true:사용/ false:사용하지 않음)
-            //bSkipXssFilter : true,		// client-side xss filter 무시 여부 (true:사용하지 않음 / 그외:사용)
-            //aAdditionalFontList : [["MS UI Gothic", "MS UI Gothic"], ["Comic Sans MS", "Comic Sans MS"],["TEST","TEST"]],	// 추가 글꼴 목록
+            bUseToolbar : true,             // 툴바 사용 여부 (true:사용/ false:사용하지 않음)
+            bUseVerticalResizer : false,        // 입력창 크기 조절바 사용 여부 (true:사용/ false:사용하지 않음)
+            bUseModeChanger : false,            // 모드 탭(Editor | HTML | TEXT) 사용 여부 (true:사용/ false:사용하지 않음)
+            //bSkipXssFilter : true,        // client-side xss filter 무시 여부 (true:사용하지 않음 / 그외:사용)
+            //aAdditionalFontList : [["MS UI Gothic", "MS UI Gothic"], ["Comic Sans MS", "Comic Sans MS"],["TEST","TEST"]], // 추가 글꼴 목록
             fOnBeforeUnload : function(){
                 //예제 코드
                 //return "내용이 변경되었습니다.";
             }
         });
-    
-        
                     
         oEditor.run({
             fnOnAppReady: function(){
 
                 $.post(
-                        "../unoteapi/Note/rpcGetNoteInfo"
+                        "/unoteapi/Note/rpcGetNoteInfo"
                         ,{
                             //"n_idx" : $('#site').val() 
                             "n_idx" : <?=$_GET['n_idx']?> 
@@ -957,15 +993,21 @@ var sContent = "" ;
                             if (status == "success" && data.code == 1)
                             {
                                 sContent = data.aNoteDetail.text;
-                                
+                                $('.noteTit').children('input').val(data.aNoteDetail.title);
+                                $('#sType').val('edit');
+                                $('#n_idx').val(<?=$_GET['n_idx']?>);
+
                                 //예제 코드
                                 oEditor.exec("PASTE_HTML", [sContent]);
-     
+                            }
+                            else if (status == "success" && data.code == 301)
+                            {
+                                alert(data.msg);
+                                opener.close();
+                                // window.close();
                             }
                         }
                 );
-
-                
             }
         });
 
@@ -979,8 +1021,10 @@ var sContent = "" ;
             alert(sHTML);
         }
 
-        function submitContents() {
-            oEditor.exec("UPDATE_CONTENTS_FIELD");	// 에디터의 내용이 textarea에 적용됩니다.
+        function _submitContents() {
+            oEditor.exec("UPDATE_CONTENTS_FIELD");  // 에디터의 내용이 textarea에 적용됩니다.
+
+            $('#frmTitle').val($('.noteTit').children('input').val());
 
             // 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
             jindo.$("ir1").form.submit();
@@ -991,6 +1035,38 @@ var sContent = "" ;
             var nFontSize = 24;
             oEditor.setDefaultFont(sDefaultFont, nFontSize);
         }
+
+        function submitContents()
+        {
+            oEditor.exec("UPDATE_CONTENTS_FIELD");  // 에디터의 내용이 textarea에 적용됩니다.
+
+            $('#frmTitle').val($('.noteTit').children('input').val());
+
+            var formData = $("#noteForm").serialize();
+            
+            $.ajax({
+                type : "POST",
+                url : "/unoteapi/Note/saveNote",
+                cache : false,
+                data : formData,
+                success : onSuccess,
+                error : onError
+            });
+        }
+
+        function onSuccess(json, status){
+            if(json.code == '1')
+            {
+                alert(json.msg);
+            }
+        }
+        function onError(data, status){
+         alert("error");
+        }
+
+
+
+
     }
 
 
