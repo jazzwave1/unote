@@ -43,92 +43,102 @@ input {outline: none;border: 0px;}
     overflow-x: hidden;
 
 }
+/*header css*/
 #editorHeader {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 60px;
-    line-height: 60px;
+    height: 59px;
+    line-height: 59px;
     /*box-shadow: 1px 1px 1px  #888888;*/
     background-color: #fff;
     /*background-color: cadetblue;*/
     /*background-image: linear-gradient( 135deg, #5EFCE8 0%, #736EFE 100%);*/
     z-index: 200;
-    border-bottom:1px solid #ccc;
+    border-bottom:1px solid #eee;
 }
-#editorHeader .hinner{
+#editorHeader .edi-hinner{
     position: relative;
     width: 100%;
 }
-#editorHeader div{
+#editorHeader .edi-hinner>div{
     float: left;
 }
-#editorHeader .hleft{
-    width: 70%;
-}
-#editorHeader .hleft h1 {
-    font-family: 'Fredericka the Great', cursive;
-    /*font-family: 'tvN_Bold';*/
-    text-align: left;
-    /*text-transform: uppercase;*/
-    font-size: 32px;
-    padding-left: 20px;
-
-}
-#editorHeader .hleft h1 a{
-    display: block;
-    color: #4f4f4f;
-    font-weight: normal;
-}
-
-#editorHeader .hright{
-    float: left;
-    width: 30%;
-    /*padding-right: 20px;*/
-}
-#editorHeader .hright div{
-    height: 59px;
-    line-height: 59px;
-
-}
-
-#editorHeader .hright .userInfo{
+#editorHeader .edi-hinner .edi-right{
     float: right;
 }
-#editorHeader .hright .userInfo .pic{
-    width: 40px;
-    height: 40px;
-    padding-top: 10px;
-    padding-right: 5px;
-}
-#editorHeader .hright .userInfo .pic img{
-    width: 100%;
-    border-radius: 50%;
-}
-#editorHeader .hright .userInfo .name{
-    padding-right: 20px;
-}
-#editorHeader .hright .userInfo .name a{
-    display: block;
-
-}
-#editorHeader .hright .userInfo .name span{
-    font-weight: bold;
-    font-size: 14px;
-}
-#editorHeader .hright .notice,#header .hright .search{
-    width: 30px;
-    height: 100%;
-    /*background-color: #ccc;*/
-}
-#editorHeader .hright .notice a, #header .hright .search a{
-    display: block;
-}
-#editorHeader .hright .notice a i,#header .hright .search a i{
+#editorHeader .edi-left h1{
+    width: 60px;
+    height: 59px;
     line-height: 59px;
+    border-right: 1px solid #eee;
+    /*background-color: azure;*/
+}
+#editorHeader .edi-left h1 a{
+    display: block;
+    height: 59px;
+
+}
+#editorHeader .edi-left h1 a img{
+    width: 80%;
+    padding-top: 5px;
+}
+#editorHeader .edi-center{
+
+}
+#editorHeader .edi-center>div{
+    width: 100%;
+}
+#editorHeader .edi-center .noteTit{
+    padding-left: 5px;
+}
+#editorHeader .edi-center .noteTit input{
+    width: 500px;
+    height: 100%;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    font-style: italic;
+}
+#se2_sample{
+    position:absolute;
+    left: 70px;
+    top:36px;
+    z-index: 300;
+    height: 30px;
+}
+#se2_sample .testBtn{
+    text-align: left;
+}
+.newBtn{
+
+
+}
+.newBtn input{
+    font-weight: bold;
+    background-color: #fff;
 }
 
+.callNoteBtn{
+
+
+}
+.callNoteBtn input{
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.serverBtn{
+
+
+}
+.serverBtn input{
+    font-weight: bold;
+    background-color: #fff;
+}
+/* //header css*/
 
 #editorCont{
     width: 100%;
@@ -146,22 +156,32 @@ input {outline: none;border: 0px;}
     padding-top: 60px;
 }
 /*addOn영역*/
-.addOnList{}
+.addOnList{
+    padding-top: 15px;
+    margin-right: 10px;
+}
 .addOnList ul li{
     float: left;
-    width: 33.3%;
-    height: 50px;
-    line-height: 50px;
-    border-bottom: 1px solid #eee;
+    display: block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
 }
-.addOnList ul li.on{
+.addOnList ul li.on .addOn-btn{
 
     /* border-bottom: 5px solid #2980b9
      */
     background-color: #2980b9;
     color:#fff;
 }
-
+.addOnList ul li .addOn-btn{
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #2980b9;
+    width: 100%;
+    border-radius:9999em;
+}
 #editorCont .right #addOnWrap{
     width: 100%;
 }
@@ -180,15 +200,24 @@ input {outline: none;border: 0px;}
 .splChk{
 
 }
-.splChk .splChkBtn{
-    padding: 20px 0 10px;
+.addOnIcon{
+    padding: 10px 20px 10px;
 
 }
-.splChk .splChkBtn a{
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #2980b9;
+.addOnIcon a{
+    display: block;
+    float: right;
+    width: 20px;
+    /*
+    padding: 5px 0;*/
+    border: 1px solid #eee;
     border-radius: 5px;
+}
+.addOnIcon a:hover{
+    background: #eee;
+}
+.addOnIcon a i{
+    color: #2980b9;
 }
 .splChk .splChkInfo{
     font-weight: bold;
@@ -248,14 +277,14 @@ input {outline: none;border: 0px;}
 }
 /*윤문추천 addOn영역*/
 .beautiChk{}
+
 .beautiChk .beautiChkBox{
-    
 }
 .beautiChk .beautiChkBox ul{
 
 }
 .beautiChk .beautiChkBox ul li.beautiBoxList{
-    padding: 20px;
+    padding: 0 20px;
 }
 .beautiChk .beautiChkBox .resultInfo{
     text-align: left;
@@ -293,23 +322,123 @@ input {outline: none;border: 0px;}
 
 }
 #bankSub .bsinner{
-    padding: 20px 0;
+    padding: 10px 0;
     border-right: 1px solid #eee;
 }
-
+.bankSubTop{
+    padding:0 10px 10px;
+    text-align: left;
+}
+.bankSubTop .bankSub-tit{
+    font-weight: bold;
+    cursor: pointer;
+}
+.bankSubTop .bankSub-categ{
+    padding-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.bankSubTop .bankSub-categ i{
+    padding-right: 10px;
+}
+.bankSubTop .bankSub-categ span{
+    text-decoration: underline;
+}
+.bankSubTop .bankSub-categ span i{
+    padding-right: 5px;
+}
+.bankSubTop .bankSub-total{
+    float: right;
+}
+.bankSubTop .bankSub-total span{
+    font-weight: bold;
+}
+.bankSubTop p{
+    display: inline-block;
+}
 .subSearch{
     text-align: left;
     padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+.subSearch > div{
+    float: left;
+}
+.subSearch .subSearch-left{
+    width: 70%;
+
 
 }
-.subSearch .search-inner{
+.subSearch .subSearch-left .search-inner{
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 0 5px;
     padding: 5px;
+}
+.subSearch .subSearch-right{
+    width: 30%;
+}
+.subSearch .subSearch-right .search-icon{
+    padding-top: 2px;
+}
+.subSearch .subSearch-right .search-icon>ul>li{
+    position: relative;
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    font-size: 18px;
+    padding: 6px 0;
+}
+.subSearch .subSearch-right .search-icon>ul>li.moveCateg.on{
+    background-color: #eee;
+    border-radius: 5px;
+}
+.subSearch .subSearch-right .search-icon>ul>li.on{
+    background-color: #eee;
+    border-radius: 5px;
+}
+.subSearch .subSearch-right .search-icon>ul>li>a:hover{
+    color: #2980b9;
+}
+.selCateg{
+    display: none;
+    position: absolute;
+    width: 200px;
+    right:0;
+    top:30px;
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04), -6px 8px 15px rgba(0, 0, 0, 0.04), 6px 8px 15px rgba(0, 0, 0, 0.04);
+    text-align: left;
+}
+.selCateg.on{
+    display: block;
+}
+.selCateg .headTit{
+    padding: 5px;
+    background: #eee;
+    font-weight: bold;
+}
+.selCateg .selCateg-inner{
+    padding: 10px 20px 0;
+}
 
+.selCateg .selList ul li{
+    float: none;
+    padding-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+.selCateg .selList ul li i{
+    padding-right: 5px;
 }
 /*add 2017-07-17 검색창 영역 수정*/
+.subSearch .search-inner{
+    position: relative;
+}
 .subSearch .search-inner input{
     width:90%;
     padding: 5px 0 5px;
@@ -348,9 +477,14 @@ input {outline: none;border: 0px;}
     width: 60px;
     line-height: 60px;
     height: 100%;
-    background-color: #eee;
     text-align: center;
     border-radius: 50%;
+}
+.cafeInfo .cafeLogo p{
+    padding: 10px;
+}
+.cafeInfo .cafeLogo p img{
+    width: 100%;
 }
 .cafeInfo .cafeTxt{
     /*width: 180px;*/
@@ -373,3 +507,36 @@ input {outline: none;border: 0px;}
 .cafeInfo .cafeTxt p{
 }
 
+/*bootBtn*/
+.btn{
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+/*맞춤법검사 확인용*/
+span.spelChk{
+    background:red;
+    color:#fff;
+}

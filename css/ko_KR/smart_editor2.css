@@ -48,7 +48,7 @@ body,#smart_editor2,#smart_editor2 p,#smart_editor2 h1,#smart_editor2 h2,#smart_
 /* EDITINGAREA_HTMLSRC */
 #smart_editor2 .off .ico_btn,#smart_editor2 .off .se2_more,#smart_editor2 .off .se2_more2,#smart_editor2 .off .se2_font_family,#smart_editor2 .off .se2_font_size,#smart_editor2 .off .se2_bold,#smart_editor2 .off .se2_underline,#smart_editor2 .off .se2_italic,#smart_editor2 .off .se2_tdel,#smart_editor2 .off .se2_fcolor,#smart_editor2 .off .se2_fcolor_more,#smart_editor2 .off .se2_bgcolor,#smart_editor2 .off .se2_bgcolor_more,#smart_editor2 .off .se2_left,#smart_editor2 .off .se2_center,#smart_editor2 .off .se2_right,#smart_editor2 .off .se2_justify,#smart_editor2 .off .se2_ol,#smart_editor2 .off .se2_ul,#smart_editor2 .off .se2_indent,#smart_editor2 .off .se2_outdent,#smart_editor2 .off .se2_lineheight,#smart_editor2 .off .se2_del_style,#smart_editor2 .off .se2_blockquote,#smart_editor2 .off .se2_summary,#smart_editor2 .off .se2_footnote,#smart_editor2 .off .se2_url,#smart_editor2 .off .se2_emoticon,#smart_editor2 .off .se2_character,#smart_editor2 .off .se2_table,#smart_editor2 .off .se2_find,#smart_editor2 .off .se2_spelling,#smart_editor2 .off .se2_sup,#smart_editor2 .off .se2_sub,#smart_editor2 .off .se2_text_tool_more,#smart_editor2 .off .se2_new,#smart_editor2 .off .selected_color,#smart_editor2 .off .se2_lineSticker{-ms-filter:alpha(opacity=50);opacity:.5;cursor:default;filter:alpha(opacity=50)}
 /* LAYER */
-#smart_editor2 .se2_text_tool .se2_layer{display:none;float:left;position:absolute;top:20px;left:0;z-index:50;margin:0;padding:0;border:1px solid #bcbbbb;background:#fafafa}
+#smart_editor2 .se2_text_tool .se2_layer{display:none;float:left;position:absolute;top:30px;left:0;z-index:50;margin:0;padding:0;border:1px solid #bcbbbb;background:#fafafa}
 #smart_editor2 .se2_text_tool li.active{z-index:50}
 #smart_editor2 .se2_text_tool .active .se2_layer{display:block}
 #smart_editor2 .se2_text_tool .active li .se2_layer{display:none}
@@ -73,14 +73,15 @@ body,#smart_editor2,#smart_editor2 p,#smart_editor2 h1,#smart_editor2 h2,#smart_
 #smart_editor2 .se2_alert_btns .se2_confirm{background-position:-369px -434px}
 #smart_editor2 .se2_alert_btns .se2_cancel{background-position:-419px -434px}
 /* TEXT_TOOLBAR */
-#smart_editor2 .se2_text_tool{position:relative;clear:both;z-index:30;padding:10px 0 10px;border-bottom: 1px solid #eee;*zoom:1;}
+#smart_editor2 .se2_text_tool{position:relative;clear:both;z-index:30;/*padding:10px 0 10px;*/border-bottom: 1px solid #eee; background: #eee; padding: 5px 0 5px 60px; *zoom:1;}
 #smart_editor2 .se2_text_tool:after{content:"";display:block;clear:both}
 #smart_editor2 .se2_text_tool ul{float:left;display:inline;margin-right:3px;padding-left:1px;white-space:nowrap}
 #smart_editor2 .se2_text_tool li{display:inline;float:left;position:relative;padding: 0 10px; z-index:30}
 
 /*툴바아이콘*/
-#smart_editor2 .se2_text_tool button,#smart_editor2 .se2_multy .se2_icon{width:30px;height:30px; line-height: 30px;/*background:url("../../img/ko_KR/text_tool_set.png?140317") no-repeat;*/vertical-align:middle; text-align: center;}
-#smart_editor2 .se2_text_tool button img{width: 100%;}
+#smart_editor2 .se2_text_tool button{width:20px; height:30px; line-height:30px; vertical-align:middle; text-align: center;}
+#smart_editor2 .se2_multy .se2_icon{width:30px;height:30px; line-height: 30px;/*background:url("../../img/ko_KR/text_tool_set.png?140317") no-repeat;*/vertical-align:middle; text-align: center;}
+#smart_editor2 .se2_text_tool button img{width: 70%;}
 #smart_editor2 .se2_text_tool .se2_font_type{position:relative}
 #smart_editor2 .se2_text_tool .se2_font_type li{margin-left:3px}
 #smart_editor2 .se2_text_tool .se2_font_type button{text-align:left}
@@ -113,10 +114,10 @@ body,#smart_editor2,#smart_editor2 p,#smart_editor2 h1,#smart_editor2 h2,#smart_
 #smart_editor2 .se2_sub_step2{width:199px}
 #smart_editor2 .se2_sub_step2_1{width:178px}
 /* TEXT_TOOLBAR : BUTTON */
-#smart_editor2 .se2_text_tool .se2_font_family{width:70px;height:21px;background-position:0 -10px}
+#smart_editor2 .se2_text_tool .se2_font_family{width:70px;height:30px;background-position:0 -10px}
 #smart_editor2 .se2_text_tool .hover .se2_font_family{background-position:0 -72px}
 #smart_editor2 .se2_text_tool .active .se2_font_family{background-position:0 -103px}
-#smart_editor2 .se2_text_tool .se2_font_size{width:45px;height:21px;background-position:-70px -10px}
+#smart_editor2 .se2_text_tool .se2_font_size{width:45px;height:30px;background-position:-70px -10px}
 #smart_editor2 .se2_text_tool .hover .se2_font_size{background-position:-70px -72px}
 #smart_editor2 .se2_text_tool .active .se2_font_size{background-position:-70px -103px}
 #smart_editor2 .se2_text_tool .se2_bold{background-position:-115px -10px}
