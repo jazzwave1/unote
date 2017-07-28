@@ -1082,12 +1082,6 @@ var sContent = "" ;
      });
      */
 
-    $("#se2_sample").css({
-        position:'absolute',
-        left:'200px',
-        top:'0',
-        'z-index':'300'
-    });
     /*addOn*/
     $(".addOn0").show();
 
@@ -1099,7 +1093,24 @@ var sContent = "" ;
         $(".addOn").hide();
         $(".addOn"+listIndex).show();
     });
+    /*글감리스트 addOn 아이콘*/
+    $(".search-icon ul li").on("click", function () {
+        $(this).siblings("li").removeClass("on");
+        $(this).addClass("on");
 
+    });
+    /*카테고리 아이콘 클릭시 */
+    $(".moveCateg").on("click",function () {
+        $(".moveCateg").toggleClass("on");
+        $(".selCateg").show();
+    });
+    $(document).mouseup(function (e) {
+        var container = $(".selCateg");
+        if (!container.is(e.target) && container.has(e.target).length === 0){
+            container.hide();
+            $(".moveCategBtn").removeClass("on");
+        }
+    });
     function responsiveView() {
         var wSize = $(window).width();
         var wHeight = $(window).height();
