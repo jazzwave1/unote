@@ -279,13 +279,12 @@ input {outline: none;border: 0px;}
 .beautiChk{}
 
 .beautiChk .beautiChkBox{
-    padding-top: 10px;
 }
 .beautiChk .beautiChkBox ul{
 
 }
 .beautiChk .beautiChkBox ul li.beautiBoxList{
-    padding: 20px;
+    padding: 0 20px;
 }
 .beautiChk .beautiChkBox .resultInfo{
     text-align: left;
