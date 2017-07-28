@@ -796,14 +796,49 @@
                     </div>
                     <!--글감리스트-->
                     <div class="addOn addOn2">
-                        <!--sublist-->
-                        <div id="bankSub" class="full-left-sublist my-note">
+                        <div id="bankSub" class="full-left-sublist">
                             <div class="bsinner">
-
-                                <div class="subSearch">
-                                    <div class="search-inner">
-                                        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                        <input type="search" id="search" placeholder="제목 검색" />
+                                <div class="bankSubTop">
+                                    <p class="bankSub-tit"><i class="fa fa-list-ul" aria-hidden="true"></i>글감리스트</p>
+                                    <p class="bankSub-categ"><i class="fa fa-angle-right" aria-hidden="true"></i><span><i class="fa fa-folder-open" aria-hidden="true"></i>라이언</span></p>
+                                    <p class="bankSub-total">전체 | <span>40</span></p>
+                                </div>
+                                <div class="subSearch clearfix">
+                                    <div class="subSearch-left">
+                                        <div class="search-inner">
+                                            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                            <input type="search" id="search" placeholder="제목 검색" />
+                                        </div>
+                                    </div>
+                                    <div class="subSearch-right">
+                                        <div class="search-icon">
+                                            <ul>
+                                                <li class="bookMark">
+                                                    <a class="bookMarkBtn" href="javascript:;" title="북마크"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a>
+                                                    <!--<div>북마크</div>-->
+                                                </li>
+                                                <li class="moveCateg">
+                                                    <a class="moveCategBtn" href="javascript:;" title="카테고리"><i class="fa fa-clipboard fa-1g" aria-hidden="true"></i></a>
+                                                    <!--<div>카테고리 이동</div>-->
+                                                    <!--카테고리 이동 안내 창-->
+                                                    <div class="selCateg">
+                                                        <div class="selCateg-inner">
+                                                            <div class="selList">
+                                                                <ul>
+                                                                    <li class="goCateg"><i class="fa fa-folder-open" aria-hidden="true"></i>라이언</li>
+                                                                    <li class="goCateg"><i class="fa fa-folder-open" aria-hidden="true"></i>프로도</li>
+                                                                    <li class="goCateg"><i class="fa fa-folder-open" aria-hidden="true"></i>어피치</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--//카테고리 이동 안내 창-->
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="sroll-inner">
@@ -815,7 +850,9 @@
                                                 <a href="#">
                                                     <div class="cafeInfo ">
                                                         <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">네이버1</div>
+                                                            <div class="cafeLogo">
+                                                                <p><img src="images/icon/logo_naver.png"></p>
+                                                            </div>
                                                             <div class="cafeTxt">
                                                                 <p class="tit">소프트웨어 교육과 미래</p>
                                                                 <p></p>
@@ -829,7 +866,9 @@
                                                 <a href="#">
                                                     <div class="cafeInfo ">
                                                         <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">네이버2</div>
+                                                            <div class="cafeLogo">
+                                                                <p><img src="images/icon/logo_naver.png"></p>
+                                                            </div>
                                                             <div class="cafeTxt">
                                                                 <p class="tit">test</p>
                                                                 <p></p>
@@ -843,7 +882,9 @@
                                                 <a href="#">
                                                     <div class="cafeInfo ">
                                                         <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">네이버3</div>
+                                                            <div class="cafeLogo">
+                                                                <p><img src="images/icon/logo_naver.png"></p>
+                                                            </div>
                                                             <div class="cafeTxt">
                                                                 <p class="tit">testettstsetsetsetsetsetsetsetsetset</p>
                                                                 <p class="date">2017.05.28</p>
@@ -856,7 +897,9 @@
                                                 <a href="#">
                                                     <div class="cafeInfo ">
                                                         <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">네이버4</div>
+                                                            <div class="cafeLogo">
+                                                                <p><img src="images/icon/logo_naver.png"></p>
+                                                            </div>
                                                             <div class="cafeTxt">
                                                                 <p class="tit">testettstsetsetsetsetsetsetsetsetset</p>
                                                                 <p class="date">2017.05.28</p>
@@ -869,7 +912,9 @@
                                                 <a href="#">
                                                     <div class="cafeInfo ">
                                                         <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">네이버5</div>
+                                                            <div class="cafeLogo">
+                                                                <p><img src="images/icon/logo_naver.png"></p>
+                                                            </div>
                                                             <div class="cafeTxt">
                                                                 <p class="tit">testettstsetsetsetsetsetsetsetsetset</p>
                                                                 <p class="date">2017.05.28</p>
@@ -882,7 +927,9 @@
                                                 <a href="#">
                                                     <div class="cafeInfo ">
                                                         <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">네이버6</div>
+                                                            <div class="cafeLogo">
+                                                                <p><img src="images/icon/logo_naver.png"></p>
+                                                            </div>
                                                             <div class="cafeTxt">
                                                                 <p class="tit">testettstsetsetsetsetsetsetsetsetset</p>
                                                                 <p class="date">2017.05.28</p>
@@ -895,7 +942,9 @@
                                                 <a href="#">
                                                     <div class="cafeInfo ">
                                                         <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">네이버7</div>
+                                                            <div class="cafeLogo">
+                                                                <p><img src="images/icon/logo_naver.png"></p>
+                                                            </div>
                                                             <div class="cafeTxt">
                                                                 <p class="tit">testettstsetsetsetsetsetsetsetsetset</p>
                                                                 <p class="date">2017.05.28</p>
@@ -910,8 +959,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--//sublist-->
-                    </div>
+                    </div><!--//글감리스트-->
                 </div>
             </div>
         </div>
