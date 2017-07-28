@@ -937,7 +937,7 @@
             <input type="hidden" name= "title" id= "frmTitle" value=""/>
             <input type="hidden" name= "sType" id= "sType" value=""/>
             <input type="hidden" name= "n_idx" id= "n_idx" value=""/>
-            <textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;" placeholder="내용을 입">
+            <textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;" placeholder="내용을 입력하세요">
             
             </textarea>
             <!--textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;">
@@ -1054,13 +1054,15 @@ var sContent = "" ;
             });
         }
 
-        function onSuccess(json, status){
+        function onSuccess(json, status)
+        {
             if(json.code == '1')
             {
                 alert(json.msg);
             }
         }
-        function onError(data, status){
+        function onError(data, status)
+        {
          alert("error");
         }
 
