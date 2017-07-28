@@ -710,8 +710,8 @@
                     <!--맞춤법검사-->
                     <div class="addOn addOn0">
                         <div class="splChk">
-                            <div class="splChkBtn">
-                                <a href="javascript:;">재검사</a>
+                            <div class="addOnIcon">
+                                <a class="btn" href="javascript:;" title="재검사"><i class="fa fa-repeat" aria-hidden="true"></i></a>
                                 <!--<a href="javascript:;">전체적용</a>-->
                             </div>
                             <!--<div class="splChkInfo">
@@ -766,8 +766,8 @@
                     <!--윤문추천-->
                     <div class="addOn addOn1">
                         <div class="beautiChk">
-                            <div class="beautiChkBtn">
-                                <a href="javascript:;">재검사</a>
+                            <div class="addOnIcon">
+                                <a class="btn" href="javascript:;" title="재검사"><i class="fa fa-repeat" aria-hidden="true"></i></a>
                                 <!--<a href="javascript:;">전체적용</a>-->
                             </div>
                            <!-- <div class="beautiChkInfo">
