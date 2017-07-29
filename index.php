@@ -898,254 +898,16 @@
                     <!--맞춤법검사-->
                     <div class="addOn addOn0">
                         <div class="splChk">
-                            <div class="addOnIcon clearfix">
-                                <a class="btn" href="javascript:;" title="재검사"><i class="fa fa-repeat" aria-hidden="true"></i></a>
-                                <!--<a href="javascript:;">전체적용</a>-->
-                            </div>
-                            <!--<div class="splChkInfo">
-                                <p>총 글자수 : <span>951</span>, 수정<span>0</span>, 제안<span>4</span></p>
-                            </div>-->
-                            <div class="splChkBox">
-                                <ul>
-                                    <li>
-                                        <!--<div class="applyBtn">
-                                            적용<i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>-->
-                                        <div class="resultInfo">
-                                            <p>정규교과로</p>
-                                            <p class="splRight">정규 교과로</p>
-                                            <p class="exspl">*띄어쓰기 오류</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                       <!-- <div class="applyBtn">
-                                            적용<i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>-->
-                                        <div class="resultInfo">
-                                            <p>정규교과</p>
-                                            <p class="splRight">정규 교과</p>
-                                            <p class="exspl">*띄어쓰기 오류</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!--<div class="applyBtn">
-                                            적용<i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>-->
-                                        <div class="resultInfo">
-                                            <p>만들어낸다.이</p>
-                                            <p class="splRight">만들어낸다. 이</p>
-                                            <p class="exspl">*띄어쓰기 오류</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                       <!-- <div class="applyBtn">
-                                            적용<i class="fa fa-check" aria-hidden="true"></i>
-                                        </div>-->
-                                        <div class="resultInfo">
-                                            <p>문제해결을</p>
-                                            <p class="splRight">문제 해결을</p>
-                                            <p class="exspl">*띄어쓰기 오류</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                     <!--윤문추천-->
                     <div class="addOn addOn1">
                         <div class="beautiChk">
-                            <div class="addOnIcon clearfix">
-                                <a class="btn" href="javascript:;" title="재검사"><i class="fa fa-repeat" aria-hidden="true"></i></a>
-                                <!--<a href="javascript:;">전체적용</a>-->
-                            </div>
-                           <!-- <div class="beautiChkInfo">
-                                <p>총 글자수 : <span>951</span>, 수정<span>0</span>, 제안<span>4</span></p>
-                            </div>-->
-                            <div class="beautiChkBox">
-                                <ul>
-                                    <li class="beautiBoxList">
-                                        <div class="resultInfo">
-                                            <p class="getTxt">입력 : 우산을 쓰다</p>
-                                            <div class="recommedTxt">
-                                                <p class="recomTit"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 윤문 추천 결과</p>
-                                                <ul>
-                                                    <li>1. 우산을 받치다</li>
-                                                    <li>2. 우산을 접다</li>
-                                                    <li>3. 우산을 펴다</li>
-                                                    <li>4. 우산이 뒤집히다</li>
-                                                    <li>5. 우산이 펼쳐지다.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                     <!--글감리스트-->
                     <div class="addOn addOn2">
-                        <div id="bankSub" class="full-left-sublist">
-                            <div class="bsinner">
-                                <div class="bankSubTop">
-                                    <p class="bankSub-tit"><i class="fa fa-list-ul" aria-hidden="true"></i>글감리스트</p>
-                                    <p class="bankSub-categ"><i class="fa fa-angle-right" aria-hidden="true"></i><span><i class="fa fa-folder-open" aria-hidden="true"></i>라이언</span></p>
-                                    <p class="bankSub-total">전체 | <span>40</span></p>
-                                </div>
-                                <div class="subSearch clearfix">
-                                    <div class="subSearch-left">
-                                        <div class="search-inner">
-                                            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                            <input type="search" id="search" placeholder="제목 검색" />
-                                        </div>
-                                    </div>
-                                    <div class="subSearch-right">
-                                        <div class="search-icon">
-                                            <ul>
-                                                <li class="bookMark">
-                                                    <a class="bookMarkBtn" href="javascript:;" title="북마크"><i class="fa fa-bookmark-o" aria-hidden="true"></i></a>
-                                                    <!--<div>북마크</div>-->
-                                                </li>
-                                                <li class="moveCateg">
-                                                    <a class="moveCategBtn" href="javascript:;" title="카테고리"><i class="fa fa-clipboard fa-1g" aria-hidden="true"></i></a>
-                                                    <!--<div>카테고리 이동</div>-->
-                                                    <!--카테고리 이동 안내 창-->
-                                                    <div class="selCateg">
-                                                        <div class="selCateg-inner">
-                                                            <div class="selList">
-                                                                <ul>
-                                                                    <li class="goCateg"><i class="fa fa-folder-open" aria-hidden="true"></i>라이언</li>
-                                                                    <li class="goCateg"><i class="fa fa-folder-open" aria-hidden="true"></i>프로도</li>
-                                                                    <li class="goCateg"><i class="fa fa-folder-open" aria-hidden="true"></i>어피치</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!--//카테고리 이동 안내 창-->
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sroll-inner">
-                                    <!--리스트가 화면 height넘어가면, class scroll-subList생김-->
-                                    <div class="scroll-subList">
-                                        <!--글감리스트-->
-                                        <ul class="bankSubList">
-                                            <li>
-                                                <a href="#">
-                                                    <div class="cafeInfo ">
-                                                        <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">
-                                                                <p><img src="images/icon/logo_naver.png"></p>
-                                                            </div>
-                                                            <div class="cafeTxt">
-                                                                <p class="tit">소프트웨어 교육과 미래</p>
-                                                                <p></p>
-                                                                <p class="date">2017.06.21</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="cafeInfo ">
-                                                        <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">
-                                                                <p><img src="images/icon/logo_naver.png"></p>
-                                                            </div>
-                                                            <div class="cafeTxt">
-                                                                <p class="tit">test</p>
-                                                                <p></p>
-                                                                <p class="date">2017.06.18</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="cafeInfo ">
-                                                        <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">
-                                                                <p><img src="images/icon/logo_naver.png"></p>
-                                                            </div>
-                                                            <div class="cafeTxt">
-                                                                <p class="tit">testettstsetsetsetsetsetsetsetsetset</p>
-                                                                <p class="date">2017.05.28</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="cafeInfo ">
-                                                        <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">
-                                                                <p><img src="images/icon/logo_naver.png"></p>
-                                                            </div>
-                                                            <div class="cafeTxt">
-                                                                <p class="tit">testettstsetsetsetsetsetsetsetsetset</p>
-                                                                <p class="date">2017.05.28</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="cafeInfo ">
-                                                        <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">
-                                                                <p><img src="images/icon/logo_naver.png"></p>
-                                                            </div>
-                                                            <div class="cafeTxt">
-                                                                <p class="tit">testettstsetsetsetsetsetsetsetsetset</p>
-                                                                <p class="date">2017.05.28</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="cafeInfo ">
-                                                        <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">
-                                                                <p><img src="images/icon/logo_naver.png"></p>
-                                                            </div>
-                                                            <div class="cafeTxt">
-                                                                <p class="tit">testettstsetsetsetsetsetsetsetsetset</p>
-                                                                <p class="date">2017.05.28</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="cafeInfo ">
-                                                        <div class="cafeinner clearfix">
-                                                            <div class="cafeLogo">
-                                                                <p><img src="images/icon/logo_naver.png"></p>
-                                                            </div>
-                                                            <div class="cafeTxt">
-                                                                <p class="tit">testettstsetsetsetsetsetsetsetsetset</p>
-                                                                <p class="date">2017.05.28</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <!--//글감리스트-->
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="bankSub" class="full-left-sublist listArticle">
                         </div>
                     </div><!--//글감리스트-->
                 </div>
@@ -1323,8 +1085,6 @@ var sContent = "" ;
             $(this).siblings("li").removeClass("on");
             $(this).addClass("on");
 
-            submitContents();
-
             var listIndex = $(this).index();
             $(".addOn").hide();
 
@@ -1350,6 +1110,8 @@ var sContent = "" ;
 
         function spellChk()
         {
+            submitContents();
+
             // $('.splChk').html('맞춤법 검사하기');
             var n_idx = $('#n_idx').val();
             var s_idx = '';
@@ -1374,6 +1136,8 @@ var sContent = "" ;
         }
         function beautiChk()
         {
+            submitContents();
+
             // $('.splChk').html('맞춤법 검사하기');
             var n_idx = $('#n_idx').val();
             var s_idx = '';
@@ -1393,17 +1157,12 @@ var sContent = "" ;
               }
             );
         }
-        function listArticle()
+        function listArticle(sType='list')
         {
-            // $('.splChk').html('맞춤법 검사하기');
-            var n_idx = $('#n_idx').val();
-            var s_idx = '';
-
             $.post(
               "/unoteapi/Ibricks/apiListArticle"
               ,{
-                   "n_idx" : n_idx
-                   ,"s_idx" : s_idx
+                   "sType" : sType
                }
               ,function(data, status) {
                 if (status == "success" && data.code == 1)
@@ -1443,7 +1202,6 @@ var sContent = "" ;
     $(".search-icon ul li").on("click", function () {
         $(this).siblings("li").removeClass("on");
         $(this).addClass("on");
-
     });
     /*카테고리 아이콘 클릭시 */
     $(".moveCateg").on("click",function () {
