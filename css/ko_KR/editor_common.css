@@ -112,7 +112,7 @@ input {outline: none;border: 0px;}
 #se2_sample .testBtn{
     text-align: left;
 }
-#se2_sample .testBtn>div{
+#se2_sample .testBtn input{
     cursor: pointer;
 }
 .newBtn{
@@ -294,6 +294,7 @@ input {outline: none;border: 0px;}
     padding: 20px;
     border: 1px solid #eee;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .beautiChk .beautiChkBox .resultInfo p.getTxt{
