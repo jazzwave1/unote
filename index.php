@@ -921,7 +921,7 @@
             <!--<input type="button" onclick="pasteHTML();" value="본문에 내용 넣기" />-->
             <!--<input type="button" onclick="showHTML();" value="본문 내용 가져오기" />-->
             <div class="newBtn" style="display:inline-block">
-                <input type="button" value="새노트"/>
+                <input type="button" onclick="newNote();" value="새노트"/>
             </div>
             <!--<div class="callNoteBtn" style="display:inline-block">
                 <input type="button" value="불러오기"/>
