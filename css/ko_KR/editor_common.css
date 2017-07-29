@@ -112,6 +112,9 @@ input {outline: none;border: 0px;}
 #se2_sample .testBtn{
     text-align: left;
 }
+#se2_sample .testBtn>div{
+    cursor: pointer;
+}
 .newBtn{
 
 
