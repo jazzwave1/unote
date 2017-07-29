@@ -1165,7 +1165,8 @@
                 <input type="button" value="불러오기"/>
             </div>-->
             <div class="serverBtn" style="display:inline-block">
-                <input type="button" onclick="submitContents();" value="저장하기"/>
+                <input type="button" onclick="submitContents('save');" value="저장하기"/>
+                <span id="saveNotice" style="display:none; color:red;">저장되었습니다.</span>
             </div>
             <!--<input type="button" onclick="setDefaultFont();" value="기본 폰트 지정하기 (궁서_24)" />-->
         </div>
@@ -1218,32 +1219,39 @@ var sContent = "" ;
         oEditor.run({
             fnOnAppReady: function(){
 
-                $.post(
-                        "/unoteapi/Note/rpcGetNoteInfo"
-                        ,{
-                            //"n_idx" : $('#site').val() 
-                            "n_idx" : <?=$_GET['n_idx']?> 
-                        }
-                        ,function(data, status) 
-                        {
-                            if (status == "success" && data.code == 1)
-                            {
-                                sContent = data.aNoteDetail.text;
-                                $('.noteTit').children('input').val(data.aNoteDetail.title);
-                                $('#sType').val('edit');
-                                $('#n_idx').val(<?=$_GET['n_idx']?>);
+                var n_idx = <?=(isset($_GET['n_idx'])) ? $_GET['n_idx'] : '""'?>;
 
-                                //예제 코드
-                                oEditor.exec("PASTE_HTML", [sContent]);
+                if(n_idx > 0)
+                {
+                    $.post(
+                            "/unoteapi/Note/rpcGetNoteInfo"
+                            ,{
+                                //"n_idx" : $('#site').val() 
+                                "n_idx" : n_idx
                             }
-                            else if (status == "success" && data.code == 301)
+                            ,function(data, status) 
                             {
-                                alert(data.msg);
-                                opener.close();
-                                // window.close();
+                                if (status == "success" && data.code == 1)
+                                {
+                                    sContent = data.aNoteDetail.text;
+                                    $('.noteTit').children('input').val(data.aNoteDetail.title);
+                                    $('#sType').val('edit');
+                                    $('#n_idx').val(n_idx);
+
+                                    //예제 코드
+                                    oEditor.exec("PASTE_HTML", [sContent]);
+                                }
+                                else if (status == "success" && data.code == 301)
+                                {
+                                    alert(data.msg);
+                                    opener.close();
+                                    // window.close();
+                                }
                             }
-                        }
-                );
+                    );
+                    
+                }
+
             }
         });
 
@@ -1272,7 +1280,7 @@ var sContent = "" ;
             oEditor.setDefaultFont(sDefaultFont, nFontSize);
         }
 
-        function submitContents()
+        function submitContents($sType='')
         {
             oEditor.exec("UPDATE_CONTENTS_FIELD");  // 에디터의 내용이 textarea에 적용됩니다.
 
@@ -1294,7 +1302,11 @@ var sContent = "" ;
         {
             if(json.code == '1')
             {
-                alert(json.msg);
+                $('#saveNotice').show();
+
+                setTimeout(function() {
+                    $('#saveNotice').fadeOut(500);
+                }, 3000);
             }
         }
         function onError(data, status)
@@ -1302,8 +1314,106 @@ var sContent = "" ;
          alert("error");
         }
 
+        function newNote()
+        {
+            window.open('/unote/index.php');
+        }
 
+        $(".addOnList ul li").on("click",function(){
+            $(this).siblings("li").removeClass("on");
+            $(this).addClass("on");
 
+            submitContents();
+
+            var listIndex = $(this).index();
+            $(".addOn").hide();
+
+            // 맞춤법 검사하기
+            if(listIndex == 0)
+            {
+                $(".addOn"+listIndex).show();
+                spellChk();
+            }
+            // 윤문 추천 받기
+            if(listIndex == 1)
+            {
+                $(".addOn"+listIndex).show();
+                beautiChk();
+            }        
+            // 글감 불러오기
+            if(listIndex == 2)
+            {
+                $(".addOn"+listIndex).show();
+                listArticle();
+            }
+        });
+
+        function spellChk()
+        {
+            // $('.splChk').html('맞춤법 검사하기');
+            var n_idx = $('#n_idx').val();
+            var s_idx = '';
+
+            $.post(
+              "/unoteapi/Ibricks/apiSpellCheck"
+              ,{
+                   "n_idx" : n_idx
+                   ,"s_idx" : s_idx
+               }
+              ,function(data, status) {
+                if (status == "success" && data.code == 1)
+                {
+                    oEditor.exec("DELETE_HTML");
+                    //editor 새로고침 추가 필요
+                    oEditor.exec("PASTE_HTML", [data.chkText]);
+                    $('.splChk').html(data.html);
+                    // console.log(data.aNoteDetail); 
+                }
+              }
+            );
+        }
+        function beautiChk()
+        {
+            // $('.splChk').html('맞춤법 검사하기');
+            var n_idx = $('#n_idx').val();
+            var s_idx = '';
+
+            $.post(
+              "/unoteapi/Ibricks/apiBeautiCheck"
+              ,{
+                   "n_idx" : n_idx
+                   ,"s_idx" : s_idx
+               }
+              ,function(data, status) {
+                if (status == "success" && data.code == 1)
+                {
+                    $('.beautiChk').html(data.html);
+                    // console.log(data.aNoteDetail); 
+                }
+              }
+            );
+        }
+        function listArticle()
+        {
+            // $('.splChk').html('맞춤법 검사하기');
+            var n_idx = $('#n_idx').val();
+            var s_idx = '';
+
+            $.post(
+              "/unoteapi/Ibricks/apiListArticle"
+              ,{
+                   "n_idx" : n_idx
+                   ,"s_idx" : s_idx
+               }
+              ,function(data, status) {
+                if (status == "success" && data.code == 1)
+                {
+                    $('.listArticle').html(data.html);
+                    // console.log(data.aNoteDetail); 
+                }
+              }
+            );
+        }
 
     }
 
@@ -1319,16 +1429,16 @@ var sContent = "" ;
      */
 
     /*addOn*/
-    $(".addOn0").show();
+    // $(".addOn0").show();
 
-    $(".addOnList ul li").on("click",function(){
-        $(this).siblings("li").removeClass("on");
-        $(this).addClass("on");
+    // $(".addOnList ul li").on("click",function(){
+    //     $(this).siblings("li").removeClass("on");
+    //     $(this).addClass("on");
 
-        var listIndex = $(this).index();
-        $(".addOn").hide();
-        $(".addOn"+listIndex).show();
-    });
+    //     var listIndex = $(this).index();
+    //     $(".addOn").hide();
+    //     $(".addOn"+listIndex).show();
+    // });
     /*글감리스트 addOn 아이콘*/
     $(".search-icon ul li").on("click", function () {
         $(this).siblings("li").removeClass("on");
