@@ -110,7 +110,7 @@
             </div>
             <div class="edi-right addOnList">
                 <ul class="clearfix">
-                    <li class="on">
+                    <li>
                         <span class="addOn-btn"><!--<i class="fa fa-check-square-o" aria-hidden="true"></i>-->맞춤법 검사하기</span>
                     </li>
                     <li>
