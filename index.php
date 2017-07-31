@@ -1157,12 +1157,13 @@ var sContent = "" ;
               }
             );
         }
-        function listArticle(sType='list')
+        function listArticle(sType='list', category_idx='')
         {
             $.post(
               "/unoteapi/Ibricks/apiListArticle"
               ,{
                    "sType" : sType
+                   ,"category_idx" : category_idx
                }
               ,function(data, status) {
                 if (status == "success" && data.code == 1)
@@ -1172,6 +1173,11 @@ var sContent = "" ;
                 }
               }
             );
+        }
+
+        function getCategoryList()
+        {
+            $(".selCateg").show();
         }
 
     }
