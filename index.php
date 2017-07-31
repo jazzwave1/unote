@@ -117,7 +117,7 @@
                         <span class="addOn-btn"><!--<i class="fa fa-comments" aria-hidden="true"></i>-->윤문 추천 받기</span>
                     </li>
                     <li>
-                        <span class="addOn-btn"><!--<i class="fa fa-list" aria-hidden="true"></i>-->글감 불러오기</span>
+                        <span class="addOn-btn"><!--<i class="fa fa-list" aria-hidden="true"></i>-->글감 확인하기</span>
                     </li>
                 </ul>
             </div>
@@ -1110,7 +1110,7 @@ var sContent = "" ;
 
         function spellChk()
         {
-            submitContents();
+            // submitContents();
 
             // $('.splChk').html('맞춤법 검사하기');
             var n_idx = $('#n_idx').val();
@@ -1125,7 +1125,7 @@ var sContent = "" ;
               ,function(data, status) {
                 if (status == "success" && data.code == 1)
                 {
-                    oEditor.exec("DELETE_HTML");
+                    // oEditor.exec("DELETE_HTML");
                     //editor 새로고침 추가 필요
                     oEditor.exec("PASTE_HTML", [data.chkText]);
                     $('.splChk').html(data.html);
@@ -1178,6 +1178,13 @@ var sContent = "" ;
         function getCategoryList()
         {
             $(".selCateg").show();
+        }
+
+        function text_replace(s_idx)
+        {
+            alert($('#s_idx_'+s_idx).text());
+            alert($('#s_idx_'+s_idx).html());
+            // $('#s_idx_'+s_idx).replace('data.html');
         }
 
     }
