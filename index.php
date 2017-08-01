@@ -1188,39 +1188,6 @@ var sContent = "" ;
         {
             $(".selCateg").show();
         }
-
-        function text_checking(s_idx, key)
-        {
-            $(".splChkList").removeClass('on');
-            $("#splChkList_"+s_idx).addClass('on');
-            
-            $("#applySpel_"+s_idx).show();
-            $("#closeSpel_"+s_idx).show();
-
-            // var text = $("#ir1").val();
-            // var search = $('#splWrong_'+s_idx+key).text();
-            // var replace = '<span class="spelChk">'+$('#splWrong_'+s_idx+key).text()+'</span>';
-
-            // text = text.replace(new RegExp(search,'gi'), replace);
-
-            // oEditor.setIR('');
-            // oEditor.exec("PASTE_HTML", [text]);
-        }
-
-        function text_replace(s_idx, key)
-        {
-            var text = $("#ir1").val();
-            var search = $('#splWrong_'+s_idx+key).text();
-            var replace = $('#splRight_'+s_idx+key).text();
-
-            text = text.replace(new RegExp(search,'gi'), replace);
-            // text = text.replace('새노트쓰기테스트', '새 노트 쓰기 테스트');
-
-            oEditor.setIR('');
-            oEditor.exec("PASTE_HTML", [text]);
-
-            $("#applySpel_"+s_idx).hide();
-        }
     }
 </script>
 
