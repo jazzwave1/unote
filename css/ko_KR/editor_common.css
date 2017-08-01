@@ -357,9 +357,18 @@ input {outline: none;border: 0px;}
     cursor: pointer;
 }
 .bankSubTop .bankSub-categ{
+    display: inline-block;
     padding-left: 10px;
     font-weight: bold;
     cursor: pointer;
+
+    font-weight: bold;
+    width: 60%;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 .bankSubTop .bankSub-categ i{
     padding-right: 10px;
@@ -449,6 +458,10 @@ input {outline: none;border: 0px;}
 
 .selCateg .selList ul li{
     float: none;
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding-bottom: 5px;
     text-align: left;
     font-weight: bold;
@@ -490,46 +503,50 @@ input {outline: none;border: 0px;}
     border-bottom: 1px solid #eee;
     padding: 10px 0
 }
-.cafeInfo div{
-    float: left;
-}
+
 .cafeInfo .cafeinner{
-    padding: 0 10px;
+    width: 100%;
 }
 .cafeInfo .cafeLogo{
-    width: 60px;
-    line-height: 60px;
-    height: 100%;
+    float: left;
+    width: 20%;
+}
+.cafeInfo .cafeLogo p{
+    height: 60px;
     text-align: center;
     border-radius: 50%;
 }
-.cafeInfo .cafeLogo p{
-    padding: 10px;
-}
 .cafeInfo .cafeLogo p img{
-    width: 100%;
+    width: 50px;
+    height: 50px;
+    padding-top: 5px;
 }
 .cafeInfo .cafeTxt{
-    /*width: 180px;*/
-    padding-top: 10px;
-    padding-left: 10px;
+    float: left;
+    width: 80%;
 }
 .cafeInfo .cafeTxt .tit{
+    display: block;
+    padding: 10px 20px 5px 5px;
     font-weight: bold;
-    display: -webkit-box;
-    /*max-height: px;*/
-    -webkit-line-clamp: 2;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    word-wrap:break-word;
+    font-size: 14px;
 }
 .cafeInfo .cafeTxt .date{
-    font-size: 11px;
+    font-size: 14px;
+    padding-left:5px;
 }
 .cafeInfo .cafeTxt p{
 }
-
+.cafeInfo .bookMarkBtn{
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    font-size: 16px;
+    color:#fdd66d;
+}
 /*bootBtn*/
 .btn{
     display: inline-block;
