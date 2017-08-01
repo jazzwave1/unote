@@ -936,6 +936,7 @@
             <input type="hidden" name= "title" id= "frmTitle" value=""/>
             <input type="hidden" name= "sType" id= "sType" value=""/>
             <input type="hidden" name= "n_idx" id= "n_idx" value=""/>
+            <input type="hidden" name= "sBtnType" id= "sBtnType" value=""/>
             <textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;" placeholder="내용을 입력하세요">
             
             </textarea>
@@ -1042,11 +1043,12 @@ var sContent = "" ;
             oEditor.setDefaultFont(sDefaultFont, nFontSize);
         }
 
-        function submitContents($sType='')
+        function submitContents(sBtnType='')
         {
             oEditor.exec("UPDATE_CONTENTS_FIELD");  // 에디터의 내용이 textarea에 적용됩니다.
 
             $('#frmTitle').val($('.noteTit').children('input').val());
+            $('#sBtnType').val(sBtnType);
 
             var formData = $("#noteForm").serialize();
             
@@ -1062,18 +1064,30 @@ var sContent = "" ;
 
         function onSuccess(json, status)
         {
-            if(json.code == '1')
+            if(json.sBtnType == 'save' && json.code == '1')
             {
-                $('#saveNotice').show();
+                if(json.pk){
+                    $('#sType').val('edit');
+                    $('#n_idx').val(json.pk);
+                }
 
+                $('#saveNotice').show();
                 setTimeout(function() {
                     $('#saveNotice').fadeOut(500);
                 }, 3000);
             }
+            else if(json.sBtnType == 'spellChk')
+            {
+                spellChk();
+            }
+            else if(json.sBtnType == 'beautiChk')
+            {
+                beautiChk();
+            }
         }
         function onError(data, status)
         {
-         alert("error");
+            alert("error");
         }
 
         function newNote()
@@ -1092,13 +1106,13 @@ var sContent = "" ;
             if(listIndex == 0)
             {
                 $(".addOn"+listIndex).show();
-                spellChk();
+                submitContents('spellChk');
             }
             // 윤문 추천 받기
             if(listIndex == 1)
             {
                 $(".addOn"+listIndex).show();
-                beautiChk();
+                submitContents('beautiChk');
             }        
             // 글감 불러오기
             if(listIndex == 2)
@@ -1110,9 +1124,6 @@ var sContent = "" ;
 
         function spellChk()
         {
-            // submitContents();
-
-            // $('.splChk').html('맞춤법 검사하기');
             var n_idx = $('#n_idx').val();
             var s_idx = '';
 
@@ -1125,8 +1136,8 @@ var sContent = "" ;
               ,function(data, status) {
                 if (status == "success" && data.code == 1)
                 {
-                    // oEditor.exec("DELETE_HTML");
-                    //editor 새로고침 추가 필요
+                    // editor 새로고침 추가 필요
+                    oEditor.setIR('');
                     oEditor.exec("PASTE_HTML", [data.chkText]);
                     $('.splChk').html(data.html);
                     // console.log(data.aNoteDetail); 
@@ -1136,8 +1147,6 @@ var sContent = "" ;
         }
         function beautiChk()
         {
-            submitContents();
-
             // $('.splChk').html('맞춤법 검사하기');
             var n_idx = $('#n_idx').val();
             var s_idx = '';
@@ -1180,66 +1189,41 @@ var sContent = "" ;
             $(".selCateg").show();
         }
 
-        function text_replace(s_idx)
+        function text_checking(s_idx, key)
         {
-            alert($('#s_idx_'+s_idx).text());
-            alert($('#s_idx_'+s_idx).html());
-            // $('#s_idx_'+s_idx).replace('data.html');
+            $(".splChkList").removeClass('on');
+            $("#splChkList_"+s_idx).addClass('on');
+            
+            $("#applySpel_"+s_idx).show();
+            $("#closeSpel_"+s_idx).show();
+
+            // var text = $("#ir1").val();
+            // var search = $('#splWrong_'+s_idx+key).text();
+            // var replace = '<span class="spelChk">'+$('#splWrong_'+s_idx+key).text()+'</span>';
+
+            // text = text.replace(new RegExp(search,'gi'), replace);
+
+            // oEditor.setIR('');
+            // oEditor.exec("PASTE_HTML", [text]);
         }
 
-    }
+        function text_replace(s_idx, key)
+        {
+            var text = $("#ir1").val();
+            var search = $('#splWrong_'+s_idx+key).text();
+            var replace = $('#splRight_'+s_idx+key).text();
 
+            text = text.replace(new RegExp(search,'gi'), replace);
+            // text = text.replace('새노트쓰기테스트', '새 노트 쓰기 테스트');
 
+            oEditor.setIR('');
+            oEditor.exec("PASTE_HTML", [text]);
 
-
-</script>
-<script>
-    /*add Jiyun*/
-
-    /*글감리스트 addOn 아이콘*/
-    $(".search-icon ul li").on("click", function () {
-        $(this).siblings("li").removeClass("on");
-        $(this).addClass("on");
-    });
-
-    /*맞춤법 검사 리스트*/
-    $("li.splChkList").on("click",function () {
-        $(this).siblings("li").removeClass("on");
-        $(this).addClass("on");
-    })
-    /*맞춤법 적용 아이콘 클릭*/
-    $(".applySpel").on("click",function () {
-       alert("OK");
-    });
-    /*맞춤법 닫기 아이콘 클릭*/
-    $(".closeSpel").on("click",function () {
-       $(this).parent().parent("li.splChk").hide();
-    });
-    /*카테고리 아이콘 클릭시 */
-    $(".moveCateg").on("click",function () {
-        $(".moveCateg").toggleClass("on");
-        $(".selCateg").show();
-    });
-    $(document).mouseup(function (e) {
-        var container = $(".selCateg");
-        if (!container.is(e.target) && container.has(e.target).length === 0){
-            container.hide();
-            $(".moveCategBtn").removeClass("on");
+            $("#applySpel_"+s_idx).hide();
         }
-    });
-    function responsiveView() {
-        var wSize = $(window).width();
-        var wHeight = $(window).height();
-        var editorHeight = wHeight - 111;
-        var addonHeight = wHeight - 60;
-
-        $(".se2_input_area").height(editorHeight);
-        $("#addOnWrap").height(addonHeight);
-        $(".addOnCon").height(editorHeight);
     }
-    $(window).on('load', responsiveView);
-    $(window).on('resize', responsiveView);
 </script>
+
 <!--Example End-->
 </body>
 </html>
