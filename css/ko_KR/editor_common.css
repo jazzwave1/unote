@@ -240,29 +240,41 @@ input {outline: none;border: 0px;}
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+.splChk .splChkBox ul li.on{
+    border-left: 5px solid #2980b9;
+}
 .splChk .splChkBox .applyBtn{
-    cursor: pointer;
     color: #2980b9;
     text-align: right;
-    padding: 10px;
-    font-size: 14px;
+    padding: 10px 10px 0 0;
+    z-index: 500;
+}
+.splChk .splChkBox .applyBtn i{
+    cursor: pointer;
+    display: inline-block;
+    padding-right: 5px;
+    font-size: 24px
 }
 .splChk .splChkBox .resultInfo{
     text-align: left;
-    padding-top: 20px;
     padding-left: 20px;
 }
 .splChk .splChkBox .resultInfo p{
-    /**/
+    font-size: 14px;
 }
 .splChk .splChkBox .resultInfo p.splRight{
     font-weight: bold;
     font-size: 14px;
     padding: 5px 0;
+    color: #2980b9;
 }
 .splChk .splChkBox .resultInfo p.exspl{
-    font-size: 10px;
-    color: red;
+    padding-top: 20px;
+    font-size: 13px;
+}
+.splChk .splChkBox .resultInfo p.exspl i.notiIcon{
+    padding-right: 5px;
+    font-weight: bold;
 }
 .addOnCon .addOn1{
     /*background-color: lightcyan;*/

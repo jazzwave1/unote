@@ -111,13 +111,13 @@
             <div class="edi-right addOnList">
                 <ul class="clearfix">
                     <li>
-                        <span class="addOn-btn"><!--<i class="fa fa-check-square-o" aria-hidden="true"></i>-->맞춤법 검사하기</span>
+                        <span class="addOn-btn"><!--<i class="fa fa-check-square-o" aria-hidden="true"></i>-->맞춤법검사</span>
                     </li>
                     <li>
-                        <span class="addOn-btn"><!--<i class="fa fa-comments" aria-hidden="true"></i>-->윤문 추천 받기</span>
+                        <span class="addOn-btn"><!--<i class="fa fa-comments" aria-hidden="true"></i>-->문장추천</span>
                     </li>
                     <li>
-                        <span class="addOn-btn"><!--<i class="fa fa-list" aria-hidden="true"></i>-->글감 확인하기</span>
+                        <span class="addOn-btn"><!--<i class="fa fa-list" aria-hidden="true"></i>-->참고글감</span>
                     </li>
                 </ul>
             </div>
@@ -1195,26 +1195,25 @@ var sContent = "" ;
 </script>
 <script>
     /*add Jiyun*/
-    /*$(".husky_seditor_ui_bold button").click(function(){
-     $(this).children(i).toggleClass("on");
-     });
-     */
 
-    /*addOn*/
-    // $(".addOn0").show();
-
-    // $(".addOnList ul li").on("click",function(){
-    //     $(this).siblings("li").removeClass("on");
-    //     $(this).addClass("on");
-
-    //     var listIndex = $(this).index();
-    //     $(".addOn").hide();
-    //     $(".addOn"+listIndex).show();
-    // });
     /*글감리스트 addOn 아이콘*/
     $(".search-icon ul li").on("click", function () {
         $(this).siblings("li").removeClass("on");
         $(this).addClass("on");
+    });
+
+    /*맞춤법 검사 리스트*/
+    $("li.splChkList").on("click",function () {
+        $(this).siblings("li").removeClass("on");
+        $(this).addClass("on");
+    })
+    /*맞춤법 적용 아이콘 클릭*/
+    $(".applySpel").on("click",function () {
+       alert("OK");
+    });
+    /*맞춤법 닫기 아이콘 클릭*/
+    $(".closeSpel").on("click",function () {
+       $(this).parent().parent("li.splChk").hide();
     });
     /*카테고리 아이콘 클릭시 */
     $(".moveCateg").on("click",function () {
