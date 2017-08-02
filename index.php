@@ -1188,6 +1188,12 @@ var sContent = "" ;
         {
             $(".selCateg").show();
         }
+        var wHeight = $(window).height();
+        $("#smart_editor2 .se2_input_area").css({
+            'width' : wHeight,
+            'overflow-x' : 'hidden',
+            'overflow-y' : 'scroll',
+        });
     }
 </script>
 
