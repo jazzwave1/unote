@@ -1105,11 +1105,13 @@
     }
     $(window).on('load', responsiveView);
     $(window).on('resize', responsiveView);
-
+git
 
     var wHeight = $(window).height();
     $("#smart_editor2 .se2_input_area").css({
         'width' : wHeight,
+        'overflow-x' : 'hidden',
+        'overflow-y' : 'scroll',
     });
 </script>
 <!--Example End-->
