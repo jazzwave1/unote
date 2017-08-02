@@ -523,7 +523,7 @@ input {outline: none;border: 0px;}
 }
 .cafeInfo .cafeTxt{
     float: left;
-    width: 80%;
+    width: 70%;
 }
 .cafeInfo .cafeTxt .tit{
     display: block;
@@ -542,8 +542,8 @@ input {outline: none;border: 0px;}
 }
 .cafeInfo .bookMarkBtn{
     position: absolute;
-    right: 10px;
-    top: 25px;
+    right: 30px;
+    top: 30px;
     font-size: 16px;
     color:#fdd66d;
 }
