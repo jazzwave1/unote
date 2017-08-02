@@ -189,7 +189,7 @@ input {outline: none;border: 0px;}
     width: 100%;
 }
 #addOnWrap{
-    border-left:1px solid #eee;
+   /* border-left:1px solid #eee;*/
 }
 .addOnCon .addOn{
     display: none;
