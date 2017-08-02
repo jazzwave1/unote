@@ -1190,7 +1190,7 @@ var sContent = "" ;
         }
         var wHeight = $(window).height();
         $("#smart_editor2 .se2_input_area").css({
-            'width' : wHeight,
+            'height' : wHeight,
             'overflow-x' : 'hidden',
             'overflow-y' : 'scroll',
         });
