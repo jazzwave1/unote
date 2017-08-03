@@ -1068,13 +1068,12 @@ var sContent = "" ;
 
         function onSuccess(json, status)
         {
+            if(json.pk){
+                $('#sType').val('edit');
+                $('#n_idx').val(json.pk);
+            }
             if(json.sBtnType == 'save' && json.code == '1')
             {
-                if(json.pk){
-                    $('#sType').val('edit');
-                    $('#n_idx').val(json.pk);
-                }
-
                 $('#saveNotice').show();
                 setTimeout(function() {
                     $('#saveNotice').fadeOut(500);
