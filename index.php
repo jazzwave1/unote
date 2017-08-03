@@ -1050,6 +1050,10 @@ var sContent = "" ;
             $('#frmTitle').val($('.noteTit').children('input').val());
             $('#sBtnType').val(sBtnType);
 
+            var text = $('#ir1').val();
+            var newText = text.replace(/<span class="spelChk" style="background:red; color:#fff;">(.+)<\/span>/ig, "$1");
+            $('#ir1').val(newText);
+
             var formData = $("#noteForm").serialize();
             
             $.ajax({
