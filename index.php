@@ -1192,13 +1192,15 @@ var sContent = "" ;
             $(".selCateg").show();
         }
         var wHeight = $(window).height();
-        $("#smart_editor2").css({
-            'border-right' : '1px solid #eee'
-        });
+        var editorHeight = wHeight - 111;
         $("#smart_editor2 .se2_input_area").css({
-            'height' : wHeight,
+            'height' :  editorHeight,
             'overflow-x' : 'hidden',
             'overflow-y' : 'scroll',
+        });
+
+        $("#smart_editor2").css({
+            'border-right' : '1px solid #eee'
         });
     }
 </script>
