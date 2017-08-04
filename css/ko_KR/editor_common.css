@@ -548,6 +548,18 @@ input {outline: none;border: 0px;}
     font-size: 16px;
     color:#fdd66d;
 }
+/*글감 없을때*/
+.emptyData{
+    padding: 20px 0 0;
+    font-size: 14px;
+    color: #ccc;
+}
+.emptyData div{
+    padding-bottom: 5px;
+}
+.emptyIcon{
+    font-size: 18px;
+}
 /*bootBtn*/
 .btn{
     display: inline-block;
