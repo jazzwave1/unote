@@ -53,13 +53,14 @@
 #smart_editor2 .se2_l_line_height button{width:105px;height:19px;margin:0;padding:3px 0 2px 0px;background:none;text-align:left}
 #smart_editor2 .se2_l_line_height button span{visibility:visible;overflow:visible;position:relative;width:auto;height:auto;margin:0;padding:0 0 0 15px;font-size:12px;line-height:normal;color:#373737}
 #smart_editor2 .se2_l_line_height li button.active span{background:url("../../img/icon_set.gif?141007") 5px -30px no-repeat}
-#smart_editor2 .se2_l_line_height_user{clear:both;width:83px;margin:5px 0 0 12px;padding:10px 0 0 0;_padding:11px 0 0 0;background:url("../../img/bg_line1.gif") repeat-x}
+#smart_editor2 .se2_l_line_height_user{display:none; clear:both;width:83px;margin:5px 0 0 12px;padding:10px 0 0 0;_padding:11px 0 0 0;background:url("../../img/bg_line1.gif") repeat-x}
 #smart_editor2 .se2_l_line_height_user h3{margin:0 0 4px 0;_margin:0 0 2px -1px;padding:0;line-height:14px;color:#000;letter-spacing:-1px}
 #smart_editor2 .se2_l_line_height_user .bx_input{display:block;position:relative;width:83px}
 #smart_editor2 .se2_l_line_height_user .btn_up{position:absolute;top:2px;*top:3px;left:68px;width:13px;height:8px;background:url("../../img/ko_KR/btn_set.png?160622") -86px -54px no-repeat}
 #smart_editor2 .se2_l_line_height_user .btn_down{position:absolute;top:10px;*top:11px;left:68px;width:13px;height:8px;background:url("../../img/ko_KR/btn_set.png?160622") -86px -62px no-repeat}
 #smart_editor2 .se2_l_line_height_user .btn_area{margin:5px 0 10px 0}
-#smart_editor2 .se2_tool .btn_area .se2_btn_apply3{width:41px;height:24px;background:url("../../img/ko_KR/btn_set.png?160622") no-repeat}
+#smart_editor2 .se2_tool .btn_area .se2_btn_apply3{width:41px;height:24px;line-height: 24px; border-radius: 5px; border: 1px solid #2980b9/*background:url("../../img/ko_KR/btn_set.png?160622") no-repeat*/}
+#smart_editor2 .se2_tool .btn_area .se2_btn_apply3 div:hover{background: #2980b9; color: #fff;}
 #smart_editor2 .se2_tool .btn_area .se2_btn_cancel3{width:39px;height:24px;margin-left:3px;background:url("../../img/ko_KR/btn_set.png?160622") -41px 0 no-repeat}
 /* TEXT_TOOLBAR : QUOTE */
 #smart_editor2 .se2_quote{width:425px;height:56px}
@@ -119,20 +120,20 @@
 #smart_editor2 .se2_apply_character .se2_cancel{width:39px;height:24px;background:url("../../img/ko_KR/btn_set.png?160622") -41px 0 no-repeat;vertical-align:middle}
 /* TEXT_TOOLBAR : TABLECREATOR */
 #smart_editor2 .se2_table_set{position:relative;width:166px;margin:3px 11px 0 11px;padding:8px 0 0 0}
-#smart_editor2 .se2_table_set .se2_cell_num{float:left;width:73px}
-#smart_editor2 .se2_table_set .se2_cell_num dt{float:left;clear:both;width:17px;height:23px;margin:0;padding:0}
+#smart_editor2 .se2_table_set .se2_cell_num{/*float:left;width:73px*/}
+#smart_editor2 .se2_table_set .se2_cell_num dt{display:inline-block;float:left;clear:both;/*width:17px;*/height:23px;margin:0;padding-right: 10px;}
 #smart_editor2 .se2_table_set .se2_cell_num dt label{display:block;margin:5px 0 0 0;font-size:11px;color:#666}
-#smart_editor2 .se2_table_set .se2_cell_num dd{float:left;position:relative;width:54px;height:23px;margin:0;padding:0}
-#smart_editor2 .se2_table_set .se2_cell_num .input_ty2{display:block;width:32px;height:16px;*margin:-1px 0 0 0;padding:2px 19px 0 0px;border:1px solid #c7c7c7;font-family:tahoma,verdana,times New Roman;font-size:11px;color:#666;text-align:right;*direction:rtl}
+#smart_editor2 .se2_table_set .se2_cell_num dd{display:inline-block;float:left;position:relative;/*width:54px;*/height:23px;margin:0;padding:0}
+#smart_editor2 .se2_table_set .se2_cell_num .input_ty2{display:inline-block;width:120px;height:16px;*margin:-1px 0 0 0;padding:2px 19px 0 0px;border:1px solid #c7c7c7;font-family:tahoma,verdana,times New Roman;font-size:11px;color:#666;text-align:right;*direction:rtl}
 #smart_editor2 .se2_table_set .se2_cell_num .input_ty2::-ms-clear{display:none}
-#smart_editor2 .se2_table_set .se2_pre_table{float:right;width:91px;height:43px;background:#c7c7c7;border-spacing:1px}
+#smart_editor2 .se2_table_set .se2_pre_table{display:none;float:right;width:91px;height:43px;background:#c7c7c7;border-spacing:1px}
 #smart_editor2 .se2_table_set .se2_pre_table tr{background:#fff}
 #smart_editor2 .se2_table_set .se2_pre_table td{font-size:0;line-height:0}
 #smart_editor2 .se2_table_set .se2_add{position:absolute;top:2px;right:3px;width:13px;height:8px;background:url("../../img/ko_KR/btn_set.png?160622") -86px -54px no-repeat}
 #smart_editor2 .se2_table_set .se2_del{position:absolute;top:10px;right:3px;width:13px;height:8px;background:url("../../img/ko_KR/btn_set.png?160622") -86px -62px no-repeat}
 /* TEXT_TOOLBAR : TABLEEDITOR */
 #smart_editor2 .se2_table_set .se2_t_proper1{float:left;width:166px;margin:7px 0 0 0;padding:10px 0 5px;background:url("../../img/bg_line1.gif") repeat-x}
-#smart_editor2 .se2_table_set .se2_t_proper1 dt{width:166px;margin:0 0 6px 0}
+#smart_editor2 .se2_table_set .se2_t_proper1 dt{width:166px;margin:0 0 6px 0;text-align: left;}
 #smart_editor2 .se2_table_set .se2_t_proper1 dd{width:166px}
 #smart_editor2 .se2_table_set .se2_t_proper1 dt input{width:15px;height:15px;margin:-1px 3px 1px 0;_margin:-2px 3px 2px 0;vertical-align:middle}
 #smart_editor2 .se2_table_set .se2_t_proper1 dt label{font-weight:bold;font-size:11px;color:#666;letter-spacing:-1px;vertical-align:middle}
@@ -234,8 +235,13 @@
 #smart_editor2 .se2_layer_t_style .se2_t_style15{background-position:-276px -436px !important}
 #smart_editor2 .se2_layer_t_style .se2_t_style16{background-position:-322px -436px !important}
 #smart_editor2 .se2_table_set .se2_btn_area{float:left;width:166px;margin:6px 0 0 0;padding:12px 0 8px 0;background:url("../../img/bg_line1.gif") repeat-x;text-align:center}
-#smart_editor2 .se2_table_set button.se2_apply{width:41px;height:24px;margin-right:3px;background:url("../../img/ko_KR/btn_set.png?160622") no-repeat}
-#smart_editor2 .se2_table_set button.se2_cancel{width:39px;height:24px;background:url("../../img/ko_KR/btn_set.png?160622") -41px 0 no-repeat}
+
+#smart_editor2 .se2_table_set button.se2_apply{width:40px;height:24px;line-height:24px;margin-right:3px; border: 1px solid #2980b9; border-radius: 5px;/*background:url("../../img/ko_KR/btn_set.png?160622") no-repeat*/}
+#smart_editor2 .se2_table_set button.se2_apply div{color: #4f4f4f;}
+#smart_editor2 .se2_table_set button.se2_apply div:hover{color: #fff; background: #2980b9;}
+#smart_editor2 .se2_table_set button.se2_cancel{width:40px;height:24px;line-height:24px; border: 1px solid #2980b9; border-radius: 5px;/*background:url("../../img/ko_KR/btn_set.png?160622") -41px 0 no-repeat*/}
+#smart_editor2 .se2_table_set button.se2_cancel div{color: #4f4f4f;}
+#smart_editor2 .se2_table_set button.se2_cancel div:hover{color: #fff; background: #2980b9;}
 #smart_editor2 .se2_table_set .se2_rd{width:14px;height:14px;vertical-align:middle}
 #smart_editor2 .se2_table_set .se2_celltit{font-size:11px;font-size:11px;color:#666;letter-spacing:-1px}
 #smart_editor2 .se2_table_set dt label.se2_celltit{display:inline}

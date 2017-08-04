@@ -348,7 +348,7 @@
                                             <button type="button" title="1% 빼기" class="btn_down"><span>1% 빼기</span></button>
                                             </span>
                                                 <div class="btn_area">
-                                                    <button type="button" class="se2_btn_apply3"><span>적용</span></button><button type="button" class="se2_btn_cancel3"><span>취소</span></button>
+                                                    <button type="button" class="se2_btn_apply3"><span>적용</span><div>적용</div></button><button type="button" class="se2_btn_cancel3"><span>취소</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -592,7 +592,7 @@
                                                     </dl>
                                                 </fieldset>
                                                 <p class="se2_btn_area">
-                                                    <button type="button" class="se2_apply"><span>적용</span></button><button type="button" class="se2_cancel"><span>취소</span></button>
+                                                    <button type="button" class="se2_apply"><span>적용</span><div>적용</div></button><button type="button" class="se2_cancel"><span>취소</span><div>취소</div></button>
                                                 </p>
                                                 <!-- 딤드레이어 -->
                                                 <div class="se2_t_dim3"></div>
