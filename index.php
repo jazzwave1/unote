@@ -1043,6 +1043,17 @@ var sContent = "" ;
             oEditor.setDefaultFont(sDefaultFont, nFontSize);
         }
 
+        // 이전 맞춤법 검색어 표시 해제
+        function removeSpellStyle(text)
+        {
+            var pre_search = $('#pre_search').val();
+            if(pre_search){
+                var pre_search_style = '<span class="spelChk" style="background:red; color:#fff;">'+pre_search+'</span>';
+                text = text.replace(new RegExp(pre_search_style,'gi'), pre_search);
+            }
+            return text;
+        }
+
         function submitContents(sBtnType='')
         {
             oEditor.exec("UPDATE_CONTENTS_FIELD");  // 에디터의 내용이 textarea에 적용됩니다.
@@ -1051,8 +1062,7 @@ var sContent = "" ;
             $('#sBtnType').val(sBtnType);
 
             var text = $('#ir1').val();
-            var newText = text.replace(/<span class="spelChk" style="background:red; color:#fff;">(.+)<\/span>/ig, "$1");
-            $('#ir1').val(newText);
+            $('#ir1').val(removeSpellStyle(text));
 
             var formData = $("#noteForm").serialize();
             
