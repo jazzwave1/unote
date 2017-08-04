@@ -355,6 +355,7 @@ input {outline: none;border: 0px;}
 .bankSubTop .bankSub-tit{
     font-weight: bold;
     cursor: pointer;
+    overflow: hidden;
 }
 .bankSubTop .bankSub-categ{
     display: inline-block;
