@@ -6,8 +6,8 @@
     <meta http-equiv="Content-Style-Type" content="text/css">
     <title>Unote Editor</title>
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="css/ko_KR/editor_common.css" rel="stylesheet">
     <link href="css/ko_KR/smart_editor2.css" rel="stylesheet" type="text/css">
+    <link href="css/ko_KR/editor_common.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
     <script type="text/javascript" src="./js/lib/jindo2.all.js" charset="utf-8"></script>
     <script type="text/javascript" src="./js/lib/jindo_component.js" charset="utf-8"></script>
@@ -102,7 +102,7 @@
     <div id="editorHeader">
         <div class="edi-hinner clearfix">
             <div class="edi-left">
-                <h1><a href="javascript:;"><img src="images/editor_logo.png" alt="글동로고"></a></h1>
+                <h1><a href="javascript:;"><img src="images/edi_logo.png" alt="글동로고"></a></h1>
             </div>
             <div class="edi-center">
                 <div class="noteTit"><input type="text" value="제목 없는 문서"></div>
@@ -127,6 +127,10 @@
     <!--contents-->
     <div id="editorCont" class="clearfix">
         <div class="left">
+            <!--확장버튼-->
+            <div class="expandBtn">
+                <div class="expand-inner" title="화면 크게"><i class="fa fa-expand" aria-hidden="true"></i></div>
+            </div>
             <!-- SE2 Markup Start -->
             <div id="smart_editor2">
                 <div id="smart_editor2_content"><a href="#se2_iframe" class="blind">글쓰기영역으로 바로가기</a>
@@ -134,7 +138,7 @@
 
                         <div class="se2_text_tool husky_seditor_text_tool">
                             <ul class="se2_font_type">
-                                <li class="husky_seditor_ui_fontName"><button type="button" class="se2_font_family" title="글꼴"><span class="husky_se2m_current_fontName">글꼴</span></button>
+                                <li class="husky_seditor_ui_fontName"><button type="button" class="se2_font_family" title="글꼴"><span class="husky_se2m_current_fontName">글꼴</span><i class="fa fa-angle-down" aria-hidden="true"></i></button>
                                     <!-- 글꼴 레이어 -->
                                     <div class="se2_layer husky_se_fontName_layer">
                                         <div class="se2_in_layer">
@@ -152,7 +156,7 @@
                                     <!-- //글꼴 레이어 -->
                                 </li>
 
-                                <li class="husky_seditor_ui_fontSize"><button type="button" class="se2_font_size" title="글자크기"><span class="husky_se2m_current_fontSize">크기</span></button>
+                                <li class="husky_seditor_ui_fontSize"><button type="button" class="se2_font_size" title="글자크기"><span class="husky_se2m_current_fontSize">크기</span><i class="fa fa-angle-down" aria-hidden="true"></i></button>
                                     <!-- 폰트 사이즈 레이어 -->
                                     <div class="se2_layer husky_se_fontSize_layer">
                                         <div class="se2_in_layer">
@@ -327,7 +331,7 @@
 
                                 <li class="husky_seditor_ui_indent"  style="display:none"><button type="button" title="들여쓰기[Tab]" class="se2_indent"><span class="_buttonRound">들여쓰기[Tab]</span></button></li>
 
-                                <li class="husky_seditor_ui_lineHeight last_child"><button type="button" title="줄간격" class="se2_lineheight"><!--<i class="fa fa-text-height" aria-hidden="true"></i>--><img src="images/icon/icon_edit_line.png"><span class="_buttonRound tool_bg">줄간격</span></button>
+                                <li class="husky_seditor_ui_lineHeight last_child"><button type="button" title="줄간격" class="se2_lineheight"><i class="fa fa-text-height" aria-hidden="true"></i><!--<img src="images/icon/icon_edit_line.png">--><span class="_buttonRound tool_bg">줄간격</span><i class="fa fa-angle-down" aria-hidden="true"></i></button>
                                     <!-- 줄간격 레이어 -->
                                     <div class="se2_layer husky_se2m_lineHeight_layer">
                                         <div class="se2_in_layer">
@@ -464,7 +468,7 @@
                                     </div>
                                     <!-- //특수기호 -->
                                 </li>
-                                <li class="husky_seditor_ui_table"><button type="button" title="표" class="se2_table"><!--<i class="fa fa-table" aria-hidden="true"></i>--><img src="images/icon/icon_table.png"><span class="_buttonRound">표</span></button>
+                                <li class="husky_seditor_ui_table"><button type="button" title="표" class="se2_table"><i class="fa fa-table" aria-hidden="true"></i><!--<img src="images/icon/icon_table.png">--><span class="_buttonRound">표</span><i class="fa fa-angle-down" aria-hidden="true"></i></button>
                                     <!--@lazyload_html create_table-->
                                     <!-- 표 -->
                                     <div class="se2_layer husky_se2m_table_layer" style="margin-left:-171px">
@@ -1204,14 +1208,36 @@ var sContent = "" ;
         var wHeight = $(window).height();
         var editorHeight = wHeight - 111;
         $("#smart_editor2 .se2_input_area").css({
+            'width' : '800px',
             'height' :  editorHeight,
             'overflow-x' : 'hidden',
             'overflow-y' : 'scroll',
+            'margin' : '0 auto',
         });
 
         $("#smart_editor2").css({
             'border-right' : '1px solid #eee'
         });
+
+        function responsiveView() {
+            $("#smart_editor2 .se2_input_area").css({
+                'height' :  editorHeight,
+                'overflow-x' : 'hidden',
+                'overflow-y' : 'scroll',
+            });
+
+            $("#smart_editor2").css({
+                'border-right' : '1px solid #eee'
+            });
+        }
+        $(window).on('load', responsiveView);
+        $(window).on('resize', responsiveView);
+
+        $(".expandBtn").on("click",function () {
+            $("#editorCont .left").toggleClass("open");
+            $(".expand-inner i").toggleClass("fa-compress fa-expand");
+        });
+
     }
 </script>
 
