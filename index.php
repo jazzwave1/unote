@@ -1062,6 +1062,7 @@ var sContent = "" ;
             $('#sBtnType').val(sBtnType);
 
             var text = $('#ir1').val();
+            text = text.replace(/<div align="">(.+)<\/div>/ig, "$1");
             $('#ir1').val(removeSpellStyle(text));
 
             var formData = $("#noteForm").serialize();
