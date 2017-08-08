@@ -1225,7 +1225,12 @@ var sContent = "" ;
 
         function getCategoryList()
         {
-            $(".selCateg").show();
+            if($(".selCateg").hasClass('noCateg')){
+                alert('설정된 카테고리가 없습니다.');
+            }
+            else{
+                $(".selCateg").show();
+            }
         }
         var wHeight = $(window).height();
         var editorHeight = wHeight - 41;
