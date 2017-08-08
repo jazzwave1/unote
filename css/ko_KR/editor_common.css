@@ -132,7 +132,7 @@ input {outline: none;border: 0px;}
 }
 #editorHeader .edi-right .userInfo{
     float: right;
-    padding-right: 40px;
+    padding-right: 20px;
 }
 #editorHeader .edi-right .userInfo .pic{
     float: left;
@@ -201,27 +201,26 @@ input {outline: none;border: 0px;}
 }
 /*addOn 버튼영역*/
 .addOnList{
-    position: absolute;
-    right:50px;
-    top:3px;
     z-index: 100;
 }
 .addOnList ul{
-    height: 40px;
+   padding: 10px 3px 3px;
 }
 .addOnList ul li{
     display: block;
     float: left;
-    width: 40px;
+    width: 30%;
+    padding: 10px 0;
+    /*width: 40px;
     padding: 8px 0;
-    border: 1px solid #2980b9;
-    border-radius:5px;
-    margin-left: 5px;
-}
-.addOnList ul li.on{
 
-    /* border-bottom: 5px solid #2980b9
-     */
+    border-radius:5px;*/
+    margin-left: 8px;
+    color: #2980b9;
+    border: 1px solid #2980b9;
+}
+
+/*.addOnList ul li.on{
     background-color: #2980b9;
     color:#fff;
     margin-bottom: 0;
@@ -243,7 +242,7 @@ input {outline: none;border: 0px;}
 }
 .addOnList ul li.on i{
     color:#fff;
-}
+}*/
 .addOnList ul li .addOn-btn {
     display: inline-block;
     cursor: pointer;
@@ -255,14 +254,16 @@ input {outline: none;border: 0px;}
 .addOnList ul li i{
     color: #2980b9;
     font-size: 16px;
+    padding-right: 10px;
     /*font-weight:bold;*/
 }
 .addOnList ul li:hover{
-    background: #2980b9;
+    /*background: #2980b9;
+    color: #fff;*/
 
 }
 .addOnList ul li:hover i{
-    color: #fff;
+
 }
 #se2_sample{
     position:absolute;
@@ -324,25 +325,25 @@ input {outline: none;border: 0px;}
     position:absolute;
     width: 40px;
     height: 40px;
-    top:3px;
-    right:5px;
+    top:0px;
+    right:0px;
     z-index: 100;
     cursor: pointer;
 }
 #editorCont .left .expandBtn .expand-inner{
-    padding: 8px;
-    border: 1px solid #2980b9;
-    border-radius: 5px;
+    padding: 12px;
+   /* border: 1px solid #2980b9;
+    border-radius: 5px;*/
 }
-#editorCont .left .expandBtn .expand-inner:hover{
+/*#editorCont .left .expandBtn .expand-inner:hover{
     background: #2980b9;
 }
 #editorCont .left .expandBtn .expand-inner:hover i{
-    color: #fff;
-}
+    color: #2980b9;
+}*/
 #editorCont .left .expandBtn .expand-inner i{
     font-size: 16px;
-    color: #2980b9;
+    color: #ccc;
 }
 #editorCont .right{
     float: left;
@@ -352,6 +353,7 @@ input {outline: none;border: 0px;}
 }
 
 #editorCont .right #addOnWrap{
+    position: relative;
     width: 100%;
 }
 #addOnWrap{
@@ -361,6 +363,15 @@ input {outline: none;border: 0px;}
     display: none;
     width: 100%;
     height: 100%;
+}
+.addOnCon .addOn .chkTit{
+    margin-top: 10px;
+    text-align: left;
+    background: #2980b9;
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
 }
 .addOnCon .addOn0{
     /*background-color: #F4DEA1;*/
