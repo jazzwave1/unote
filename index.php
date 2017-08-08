@@ -1003,6 +1003,7 @@ var sContent = "" ;
                     
         oEditor.run({
             fnOnAppReady: function(){
+                setDefaultFont();
 
                 var n_idx = <?=(isset($_GET['n_idx'])) ? $_GET['n_idx'] : '""'?>;
 
@@ -1060,8 +1061,8 @@ var sContent = "" ;
         }
 
         function setDefaultFont() {
-            var sDefaultFont = '궁서';
-            var nFontSize = 24;
+            var sDefaultFont = 'Arial';
+            var nFontSize = 11;
             oEditor.setDefaultFont(sDefaultFont, nFontSize);
         }
 
