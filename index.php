@@ -1105,6 +1105,7 @@ var sContent = "" ;
             if(json.pk){
                 $('#sType').val('edit');
                 $('#n_idx').val(json.pk);
+                history.pushState(null, null, '/unote/index.php?n_idx='+$('#n_idx').val());
             }
             if(json.sBtnType == 'save' && json.code == '1')
             {
