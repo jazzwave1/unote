@@ -100,26 +100,31 @@
 <div id="wrap">
     <!--header-->
     <div id="editorHeader">
+        <h1><a href="javascript:;"><img src="images/edi_logo.png" alt="글동로고"></a></h1>
         <div class="edi-hinner clearfix">
-            <div class="edi-left">
-                <h1><a href="javascript:;"><img src="images/edi_logo.png" alt="글동로고"></a></h1>
+            <div class="edi-left clearfix">
+                <div class="edi-tit">
+                    <div class="noteTit"><input type="text" value="제목 없는 문서"></div>
+                    <div class="ediBtn"></div>
+                </div>
             </div>
-            <div class="edi-center">
-                <div class="noteTit"><input type="text" value="제목 없는 문서"></div>
-                <div class="ediBtn"></div>
-            </div>
-            <div class="edi-right addOnList">
-                <ul class="clearfix">
-                    <li>
-                        <span class="addOn-btn"><!--<i class="fa fa-check-square-o" aria-hidden="true"></i>-->맞춤법검사</span>
-                    </li>
-                    <li>
-                        <span class="addOn-btn"><!--<i class="fa fa-comments" aria-hidden="true"></i>-->문장추천</span>
-                    </li>
-                    <li>
-                        <span class="addOn-btn"><!--<i class="fa fa-list" aria-hidden="true"></i>-->참고글감</span>
-                    </li>
-                </ul>
+            <div class="edi-right">
+                <!--userInfo-->
+                <div class="userInfo clearfix">
+                    <div class="pic"><img src="images/deault_profile.png"></div>
+                    <div class="name"><a href="#"><span>김지윤</span> 님 <i class="fa fa-caret-down" aria-hidden="true"></i></a></div>
+                </div>
+                <!--//userInfo-->
+                <!--로그아웃창-->
+                <div class="userBtn">
+                    <div class="userBtn-inner">
+                        <ul>
+                            <li><a href="/unoteapi/Logout"><i class="fa fa-sign-out" aria-hidden="true"></i>로그아웃</a></li>
+                            <li><a href="#"><i class="fa fa-lock" aria-hidden="true"></i>개인정보처리방침</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--//로그아웃창-->
             </div>
         </div>
     </div>
@@ -127,9 +132,22 @@
     <!--contents-->
     <div id="editorCont" class="clearfix">
         <div class="left">
+            <div class="addOnList">
+                <ul class="clearfix">
+                    <li>
+                        <span class="addOn-btn" title="맞춤법검사"><i class="fa fa-stethoscope" aria-hidden="true"></i><!--맞춤법검사--></span>
+                    </li>
+                    <li>
+                        <span class="addOn-btn" title="문장추천"><!--<i class="fa fa-comments" aria-hidden="true"></i>--><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><!--문장추천--></span>
+                    </li>
+                    <li>
+                        <span class="addOn-btn" title="참고글감"><i class="fa fa-list" aria-hidden="true"></i><!--참고글감--></span>
+                    </li>
+                </ul>
+            </div>
             <!--확장버튼-->
             <div class="expandBtn">
-                <div class="expand-inner" title="화면 크게"><i class="fa fa-expand" aria-hidden="true"></i></div>
+                <div class="expand-inner" title="화면 크게"><i class="fa fa-compress" aria-hidden="true"></i></div>
             </div>
             <!-- SE2 Markup Start -->
             <div id="smart_editor2">
@@ -1207,7 +1225,7 @@ var sContent = "" ;
             $(".selCateg").show();
         }
         var wHeight = $(window).height();
-        var editorHeight = wHeight - 111;
+        var editorHeight = wHeight - 41;
         $("#smart_editor2 .se2_input_area").css({
             'width' : '800px',
             'height' :  editorHeight,
@@ -1234,9 +1252,15 @@ var sContent = "" ;
         $(window).on('load', responsiveView);
         $(window).on('resize', responsiveView);
 
+        /*화면확장*/
         $(".expandBtn").on("click",function () {
             $("#editorCont .left").toggleClass("open");
-            $(".expand-inner i").toggleClass("fa-compress fa-expand");
+            $(".expand-inner i").toggleClass("fa-expand fa-compress");
+        });
+        /*로그아웃*/
+        $(".userInfo").on("click",function () {
+            $(".userBtn").slideToggle();
+            $(".name i").toggleClass("fa-caret-down fa-caret-up");
         });
 
     }
