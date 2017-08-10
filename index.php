@@ -107,6 +107,19 @@
                     <div class="noteTit"><input type="text" value="제목 없는 문서"></div>
                     <div class="ediBtn"></div>
                 </div>
+                <div class="addOnList">
+                    <ul class="clearfix">
+                        <li>
+                            <span class="addOn-btn" title="맞춤법검사"><!--<i class="fa fa-check-square-o" aria-hidden="true"></i>-->맞춤법검사</span>
+                        </li>
+                        <li>
+                            <span class="addOn-btn" title="문장추천"><!--<i class="fa fa-comments" aria-hidden="true"></i>--><!--<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>-->문장추천</span>
+                        </li>
+                        <li>
+                            <span class="addOn-btn" title="참고글감"><!--<i class="fa fa-list" aria-hidden="true"></i>-->참고글감</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="edi-right">
                 <!--userInfo-->
@@ -901,19 +914,6 @@
         </div>
         <div class="right">
             <div id="addOnWrap">
-                <div class="addOnList">
-                    <ul class="clearfix">
-                        <li>
-                            <span class="addOn-btn" title="맞춤법검사"><i class="fa fa-check-square-o" aria-hidden="true"></i>맞춤법검사</span>
-                        </li>
-                        <li>
-                            <span class="addOn-btn" title="문장추천"><!--<i class="fa fa-comments" aria-hidden="true"></i>--><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>문장추천</span>
-                        </li>
-                        <li>
-                            <span class="addOn-btn" title="참고글감"><i class="fa fa-list" aria-hidden="true"></i>참고글감</span>
-                        </li>
-                    </ul>
-                </div>
                 <!--맞춤법검사/윤문/글감리스트 영역-->
                 <div class="addOnCon">
                     <!--맞춤법검사-->

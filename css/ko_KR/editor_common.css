@@ -202,22 +202,22 @@ input {outline: none;border: 0px;}
 /*addOn 버튼영역*/
 .addOnList{
     z-index: 100;
+    position: absolute;
+    left: 170px;
+    top: 17px;
 }
 .addOnList ul{
-   padding: 10px 3px 3px;
+   /*padding: 10px 3px 3px;*/
 }
 .addOnList ul li{
     display: block;
     float: left;
-    width: 30%;
-    padding: 10px 0;
-    /*width: 40px;
-    padding: 8px 0;
-
-    border-radius:5px;*/
     margin-left: 8px;
     color: #2980b9;
-    border: 1px solid #2980b9;
+    height: 30px;
+    font-weight: bold;
+    padding-right: 5px;
+   /* border: 1px solid #2980b9;*/
 }
 
 /*.addOnList ul li.on{
@@ -244,11 +244,8 @@ input {outline: none;border: 0px;}
     color:#fff;
 }*/
 .addOnList ul li .addOn-btn {
-    display: inline-block;
     cursor: pointer;
-
     width: 100%;
-
     /*border-radius: 9999em;*/
 }
 .addOnList ul li i{
@@ -267,7 +264,7 @@ input {outline: none;border: 0px;}
 }
 #se2_sample{
     position:absolute;
-    left: 70px;
+    left: 55px;
     top:36px;
     z-index: 300;
     height: 30px;
