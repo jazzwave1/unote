@@ -902,6 +902,12 @@
             </div><!-- SE2 Markup End -->
         </div>
         <div class="right">
+            <!-- 로딩중 이미지 -->
+            <div class="loading" style="display:none;">
+                <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+            </div>
+            <!-- //로딩중 이미지 -->
+            <!-- addon main -->
             <div class="addOn-default">
                 <p>Unote의 추가 기능을 통해<br>나의 글을 다듬어 보세요</p>
                 <div class="addOnList">
@@ -939,6 +945,7 @@
                     </div>
                 </div>
             </div>
+            <!-- //addon main -->
             <div id="addOnWrap">
                 <!--맞춤법검사/윤문/글감리스트 영역-->
                 <div class="addOnCon">
@@ -1119,13 +1126,21 @@ var sContent = "" ;
                 url : "/unoteapi/Note/saveNote",
                 cache : false,
                 data : formData,
+                beforeSend : beforeSend,
                 success : onSuccess,
                 error : onError
             });
         }
 
+        function beforeSend()
+        {
+            $('.loading').show();
+        }
+
         function onSuccess(json, status)
         {
+            $('.loading').hide();
+
             if(json.pk){
                 $('#sType').val('edit');
                 $('#n_idx').val(json.pk);
