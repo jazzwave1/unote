@@ -107,19 +107,7 @@
                     <div class="noteTit"><input type="text" value="제목 없는 문서"></div>
                     <div class="ediBtn"></div>
                 </div>
-                <div class="addOnList">
-                    <ul class="clearfix">
-                        <li>
-                            <span class="addOn-btn" title="맞춤법검사"><!--<i class="fa fa-check-square-o" aria-hidden="true"></i>-->맞춤법검사</span>
-                        </li>
-                        <li>
-                            <span class="addOn-btn" title="문장추천"><!--<i class="fa fa-comments" aria-hidden="true"></i>--><!--<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>-->문장추천</span>
-                        </li>
-                        <li>
-                            <span class="addOn-btn" title="참고글감"><!--<i class="fa fa-list" aria-hidden="true"></i>-->참고글감</span>
-                        </li>
-                    </ul>
-                </div>
+
             </div>
             <div class="edi-right">
                 <!--userInfo-->
@@ -127,6 +115,7 @@
                     <div class="pic"><img src="images/junghun.jpg"></div>
                     <div class="name"><a href="#"><span>정훈</span> 님 <i class="fa fa-caret-down" aria-hidden="true"></i></a></div>
                 </div>
+
                 <!--//userInfo-->
                 <!--로그아웃창-->
                 <div class="userBtn">
@@ -147,7 +136,7 @@
         <div class="left">
             <!--확장버튼-->
             <div class="expandBtn">
-                <div class="expand-inner" title="addOn"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+                <div class="expand-inner" title="addOn"><i class="fa fa-expand" aria-hidden="true"></i></div>
             </div>
             <!-- SE2 Markup Start -->
             <div id="smart_editor2">
@@ -913,6 +902,43 @@
             </div><!-- SE2 Markup End -->
         </div>
         <div class="right">
+            <div class="addOn-default">
+                <p>Unote의 추가 기능을 통해<br>나의 글을 다듬어 보세요</p>
+                <div class="addOnList">
+                    <ul class="clearfix">
+                        <li>
+                            <span class="addOn-btn" title="맞춤법검사"><i class="fa fa-check-square-o" aria-hidden="true"></i>맞춤법검사<i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                        </li>
+                        <li>
+                            <span class="addOn-btn" title="문장추천"><!--<i class="fa fa-comments" aria-hidden="true"></i>--><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>문장추천<i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                        </li>
+                    </ul>
+                    <p>또한, 내가 관리한 글감을 참고하며 <br>  글을 정리해보세요</p>
+                    <div class="addOn-catgbtn">
+                        <span class="catg"><i class="fa fa-list" aria-hidden="true"></i>참고글감</span>
+                        <a class="dropdown href="#">
+                        <span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
+                        </a>
+                        <div>
+                            <!--카테고리 이동 안내 창-->
+                            <div class="selCateg">
+                                <div class="selCateg-inner">
+                                    <div class="selList">
+                                        <ul>
+                                            <li class="goCateg"><a href="#">전체 글감</a></li>
+                                            <li class="goCateg"><a href="#">북마크</a></li>
+                                            <li class="goCateg"><a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i>카테고리1</a></li>
+                                            <li class="goCateg"><a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i>카테고리2</a></li>
+                                            <li class="goCateg"><a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i>카테고리3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//카테고리 이동 안내 창-->
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="addOnWrap">
                 <!--맞춤법검사/윤문/글감리스트 영역-->
                 <div class="addOnCon">
@@ -1246,6 +1272,7 @@ var sContent = "" ;
             'border-right' : '1px solid #eee'
         });
 
+
         function responsiveView() {
             $("#smart_editor2 .se2_input_area").css({
                 'height' :  editorHeight,
@@ -1256,6 +1283,7 @@ var sContent = "" ;
             $("#smart_editor2").css({
                 'border-right' : '1px solid #eee'
             });
+
         }
         $(window).on('load', responsiveView);
         $(window).on('resize', responsiveView);
@@ -1263,14 +1291,20 @@ var sContent = "" ;
         /*화면확장*/
         $(".expandBtn").on("click",function () {
             $("#editorCont .left").toggleClass("open");
-            $(".expand-inner i").toggleClass("fa-chevron-left fa-chevron-right");
+            $(".expand-inner i").toggleClass("fa-expand fa-compress");
         });
+
         /*로그아웃*/
         $(".userInfo").on("click",function () {
             $(".userBtn").slideToggle();
             $(".name i").toggleClass("fa-caret-down fa-caret-up");
         });
 
+        /*참조글감*/
+        $(".dropdown").on("click",function () {
+           $(this).children('span').toggleClass("fa-caret-down fa-caret-up");
+           $(".selCateg").slideToggle();
+        });
     }
 </script>
 
