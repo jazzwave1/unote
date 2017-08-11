@@ -199,69 +199,7 @@ input {outline: none;border: 0px;}
 #editorHeader .edi-right .userBtn ul li a{
     display: block;
 }
-/*addOn 버튼영역*/
-.addOnList{
-    z-index: 100;
-    position: absolute;
-    left: 170px;
-    top: 17px;
-}
-.addOnList ul{
-   /*padding: 10px 3px 3px;*/
-}
-.addOnList ul li{
-    display: block;
-    float: left;
-    margin-left: 8px;
-    color: #2980b9;
-    height: 30px;
-    font-weight: bold;
-    padding-right: 5px;
-   /* border: 1px solid #2980b9;*/
-}
 
-/*.addOnList ul li.on{
-    background-color: #2980b9;
-    color:#fff;
-    margin-bottom: 0;
-    font-weight: normal;
-    text-align: center;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    border: 1px solid transparent;
-    white-space: nowrap;
-    font-size: 14px;
-    line-height: 1.42857143;
-    border-radius: 4px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
-}
-.addOnList ul li.on i{
-    color:#fff;
-}*/
-.addOnList ul li .addOn-btn {
-    cursor: pointer;
-    width: 100%;
-    /*border-radius: 9999em;*/
-}
-.addOnList ul li i{
-    color: #2980b9;
-    font-size: 16px;
-    padding-right: 10px;
-    /*font-weight:bold;*/
-}
-.addOnList ul li:hover{
-    /*background: #2980b9;
-    color: #fff;*/
-
-}
-.addOnList ul li:hover i{
-
-}
 #se2_sample{
     position:absolute;
     left: 55px;
@@ -309,12 +247,12 @@ input {outline: none;border: 0px;}
 #editorCont .left{
     position: relative;
     float: left;
-    width: 100%;
+    width: 70%;
     height: 100%;
    /* padding-top: 60px;*/
 }
 #editorCont .left.open{
-    width: 70%;
+    width: 100%;
 }
 
 /*확장 버튼*/
@@ -343,35 +281,196 @@ input {outline: none;border: 0px;}
     color: #ccc;
 }
 #editorCont .right{
+    position: relative;
     float: left;
     width: 30%;
     height: 100%;
    /* padding-top: 60px;*/
 }
 
-#editorCont .right #addOnWrap{
-    position: relative;
-    width: 100%;
+/*addOn 버튼영역*/
+.addOnList{
+    z-index: 100;
+    /*position: absolute;
+    left: 170px;
+    top: 17px;*/
 }
-#addOnWrap{
+.addOnList ul{
+    /*padding: 10px 3px 3px;*/
+}
+.addOnList ul li{
+
+    display: block;
+    /*float: left;*/
+    /*margin-left: 8px;*/
+    color: #2980b9;
+    font-weight: bold;
+    /*padding-right: 5px;*/
+
+}
+.addOnList .addOn-catgbtn{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    background: #1d9d74;
+    color:#fff;
+
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+
+    border: 1px solid transparent;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+.addOnList .addOn-catgbtn span.catg{
+    display: inline-block;
+    padding-right: 35px;
+}
+.addOnList .addOn-catgbtn span.catg i{
+    padding-right: 10px;
+}
+.addOnList .addOn-catgbtn .dropdown{
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 42px;
+    height: 41px;
+
+    display: inline-block;
+    color: #fff;
+    border-left:1px solid #198764;
+}
+.addOnList .addOn-catgbtn .dropdown span{
+    height: 41px;
+    line-height: 41px;
+}
+.addOnList ul li .addOn-btn {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+
+
+    background-color: #2980b9;
+    color:#fff;
+
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+
+    border: 1px solid transparent;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+
+    color: #fff;
+    background-color: #2980b9;
+    border-color: #2e6da4;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+.addOnList ul li .addOn-btn:hover{
+    box-shadow: inset -1px -1px 1px 1px rgba(255,255,255,0.2);
+}
+.addOnList ul li i{
+    padding-right: 10px;
+}
+.addOnList ul li i.fa-angle-right{
+    position: absolute;
+    right: 10px;
+    top:10px;
+    color: #fff;
+    font-size: 16px;
+
+    /*font-weight:bold;*/
+}
+.addOnList ul li:hover{
+    /*background: #2980b9;
+    color: #fff;*/
+
+}
+.addOnList ul li:hover i{
+
+}
+
+
+
+
+.right #addOnWrap{
+    /*position: absolute;
+    right: 0;
+    top:0;*/
+    width: 100%;
    /* border-left:1px solid #eee;*/
 }
+.addOn-default{
+    width: 100%;
+    height: 100vh;
+    background: #dfdfdf;
+}
+.addOn-default p{
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.addOnCon{
+    height: 100%;
+}
+
 .addOnCon .addOn{
     display: none;
     width: 100%;
     height: 100%;
 }
 .addOnCon .addOn .chkTit{
-    margin-top: 10px;
+    position: relative;
+    height: 41px;
+    line-height: 41px;
     text-align: left;
     background: #2980b9;
-    padding: 10px;
     color: #fff;
     font-weight: bold;
     font-size: 14px;
+    padding-left: 10px;
+}
+
+.addOnCon .addOn .chkTit .closedBtn{
+    position: absolute;
+    right: 10px;
+    top:10px;
+}
+.addOnCon .addOn .chkTit .closedBtn i{
+    font-size: 18px;
 }
 .addOnCon .addOn0{
     /*background-color: #F4DEA1;*/
+    background: #dfdfdf;
 }
 /*맞춤법검사 addOn영역*/
 .splChk{
@@ -389,6 +488,7 @@ input {outline: none;border: 0px;}
     padding: 5px 0;*/
     border: 1px solid #eee;
     border-radius: 5px;
+    background: #fff;
 }
 .addOnIcon a:hover{
     background: #eee;
@@ -415,6 +515,7 @@ input {outline: none;border: 0px;}
     padding-top: 35px;
     padding-bottom: 20px;
     margin-bottom: 20px;
+    background: #fff;
 }
 .splChk .splChkBox ul li.on{
     border-left: 5px solid #2980b9;
@@ -459,9 +560,11 @@ input {outline: none;border: 0px;}
 }
 .addOnCon .addOn1{
     /*background-color: lightcyan;*/
+    background: #dfdfdf;
 }
 .addOnCon .addOn2{
     /*background-color: lightpink;*/
+
 }
 .husky_seditor_ui_bold button i.on{
     color:black;
@@ -488,6 +591,7 @@ input {outline: none;border: 0px;}
     border: 1px solid #eee;
     border-radius: 5px;
     margin-bottom: 20px;
+    background: #fff;
 }
 
 .beautiChk .beautiChkBox .resultInfo p.getTxt{
@@ -611,8 +715,8 @@ input {outline: none;border: 0px;}
     display: none;
     position: absolute;
     width: 200px;
-    right:0;
-    top:30px;
+    left:-2px;
+    top:43px;
     background: #fff;
     border: 1px solid #ececec;
     border-radius: 6px;
