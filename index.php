@@ -960,9 +960,7 @@
             <input type="hidden" name= "sType" id= "sType" value=""/>
             <input type="hidden" name= "n_idx" id= "n_idx" value=""/>
             <input type="hidden" name= "sBtnType" id= "sBtnType" value=""/>
-            <textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;" placeholder="내용을 입력하세요">
-            
-            </textarea>
+            <textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;" placeholder="노트를 작성하세요"></textarea>
             <!--textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;">
                 <p class="newTit" style="font-size:24pt; font-weight:bold;">소프트웨어 교육이 궁금해!</p>
                 <p class="newTxt" style="font-size:11pt; text-align: justify">
@@ -1004,7 +1002,6 @@ var sContent = "" ;
                     
         oEditor.run({
             fnOnAppReady: function(){
-                setDefaultFont();
 
                 var n_idx = <?=(isset($_GET['n_idx'])) ? $_GET['n_idx'] : '""'?>;
 
@@ -1080,7 +1077,6 @@ var sContent = "" ;
 
         function submitContents(sBtnType='')
         {
-            oEditor.exec("UPDATE_CONTENTS_FIELD");  // 에디터의 내용이 textarea에 적용됩니다.
 
             $('#frmTitle').val($('.noteTit').children('input').val());
             $('#sBtnType').val(sBtnType);
@@ -1089,6 +1085,7 @@ var sContent = "" ;
             text = text.replace(/<div align="">(.+)<\/div>/ig, "$1");
             $('#ir1').val(removeSpellStyle(text));
 
+            oEditor.exec("UPDATE_CONTENTS_FIELD");  // 에디터의 내용이 textarea에 적용됩니다.
             var formData = $("#noteForm").serialize();
             
             $.ajax({
