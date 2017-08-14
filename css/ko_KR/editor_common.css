@@ -288,7 +288,11 @@ input {outline: none;border: 0px;}
    /* padding-top: 60px;*/
 }
 .right .loading{
+
     display: none;
+    font-size: 20px;
+    color: #2980b9;
+    padding-top: 100px;
 }
 /*addOn 버튼영역*/
 .addOnList{
@@ -428,6 +432,8 @@ input {outline: none;border: 0px;}
     right: 0;
     top:0;*/
     width: 100%;
+    background: #dfdfdf;
+    padding-bottom: 60px;
    /* border-left:1px solid #eee;*/
 }
 .addOn-default{
@@ -561,14 +567,7 @@ input {outline: none;border: 0px;}
     padding-right: 5px;
     font-weight: bold;
 }
-.addOnCon .addOn{
-    /*background-color: lightcyan;*/
-    background: #dfdfdf;
-}
-.addOnCon .addOn2{
-    /*background-color: lightpink;*/
 
-}
 .husky_seditor_ui_bold button i.on{
     color:black;
     font-weight: bold;
