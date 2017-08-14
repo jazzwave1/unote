@@ -1112,7 +1112,7 @@
             window.open('/unote/index.php');
         }
 
-        $(".addOnList ul li").on("click",function(){
+        $(".addOnList>ul>li").on("click",function(){
             var listIndex = $(this).index();
 
             $(".addOn-default").hide();
