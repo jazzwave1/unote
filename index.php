@@ -905,6 +905,7 @@
             <!-- 로딩중 이미지 -->
             <div class="loading">
                 <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                <div>Loading...</div>
             </div>
             <!-- //로딩중 이미지 -->
             <!-- addon main -->
@@ -922,7 +923,7 @@
                     <p>또한, 내가 관리한 글감을 참고하며 <br>  글을 정리해보세요</p>
                     <div class="addOn-catgbtn">
                         <span class="catg"><i class="fa fa-list" aria-hidden="true"></i>참고글감</span>
-                        <a class="dropdown href="javascript:;">
+                        <a class="dropdown">
                         <span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
                         </a>
                         <div>
