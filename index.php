@@ -903,7 +903,7 @@
         </div>
         <div class="right">
             <!-- 로딩중 이미지 -->
-            <div class="loading" style="display:none;">
+            <div class="loading">
                 <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
             </div>
             <!-- //로딩중 이미지 -->

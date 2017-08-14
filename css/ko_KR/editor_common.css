@@ -287,7 +287,9 @@ input {outline: none;border: 0px;}
     height: 100%;
    /* padding-top: 60px;*/
 }
-
+.right .loading{
+    display: none;
+}
 /*addOn 버튼영역*/
 .addOnList{
     z-index: 100;
@@ -443,11 +445,11 @@ input {outline: none;border: 0px;}
     height: 100%;
 }
 
-.addOnCon .addOn{
+/*.addOnCon .addOn{
     display: none;
     width: 100%;
     height: 100%;
-}
+}*/
 .addOnCon .addOn .chkTit{
     position: relative;
     height: 41px;
