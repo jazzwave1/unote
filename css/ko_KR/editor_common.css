@@ -444,7 +444,7 @@ input {outline: none;border: 0px;}
 }
 
 .addOnCon .addOn{
-    display: none;
+    /*display: none;*/
     width: 100%;
     height: 100%;
 }
@@ -496,19 +496,19 @@ input {outline: none;border: 0px;}
 .addOnIcon a i{
     color: #2980b9;
 }
-.splChk .splChkInfo{
+.addOn .splChkInfo{
     font-weight: bold;
     font-size: 14px;
     padding-bottom: 20px;
 }
-.splChk .splChkInfo span{
+.addOn .splChkInfo span{
     color: #2980b9;
     padding: 0 10px;
 }
-.splChk .splChkBox ul{
+.addOn .splChkBox ul{
     padding: 0 20px;
 }
-.splChk .splChkBox ul li{
+.addOn .splChkBox ul li{
     position: relative;
     border: 1px solid #eee;
     border-radius: 5px;
@@ -517,10 +517,10 @@ input {outline: none;border: 0px;}
     margin-bottom: 20px;
     background: #fff;
 }
-.splChk .splChkBox ul li.on{
+.addOn .splChkBox ul li.on{
     border-left: 5px solid #2980b9;
 }
-.splChk .splChkBox ul li .applyBtn{
+.addOn .splChkBox ul li .applyBtn{
     position: absolute;
     right: 10px;
     top: 10px;
@@ -528,37 +528,37 @@ input {outline: none;border: 0px;}
     text-align: right;
     z-index: 500;
 }
-.splChk .splChkBox .applyBtn i{
+.addOn .splChkBox .applyBtn i{
     cursor: pointer;
     display: inline-block;
     padding-right: 5px;
     font-size: 24px
 }
-.splChk .splChkBox ul li .resultInfo{
+.addOn .splChkBox ul li .resultInfo{
     text-align: left;
     padding-left: 20px;
 }
-.splChk .splChkBox ul li.on .resultInfo{
+.addOn .splChkBox ul li.on .resultInfo{
     padding-left: 16px;
 }
-.splChk .splChkBox .resultInfo p{
+.addOn .splChkBox .resultInfo p{
     font-size: 14px;
 }
-.splChk .splChkBox .resultInfo p.splRight{
+.addOn .splChkBox .resultInfo p.splRight{
     font-weight: bold;
     font-size: 14px;
     padding: 5px 0;
     color: #2980b9;
 }
-.splChk .splChkBox .resultInfo p.exspl{
+.addOn .splChkBox .resultInfo p.exspl{
     padding-top: 20px;
     font-size: 13px;
 }
-.splChk .splChkBox .resultInfo p.exspl i.notiIcon{
+.addOn .splChkBox .resultInfo p.exspl i.notiIcon{
     padding-right: 5px;
     font-weight: bold;
 }
-.addOnCon .addOn1{
+.addOnCon .addOn{
     /*background-color: lightcyan;*/
     background: #dfdfdf;
 }
@@ -575,17 +575,17 @@ input {outline: none;border: 0px;}
     font-size: 32px;
 }
 /*윤문추천 addOn영역*/
-.beautiChk{}
+.addOn{}
 
-.beautiChk .beautiChkBox{
+.addOn .beautiChkBox{
 }
-.beautiChk .beautiChkBox ul{
+.addOn .beautiChkBox ul{
 
 }
-.beautiChk .beautiChkBox ul li.beautiBoxList{
+.addOn .beautiChkBox ul li.beautiBoxList{
     padding: 0 20px;
 }
-.beautiChk .beautiChkBox .resultInfo{
+.addOn .beautiChkBox .resultInfo{
     text-align: left;
     padding: 20px;
     border: 1px solid #eee;
@@ -594,12 +594,12 @@ input {outline: none;border: 0px;}
     background: #fff;
 }
 
-.beautiChk .beautiChkBox .resultInfo p.getTxt{
+.addOn .beautiChkBox .resultInfo p.getTxt{
     font-weight: bold;
     font-size: 14px;
 
 }
-.beautiChk .beautiChkBox .resultInfo .recomTit{
+.addOn .beautiChkBox .resultInfo .recomTit{
     display: inline-block;
     font-weight: bold;
     background: #2980b9;
@@ -607,13 +607,13 @@ input {outline: none;border: 0px;}
     margin: 10px 0;
     padding: 5px;
 }
-.beautiChk .beautiChkBox .resultInfo .recomTit i{
+.addOn .beautiChkBox .resultInfo .recomTit i{
     color: #fff;
 }
-.beautiChk .beautiChkBox .resultInfo .recommedTxt {
+.addOn .beautiChkBox .resultInfo .recommedTxt {
 
 }
-.beautiChk .beautiChkBox .resultInfo .recommedTxt ul li{
+.addOn .beautiChkBox .resultInfo .recommedTxt ul li{
     padding-bottom: 5px;
 }
 /*글감리스트 addOn영역*/
@@ -622,7 +622,7 @@ input {outline: none;border: 0px;}
 
 
 }
-#bankSub .bsinner{
+.bsinner{
     padding: 10px 0;
     border-right: 1px solid #eee;
 }
