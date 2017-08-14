@@ -922,7 +922,7 @@
                     <p>또한, 내가 관리한 글감을 참고하며 <br>  글을 정리해보세요</p>
                     <div class="addOn-catgbtn">
                         <span class="catg"><i class="fa fa-list" aria-hidden="true"></i>참고글감</span>
-                        <a class="dropdown href="#">
+                        <a class="dropdown href="javascript:;">
                         <span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
                         </a>
                         <div>
@@ -931,11 +931,8 @@
                                 <div class="selCateg-inner">
                                     <div class="selList">
                                         <ul>
-                                            <li class="goCateg"><a href="#">전체 글감</a></li>
-                                            <li class="goCateg"><a href="#">북마크</a></li>
-                                            <li class="goCateg"><a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i>카테고리1</a></li>
-                                            <li class="goCateg"><a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i>카테고리2</a></li>
-                                            <li class="goCateg"><a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i>카테고리3</a></li>
+                                            <li class="goCateg"><a href="javascript:listArticle('list');">전체 글감</a></li>
+                                            <li class="goCateg"><a href="javascript:listArticle('bookmark');">북마크</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -946,27 +943,17 @@
                 </div>
             </div>
             <!-- //addon main -->
-            <div id="addOnWrap">
+            <div id="addOnWrap" style="display:none;">
                 <!--맞춤법검사/윤문/글감리스트 영역-->
                 <div class="addOnCon">
-                    <!--맞춤법검사-->
-                    <div class="addOn addOn0">
-                        <div class="splChk">
-
-                        </div>
+                    <div class="addOn">
                     </div>
-                    <!--윤문추천-->
-                    <div class="addOn addOn1">
-                        <div class="beautiChk">
-
-                        </div>
-                    </div>
-                    <!--글감리스트-->
+                <!--
                     <div class="addOn addOn2">
                         <div id="bankSub" class="full-left-sublist listArticle">
                         </div>
-                    </div><!--//글감리스트-->
-                </div>
+                    </div>
+                -->
             </div>
         </div>
     </div>
@@ -1017,7 +1004,7 @@
 </div>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
-var sContent = "" ;
+    var sContent = "" ;
     if(window.frameElement){
         /*jindo.$("se2_sample").style.display = "none";*/
     }else{
@@ -1082,20 +1069,32 @@ var sContent = "" ;
             alert(sHTML);
         }
 
-        function _submitContents() {
-            oEditor.exec("UPDATE_CONTENTS_FIELD");  // 에디터의 내용이 textarea에 적용됩니다.
-
-            $('#frmTitle').val($('.noteTit').children('input').val());
-
-            // 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
-            jindo.$("ir1").form.submit();
-        }
-
         function setDefaultFont() {
             var sDefaultFont = 'Arial';
             var nFontSize = 11;
             oEditor.setDefaultFont(sDefaultFont, nFontSize);
         }
+
+        $(window).load(function(){
+            $.post(
+              "/unoteapi/Addon/getCategory"
+              ,function(data, status) {
+                if (status == "success" && data.code == 1)
+                {
+                    for (var i=0; i<data.aCategory.length; i++) {
+                        $('.selList>ul').append('<li class="goCateg"><a href="javascript:listArticle(\'category\', \''+data.aCategory[i].category_idx+'\')"><i class="fa fa-folder-open" aria-hidden="true"></i>'+data.aCategory[i].name+'</a></li>');
+                    }
+                    // console.log(data.aCategory); 
+                }
+              }
+            );
+        });
+
+
+
+
+
+
 
         // 이전 맞춤법 검색어 표시 해제
         function removeSpellStyle(text)
@@ -1108,9 +1107,37 @@ var sContent = "" ;
             return text;
         }
 
+        function newNote()
+        {
+            window.open('/unote/index.php');
+        }
+
+        $(".addOnList ul li").on("click",function(){
+            var listIndex = $(this).index();
+
+            $(".addOn-default").hide();
+
+            // 맞춤법 검사하기
+            if(listIndex == 0)
+            {
+                submitContents('spellChk');
+            }
+            // 윤문 추천 받기
+            if(listIndex == 1)
+            {
+                submitContents('beautiChk');
+            }        
+            // 글감 불러오기
+            // if(listIndex == 2)
+            // {
+            //     $(".addOn"+listIndex).show();
+            //     listArticle();
+            // }
+        });
+
+
         function submitContents(sBtnType='')
         {
-
             $('#frmTitle').val($('.noteTit').children('input').val());
             $('#sBtnType').val(sBtnType);
 
@@ -1131,12 +1158,10 @@ var sContent = "" ;
                 error : onError
             });
         }
-
         function beforeSend()
         {
             $('.loading').show();
         }
-
         function onSuccess(json, status)
         {
             $('.loading').hide();
@@ -1167,38 +1192,6 @@ var sContent = "" ;
             alert("error");
         }
 
-        function newNote()
-        {
-            window.open('/unote/index.php');
-        }
-
-        $(".addOnList ul li").on("click",function(){
-            $(this).siblings("li").removeClass("on");
-            $(this).addClass("on");
-
-            var listIndex = $(this).index();
-            $(".addOn").hide();
-
-            // 맞춤법 검사하기
-            if(listIndex == 0)
-            {
-                $(".addOn"+listIndex).show();
-                submitContents('spellChk');
-            }
-            // 윤문 추천 받기
-            if(listIndex == 1)
-            {
-                $(".addOn"+listIndex).show();
-                submitContents('beautiChk');
-            }        
-            // 글감 불러오기
-            if(listIndex == 2)
-            {
-                $(".addOn"+listIndex).show();
-                listArticle();
-            }
-        });
-
         function spellChk()
         {
             var n_idx = $('#n_idx').val();
@@ -1216,8 +1209,9 @@ var sContent = "" ;
                     // editor 새로고침 추가 필요
                     oEditor.setIR('');
                     oEditor.exec("PASTE_HTML", [data.chkText]);
-                    $('.splChk').html(data.html);
-                    // console.log(data.aNoteDetail); 
+                    $('.addOn').html(data.html);
+                    $("#addOnWrap").show();
+                    // console.log(data); 
                 }
               }
             );
@@ -1237,7 +1231,8 @@ var sContent = "" ;
               ,function(data, status) {
                 if (status == "success" && data.code == 1)
                 {
-                    $('.beautiChk').html(data.html);
+                    $('.addOn').html(data.html);
+                    $("#addOnWrap").show();
                     // console.log(data.aNoteDetail); 
                 }
               }
@@ -1245,6 +1240,8 @@ var sContent = "" ;
         }
         function listArticle(sType='list', category_idx='')
         {
+            $(".addOn-default").hide();
+
             $.post(
               "/unoteapi/Ibricks/apiListArticle"
               ,{
@@ -1254,7 +1251,8 @@ var sContent = "" ;
               ,function(data, status) {
                 if (status == "success" && data.code == 1)
                 {
-                    $('.listArticle').html(data.html);
+                    $('.addOn').html(data.html);
+                    $("#addOnWrap").show();
                     // console.log(data.aNoteDetail); 
                 }
               }
