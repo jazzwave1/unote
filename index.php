@@ -1201,7 +1201,7 @@
                     beautiChk();
                 }
 
-            }, 2000);
+            }, 1000);
 
         }
         function onError(data, status)
@@ -1318,6 +1318,7 @@
         /*화면확장*/
         $(".expandBtn").on("click",function () {
             $("#editorCont .left").toggleClass("open");
+            $("#editorCont .right").toggleClass("open");
             $(".expand-inner i").toggleClass("fa-expand fa-compress");
         });
 

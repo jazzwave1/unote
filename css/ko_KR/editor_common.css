@@ -254,7 +254,9 @@ input {outline: none;border: 0px;}
 #editorCont .left.open{
     width: 100%;
 }
-
+#editorCont .right.open{
+    width: 0%;
+}
 /*확장 버튼*/
 #editorCont .left .expandBtn{
     position:absolute;
@@ -330,10 +332,10 @@ input {outline: none;border: 0px;}
     margin-top : 4px;
     border-top : 2px solid #2980b9;
     opacity : 0;
-    -webkit-animation : writeline 0.5s infinite ease-in;
-    -moz-animation : writeline 0.5s infinite ease-in;
-    -o-animation : writeline 0.5s infinite ease-in;
-    animation : writeline 0.5s infinite ease-in;
+    -webkit-animation : writeline 1s infinite ease-in;
+    -moz-animation : writeline 1s infinite ease-in;
+    -o-animation : writeline 1s infinite ease-in;
+    animation : writeline 1s infinite ease-in;
 }
 
 .loading .line:first-child {
