@@ -254,9 +254,6 @@ input {outline: none;border: 0px;}
 #editorCont .left.open{
     width: 100%;
 }
-#editorCont .right.open{
-    width: 0%;
-}
 /*확장 버튼*/
 #editorCont .left .expandBtn{
     position:absolute;
@@ -283,12 +280,17 @@ input {outline: none;border: 0px;}
     color: #ccc;
 }
 #editorCont .right{
+    display: block;
     position: relative;
     float: left;
     width: 30%;
     height: 100%;
    /* padding-top: 60px;*/
 }
+#editorCont .right.open{
+     display: none;
+     width: 0%;
+ }
 /*loading*/
 /*.right .loading{
 
