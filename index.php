@@ -1165,28 +1165,33 @@
         }
         function onSuccess(json, status)
         {
-            $('.loading').hide();
+            setTimeout(function() {
 
-            if(json.pk){
-                $('#sType').val('edit');
-                $('#n_idx').val(json.pk);
-                history.pushState(null, null, '/unote/index.php?n_idx='+$('#n_idx').val());
-            }
-            if(json.sBtnType == 'save' && json.code == '1')
-            {
-                $('#saveNotice').show();
-                setTimeout(function() {
-                    $('#saveNotice').fadeOut(500);
-                }, 3000);
-            }
-            else if(json.sBtnType == 'spellChk')
-            {
-                spellChk();
-            }
-            else if(json.sBtnType == 'beautiChk')
-            {
-                beautiChk();
-            }
+                $('.loading').hide();
+
+                if(json.pk){
+                    $('#sType').val('edit');
+                    $('#n_idx').val(json.pk);
+                    history.pushState(null, null, '/unote/index.php?n_idx='+$('#n_idx').val());
+                }
+                if(json.sBtnType == 'save' && json.code == '1')
+                {
+                    $('#saveNotice').show();
+                    setTimeout(function() {
+                        $('#saveNotice').fadeOut(500);
+                    }, 3000);
+                }
+                else if(json.sBtnType == 'spellChk')
+                {
+                    spellChk();
+                }
+                else if(json.sBtnType == 'beautiChk')
+                {
+                    beautiChk();
+                }
+
+            }, 2000);
+
         }
         function onError(data, status)
         {
