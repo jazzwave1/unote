@@ -903,9 +903,20 @@
         </div>
         <div class="right">
             <!-- 로딩중 이미지 -->
-            <div class="loading">
+            <!--<div class="loading">
                 <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
                 <div>Loading...</div>
+            </div>-->
+            <div class="loading">
+                <div class="binding"></div>
+                <div class="pad">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+                <div class="text">
+                    Unote is loading...
+                </div>
             </div>
             <!-- //로딩중 이미지 -->
             <!-- addon main -->

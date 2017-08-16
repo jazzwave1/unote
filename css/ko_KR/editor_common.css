@@ -287,12 +287,113 @@ input {outline: none;border: 0px;}
     height: 100%;
    /* padding-top: 60px;*/
 }
-.right .loading{
+/*loading*/
+/*.right .loading{
 
     display: none;
     font-size: 20px;
     color: #2980b9;
     padding-top: 100px;
+}*/
+.loading {
+    padding-top: 300px;
+    display: none;
+    width : 150px;
+    position: absolute;
+    top: 50%;
+    left : 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -o-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.loading .binding {
+    content : '';
+    width : 27px;
+    height : 4px;
+    border : 2px solid #2980b9;
+    margin : 0 auto;
+}
+
+.loading .pad {
+    width : 15px;
+    height : 18px;
+    border : 2px solid #2980b9;
+    border-top : 0;
+    padding : 6px;
+    margin : 0 auto;
+}
+
+.loading .line {
+    width : 15px;
+    margin-top : 4px;
+    border-top : 2px solid #2980b9;
+    opacity : 0;
+    -webkit-animation : writeline 0.5s infinite ease-in;
+    -moz-animation : writeline 0.5s infinite ease-in;
+    -o-animation : writeline 0.5s infinite ease-in;
+    animation : writeline 0.5s infinite ease-in;
+}
+
+.loading .line:first-child {
+    margin-top : 0;
+}
+
+.loading .line.line1 {
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.loading .line.line2 {
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    -o-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.loading .line.line3 {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay : 0.2s;
+}
+
+.loading .text {
+    text-align : center;
+    margin-top : 10px;
+    font-size : 14px;
+    color : #2980b9;
+}
+
+@-webkit-keyframes writeline {
+    0% { width : 0px; opacity: 0; }
+    33% { width : 15px; opacity : 1; }
+    70% { opacity : 1; }
+    100% {opacity : 0; }
+}
+
+@-moz-keyframes writeline {
+    0% { width : 0px; opacity: 0; }
+    33% { width : 15px; opacity : 1; }
+    70% { opacity : 1; }
+    100% {opacity : 0; }
+}
+
+@-o-keyframes writeline {
+    0% { width : 0px; opacity: 0; }
+    33% { width : 15px; opacity : 1; }
+    70% { opacity : 1; }
+    100% {opacity : 0; }
+}
+
+@keyframes writeline {
+    0% { width : 0px; opacity: 0; }
+    33% { width : 15px; opacity : 1; }
+    70% { opacity : 1; }
+    100% {opacity : 0; }
 }
 /*addOn 버튼영역*/
 .addOnList{
@@ -468,7 +569,9 @@ input {outline: none;border: 0px;}
     font-size: 14px;
     padding-left: 10px;
 }
-
+.addOnCon .addOn .chkTit2{
+    background: #1d9d74;
+}
 .addOnCon .addOn .chkTit .closedBtn{
     position: absolute;
     right: 10px;
@@ -525,6 +628,9 @@ input {outline: none;border: 0px;}
     padding-bottom: 20px;
     margin-bottom: 20px;
     background: #fff;
+}
+.addOn .splChkBox ul li.emptySpell{
+    padding-top: 20px;
 }
 .addOn .splChkBox ul li.on{
     border-left: 5px solid #2980b9;
@@ -596,7 +702,7 @@ input {outline: none;border: 0px;}
     background: #fff;
 }
 
-.addOn .beautiChkBox .resultInfo p.getTxt{
+.addOn .resultInfo p.getTxt{
     font-weight: bold;
     font-size: 14px;
 
