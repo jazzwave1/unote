@@ -468,7 +468,9 @@ input {outline: none;border: 0px;}
     font-size: 14px;
     padding-left: 10px;
 }
-
+.addOnCon .addOn .chkTit2{
+    background: #1d9d74;
+}
 .addOnCon .addOn .chkTit .closedBtn{
     position: absolute;
     right: 10px;
