@@ -528,6 +528,9 @@ input {outline: none;border: 0px;}
     margin-bottom: 20px;
     background: #fff;
 }
+.addOn .splChkBox ul li.emptySpell{
+    padding-top: 20px;
+}
 .addOn .splChkBox ul li.on{
     border-left: 5px solid #2980b9;
 }
@@ -598,7 +601,7 @@ input {outline: none;border: 0px;}
     background: #fff;
 }
 
-.addOn .beautiChkBox .resultInfo p.getTxt{
+.addOn .resultInfo p.getTxt{
     font-weight: bold;
     font-size: 14px;
 
