@@ -1102,20 +1102,76 @@
             );
         });
 
-
-
-
-
-
-
         // 이전 맞춤법 검색어 표시 해제
-        function removeSpellStyle(text)
+        function repPreSelectStyle(pre_search, text)
         {
-            var pre_search = $('#pre_search').val();
             if(pre_search){
-                var pre_search_style = '<span class="spelChk" style="background:red; color:#fff;">'+pre_search+'</span>';
-                text = text.replace(new RegExp(pre_search_style,'gi'), pre_search);
+                var pre_search_style = '<span class="highlightChk">'+pre_search+'</span>';
+                var replace_style = '<span class="underlineChk">'+pre_search+'</span>';
+                text = text.replace(new RegExp(pre_search_style,'gi'), replace_style);
             }
+            return text;
+        }
+
+        // 선택 맞춤법 검색어 표시
+        function repSelectStyle(search, text)
+        {
+            if(search){
+                var search_style = '<span class="underlineChk">'+search+'</span>';
+                var replace_style = '<span class="highlightChk">'+search+'</span>';
+                text = text.replace(new RegExp(search_style,'gi'), replace_style);
+            }
+            return text;
+        }
+
+        // 맞춤법 검색 적용
+        function repApplyStyle(search, replace, text)
+        {
+            // 적용
+            if(replace){
+                var search_style = '<span class="highlightChk">'+search+'</span>';
+                text = text.replace(new RegExp(search_style,'gi'), replace);
+            }
+            // 적용하지 않고 삭제할 경우
+            else{
+                var search_style = '<span class="highlightChk">'+search+'</span>';
+                text = text.replace(new RegExp(search_style,'gi'), search);
+            }
+            return text;
+        }
+
+        function repAllStyle(aSplChk, text)
+        {
+            var search = '';
+            var search_style = '';
+            for(i=0; i<aSplChk.length; i++)
+            {
+                search = aSplChk[i].value;
+                search_style = '<span class="underlineChk">'+search+'</span>';
+                text = text.replace(new RegExp(search_style,'gi'), search);
+
+                search_style2 = '<span class="highlightChk">'+search+'</span>';
+                text = text.replace(new RegExp(search_style2,'gi'), search);
+            }
+
+            return text;
+        }
+
+        function removeStyleScript(text)
+        {
+            var script = '<style>.underlineChk{text-decoration: underline; text-decoration-color:red;color:red;}.highlightChk{background:red; color:#fff;}</style>';
+            text = text.replace(new RegExp(script,'gi'), '');
+
+            // 이건 도대체 왜 추가되는지 모르곘다
+            text = text.replace(/<div align="" style="">(.+)<\/div>/ig, "$1");
+            return text;
+        }
+
+        // 이거도 왜 추가되는지 모르겠다
+        // oEditor.getIR();로 가져올때마다 추가됨
+        function removeBrTag(text)
+        {
+            text = text.replace(/(.+)<p><br><\/p>$/ig, "$1");
             return text;
         }
 
@@ -1153,11 +1209,17 @@
             $('#frmTitle').val($('.noteTit').children('input').val());
             $('#sBtnType').val(sBtnType);
 
-            var text = $('#ir1').val();
-            text = text.replace(/<div align="">(.+)<\/div>/ig, "$1");
-            $('#ir1').val(removeSpellStyle(text));
+            var text = removeBrTag(oEditor.getIR());
+            var aSplChk = document.getElementsByName('aSplChk[]');
 
-            oEditor.exec("UPDATE_CONTENTS_FIELD");  // 에디터의 내용이 textarea에 적용됩니다.
+            text = repAllStyle(aSplChk, text);
+            text = removeStyleScript(text);
+
+            // oEditor.exec("UPDATE_CONTENTS_FIELD");  // 에디터의 내용이 textarea에 적용됩니다.
+
+            // 저장 시 맞춤법 검사 표시는 그대로 유지
+            $('#ir1').val(text);
+
             var formData = $("#noteForm").serialize();
             
             $.ajax({
@@ -1172,36 +1234,37 @@
         }
         function beforeSend()
         {
-            $('.loading').show();
+            if($('#sBtnType').val() != 'save')      $('.loading').show();
         }
         function onSuccess(json, status)
         {
-            setTimeout(function() {
+            if(json.sBtnType != 'save')
+            {
+                setTimeout(function() {
+                   $('.loading').hide();
+                }, 1000);
+            }
 
-                $('.loading').hide();
-
-                if(json.pk){
-                    $('#sType').val('edit');
-                    $('#n_idx').val(json.pk);
-                    history.pushState(null, null, '/unote/index.php?n_idx='+$('#n_idx').val());
-                }
-                if(json.sBtnType == 'save' && json.code == '1')
-                {
-                    $('#saveNotice').show();
-                    setTimeout(function() {
-                        $('#saveNotice').fadeOut(500);
-                    }, 3000);
-                }
-                else if(json.sBtnType == 'spellChk')
-                {
-                    spellChk();
-                }
-                else if(json.sBtnType == 'beautiChk')
-                {
-                    beautiChk();
-                }
-
-            }, 1000);
+            if(json.pk){
+                $('#sType').val('edit');
+                $('#n_idx').val(json.pk);
+                history.pushState(null, null, '/unote/index.php?n_idx='+$('#n_idx').val());
+            }
+            if(json.sBtnType == 'save' && json.code == '1')
+            {
+                $('#saveNotice').show();
+                setTimeout(function() {
+                    $('#saveNotice').fadeOut(500);
+                }, 3000);
+            }
+            else if(json.sBtnType == 'spellChk' && json.code == '1')
+            {
+                spellChk();
+            }
+            else if(json.sBtnType == 'beautiChk' && json.code == '1')
+            {
+                beautiChk();
+            }
 
         }
         function onError(data, status)
