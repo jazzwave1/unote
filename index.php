@@ -1320,6 +1320,7 @@
         }
         function listArticle(sType='list', category_idx='')
         {
+            $(".dropdown").children('span').toggleClass("fa-caret-down fa-caret-up");
             $(".addOn-default").hide();
 
             $.post(
