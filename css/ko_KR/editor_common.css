@@ -100,7 +100,7 @@ input {outline: none;border: 0px;}
     left:0;
     top:5px;
     width: 60px;
-    height: 59px;
+    z-index:1000;
 }
 #editorHeader .edi-hinner{
     position: relative;
@@ -578,8 +578,10 @@ input {outline: none;border: 0px;}
 }
 .addOnCon .addOn .chkTit .closedBtn{
     position: absolute;
-    right: 10px;
-    top:10px;
+    right: 0px;
+    top:0px;
+    padding: 10px;
+    cursor: pointer;
 }
 .addOnCon .addOn .chkTit .closedBtn i{
     font-size: 18px;
@@ -731,16 +733,17 @@ input {outline: none;border: 0px;}
 /*글감리스트 addOn영역*/
 #bankSub{
 
-
-
 }
 .bsinner{
-    padding: 10px 0;
-    border-right: 1px solid #eee;
+
+}
+.listArticleBg{
+    background: #fff;
 }
 .bankSubTop{
-    padding:0 10px 10px;
+    padding:10px 10px 0;
     text-align: left;
+    font-size: 14px;
 }
 .bankSubTop .bankSub-tit{
     font-weight: bold;
@@ -749,32 +752,35 @@ input {outline: none;border: 0px;}
 }
 .bankSubTop .bankSub-categ{
     display: inline-block;
-    padding-left: 10px;
+   /* padding-left: 10px;*/
     font-weight: bold;
-    cursor: pointer;
+    /*cursor: pointer;*/
 
     font-weight: bold;
-    width: 60%;
+    /*width: 60%;
     cursor: pointer;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis;*/
 
 }
 .bankSubTop .bankSub-categ i{
     padding-right: 10px;
 }
 .bankSubTop .bankSub-categ span{
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 .bankSubTop .bankSub-categ span i{
     padding-right: 5px;
 }
 .bankSubTop .bankSub-total{
-    float: right;
+    /*float: right;*/
+    font-weight: bold;
 }
 .bankSubTop .bankSub-total span{
     font-weight: bold;
+    color: #1d9d74;
+    padding-left: 5px;
 }
 .bankSubTop p{
     display: inline-block;
@@ -876,6 +882,12 @@ input {outline: none;border: 0px;}
     vertical-align: middle;
 }
 .bankSubList{
+    padding: 10px;
+}
+.bankSubList li{
+    background: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
 
 }
 .bankSubList .on{
@@ -890,44 +902,51 @@ input {outline: none;border: 0px;}
 .cafeInfo{
     position: relative;
     width: 100%;
-    height: 60px;
+    /*height: 60px;
     border-bottom: 1px solid #eee;
-    padding: 10px 0
+    padding: 10px 0*/
 }
 
 .cafeInfo .cafeinner{
     width: 100%;
+    cursor: pointer;
 }
 .cafeInfo .cafeLogo{
     float: left;
-    width: 20%;
+    width: 15%;
 }
 .cafeInfo .cafeLogo p{
-    height: 60px;
     text-align: center;
     border-radius: 50%;
 }
 .cafeInfo .cafeLogo p img{
-    width: 50px;
-    height: 50px;
-    padding-top: 5px;
+    height: 30px;
+    padding-top: 2px;
+    vertical-align: middle;
+    line-height: 30px;
 }
 .cafeInfo .cafeTxt{
     float: left;
-    width: 70%;
+    width: 85%;
+    line-height: 30px;
 }
 .cafeInfo .cafeTxt .tit{
-    display: block;
-    padding: 10px 20px 5px 5px;
+    display: inline-block;
+    float: left;
     font-weight: bold;
+    width: 70%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 14px;
 }
 .cafeInfo .cafeTxt .date{
+    display: inline-block;
+    width: 25%;
     font-size: 14px;
     padding-left:5px;
+    float: right;
+    /*padding-right: 20px;*/
 }
 .cafeInfo .cafeTxt p{
 }
@@ -938,14 +957,42 @@ input {outline: none;border: 0px;}
     font-size: 16px;
     color:#fdd66d;
 }
+/*글감 상세보기*/
+.bankSubList .detail{
+    padding: 20px;
+    text-align: left;
+    background: url('/unoteapi/static/images/bg_line2.png') repeat-x 0 0;
+    margin-top: 10px;
+}
+.bankSubList .detail .detailTit{
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.bankSubList .detail .detailTxt{
+    padding-bottom: 20px;
+}
+.bankSubList .detail .detailBtn{
+    border: 1px solid #1d9d74;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: bold;;
+}
+.bankSubList .detail .detailBtn:hover{
+    background: #1d9d74;
+    color: #fff;
+}
 /*글감 없을때*/
 .emptyData{
     padding: 20px 0 0;
     font-size: 14px;
-    color: #ccc;
+    color: #555;
 }
 .emptyData div{
     padding-bottom: 5px;
+    font-weight: bold;
 }
 .emptyIcon{
     font-size: 18px;

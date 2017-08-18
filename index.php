@@ -100,7 +100,7 @@
 <div id="wrap">
     <!--header-->
     <div id="editorHeader">
-        <h1><a href="javascript:;"><img src="images/edi_logo.png" alt="글동로고"></a></h1>
+        <h1><a href="http://unote.eduniety.net/unoteapi/note/list"><img src="images/edi_logo.png" alt="글동로고"></a></h1>
         <div class="edi-hinner clearfix">
             <div class="edi-left clearfix">
                 <div class="edi-tit">
