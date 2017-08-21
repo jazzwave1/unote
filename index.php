@@ -1069,7 +1069,7 @@
                 }
                 else
                 {
-                    sContent = '글을 입력하세요';
+                    sContent = '<span class="placeHoder" style="font-size: 16px; font-weight: bold; color:#ccc; ">글을 입력하세요</span>';
                     oEditor.exec("PASTE_HTML", [sContent]);
                 }
 
