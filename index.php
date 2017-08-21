@@ -1354,6 +1354,12 @@
                 $(".selCateg").show();
             }
         }
+
+        function setDetailText(sText)
+        {
+            oEditor.exec("PASTE_HTML", [sText]);
+        }
+
         var wHeight = $(window).height();
         var editorHeight = wHeight - 41;
         $("#smart_editor2 .se2_input_area").css({
@@ -1381,6 +1387,7 @@
             });
 
         }
+
         $(window).on('load', responsiveView);
         $(window).on('resize', responsiveView);
 
