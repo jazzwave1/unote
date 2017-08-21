@@ -1067,6 +1067,11 @@
                     );
                     
                 }
+                else
+                {
+                    sContent = '글을 입력하세요';
+                    oEditor.exec("PASTE_HTML", [sContent]);
+                }
 
             }
         });
