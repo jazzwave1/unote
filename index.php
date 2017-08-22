@@ -1071,8 +1071,9 @@
                     oEditor.exec("FOCUS");
                     var iframe = document.getElementById('se2_iframe');
                     var placeholder = '<span class="placeHoder" style="font-size: 16px; font-weight: bold; color:#ccc;">글을 입력하세요</span>';
-                    iframe.contentWindow.document.body.innerHTML = placeholder;
+
                     iframe.contentWindow.document.addEventListener('keydown', removePlaceholder, false);
+                    iframe.contentWindow.document.body.innerHTML = placeholder;
                 }
 
             }
@@ -1230,6 +1231,8 @@
 
         function submitContents(sBtnType='')
         {
+            removePlaceholder();
+
             $('#frmTitle').val($('.noteTit').children('input').val());
             $('#sBtnType').val(sBtnType);
 
@@ -1377,6 +1380,8 @@
 
         function setDetailText(sText)
         {
+            removePlaceholder();
+
             oEditor.exec("PASTE_HTML", [sText]);
 
             var text = removeBrTag(oEditor.getIR());
