@@ -883,6 +883,9 @@ input {outline: none;border: 0px;}
     cursor: pointer;
     font-size: 14px;
 }
+.selCateg .selList ul li a{
+    display: block;
+}
 .selCateg .selList ul li i{
     padding-right: 5px;
 }
