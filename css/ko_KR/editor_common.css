@@ -538,12 +538,12 @@ input {outline: none;border: 0px;}
     top:0;*/
     width: 100%;
     background: #dfdfdf;
-    padding-bottom: 60px;
+   /* padding-bottom: 60px;*/
    /* border-left:1px solid #eee;*/
 }
 .addOn-default{
     width: 100%;
-    height: 100vh;
+   /* height: 100vh;*/
     background: #dfdfdf;
 }
 .addOn-default p{

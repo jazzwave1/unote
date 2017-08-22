@@ -1069,7 +1069,7 @@
                 }
                 else
                 {
-                    sContent = '글을 입력하세요';
+                    sContent = '<span class="placeHoder" style="font-size: 16px; font-weight: bold; color:#ccc; ">글을 입력하세요</span>';
                     oEditor.exec("PASTE_HTML", [sContent]);
                 }
 
@@ -1374,30 +1374,44 @@
         }
 
         var wHeight = $(window).height();
-        var editorHeight = wHeight - 41;
-        $("#smart_editor2 .se2_input_area").css({
-            'width' : '800px',
+        var editorHeight = wHeight - 60;
+        var textareaHeight = editorHeight -41;
+        $(".addOn-default").css({
+            'height' :  editorHeight,
+        });
+        $("#smart_editor2").css({
+
             'height' :  editorHeight,
             'overflow-x' : 'hidden',
             'overflow-y' : 'scroll',
             'margin' : '0 auto',
+            'border-right' : '1px solid #eee'
         });
 
-        $("#smart_editor2").css({
-            'border-right' : '1px solid #eee'
+        $(".se2_input_area").css({
+            'width' : '800px',
+            'margin' : '0 auto',
+            'height' : textareaHeight,
         });
 
 
         function responsiveView() {
-            $("#smart_editor2 .se2_input_area").css({
+            $(".addOn-default").css({
+                'height' :  editorHeight,
+            });
+            $("#smart_editor2").css({
                 'height' :  editorHeight,
                 'overflow-x' : 'hidden',
                 'overflow-y' : 'scroll',
-            });
 
-            $("#smart_editor2").css({
                 'border-right' : '1px solid #eee'
             });
+            $(".se2_input_area").css({
+                'width' : '800px',
+                'margin' : '0 auto',
+                'height' : textareaHeight,
+            });
+
 
         }
 
