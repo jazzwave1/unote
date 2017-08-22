@@ -987,13 +987,12 @@ input {outline: none;border: 0px;}
 .bankSubList .detail .detailTit{
     font-size: 14px;
     font-weight: bold;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
-.bankSubList .detail .detailTit .detailDate{
-    float: right;
+.bankSubList .detail .detailDate{
     font-size: 12px;
-    font-weight: normal;
-    padding-top: 2px;
+    font-weight: bold;
+    padding-bottom: 10px;
 }
 .bankSubList .detail .detailTxt{
     padding-bottom: 20px;
