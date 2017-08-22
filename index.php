@@ -955,18 +955,20 @@
                 </div>
             </div>
             <!-- //addon main -->
-            <div id="addOnWrap" style="display:none;">
-                <!--맞춤법검사/윤문/글감리스트 영역-->
-                <div class="addOnCon">
-                    <div class="addOn">
-                    </div>
-                <!--
-                    <div class="addOn addOn2">
-                        <div id="bankSub" class="full-left-sublist listArticle">
+            <div id="addOnWrap" class="scrollStyle" style="display:none;">
+
+                    <!--맞춤법검사/윤문/글감리스트 영역-->
+                    <div class="addOnCon">
+                        <div class="addOn">
                         </div>
+                    <!--
+                        <div class="addOn addOn2">
+                            <div id="bankSub" class="full-left-sublist listArticle">
+                            </div>
+                        </div>
+                    -->
                     </div>
-                -->
-            </div>
+
         </div>
     </div>
     <!--//contents-->
@@ -1383,7 +1385,7 @@
 
             'height' :  editorHeight,
             'overflow-x' : 'hidden',
-            'overflow-y' : 'scroll',
+            'overflow-y' : 'auto',
             'margin' : '0 auto',
             'border-right' : '1px solid #eee'
         });
@@ -1396,13 +1398,17 @@
 
 
         function responsiveView() {
+            wHeight = $(window).height();
+            editorHeight = wHeight - 60;
+            textareaHeight = editorHeight - 41;
+            
             $(".addOn-default").css({
                 'height' :  editorHeight,
             });
             $("#smart_editor2").css({
                 'height' :  editorHeight,
                 'overflow-x' : 'hidden',
-                'overflow-y' : 'scroll',
+                'overflow-y' : 'auto',
 
                 'border-right' : '1px solid #eee'
             });
@@ -1415,8 +1421,11 @@
 
         }
 
+
         $(window).on('load', responsiveView);
         $(window).on('resize', responsiveView);
+
+
 
         /*화면확장*/
         $(".expandBtn").on("click",function () {
