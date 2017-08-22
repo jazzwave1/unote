@@ -1167,8 +1167,14 @@
             var script = '<style>.underlineChk{text-decoration: underline; text-decoration-color:red;color:red;}.highlightChk{background:red; color:#fff;}</style>';
             text = text.replace(new RegExp(script,'gi'), '');
 
+            return text;
+        }
+
+        function removeTempTag(text)
+        {
             // 이건 도대체 왜 추가되는지 모르곘다
-            text = text.replace(/<div align="" style="">(.+)<\/div>/ig, "$1");
+            text = text.replace(/<div align="" style="">(.+)<\/div>(.+|)/ig, "$1$2");
+
             return text;
         }
 
@@ -1219,6 +1225,7 @@
 
             text = repAllStyle(aSplChk, text);
             text = removeStyleScript(text);
+            text = removeTempTag(text);
 
             // oEditor.exec("UPDATE_CONTENTS_FIELD");  // 에디터의 내용이 textarea에 적용됩니다.
 
@@ -1358,6 +1365,12 @@
         function setDetailText(sText)
         {
             oEditor.exec("PASTE_HTML", [sText]);
+
+            var text = removeBrTag(oEditor.getIR());
+            text = removeTempTag(text);
+
+            oEditor.setIR('');
+            oEditor.exec("PASTE_HTML", [text]);
         }
 
         var wHeight = $(window).height();
