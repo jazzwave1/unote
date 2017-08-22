@@ -933,6 +933,7 @@ input {outline: none;border: 0px;}
 .cafeInfo .cafeTxt .tit{
     display: inline-block;
     float: left;
+    text-align: left;
     font-weight: bold;
     width: 70%;
     white-space: nowrap;
@@ -968,6 +969,12 @@ input {outline: none;border: 0px;}
     font-size: 14px;
     font-weight: bold;
     padding-bottom: 10px;
+}
+.bankSubList .detail .detailTit .detailDate{
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+    padding-top: 2px;
 }
 .bankSubList .detail .detailTxt{
     padding-bottom: 20px;
