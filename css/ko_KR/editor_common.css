@@ -165,7 +165,7 @@ input {outline: none;border: 0px;}
 }
 #editorHeader .edi-right .userInfo .name{
     float: left;
-    padding-right: 20px;
+    /*padding-right: 20px;*/
 }
 #editorHeader .edi-right .userInfo .name a{
     display: block;
@@ -278,7 +278,7 @@ input {outline: none;border: 0px;}
     width: 40px;
     height: 40px;
     top:0px;
-    right:0px;
+    right:20px;
     z-index: 100;
     cursor: pointer;
 }
@@ -947,6 +947,7 @@ input {outline: none;border: 0px;}
     line-height: 30px;
 }
 .cafeInfo .cafeTxt{
+    position: relative;
     float: left;
     width: 80%;
     line-height: 30px;
@@ -957,11 +958,18 @@ input {outline: none;border: 0px;}
     float: left;
     text-align: left;
     font-weight: bold;
-    width: 100%;
+    width: 90%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 14px;
+}
+.cafeInfo .cafeTxt .tit span{
+    position: absolute;
+    right: 5px;
+    font-weight: normal;
+    font-size: 12px;
+    font-style: italic;
 }
 .cafeInfo .cafeTxt .date{
     display: inline-block;
