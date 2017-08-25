@@ -967,7 +967,7 @@
                 </div>
             </div>
             <!-- //addon main -->
-            <div id="addOnWrap" class="scrollStyle" style="display:none;">
+            <div id="addOnWrap" style="display:none;">
 
                     <!--맞춤법검사/윤문/글감리스트 영역-->
                     <div class="addOnCon">

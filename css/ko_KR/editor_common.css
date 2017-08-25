@@ -318,7 +318,7 @@ input {outline: none;border: 0px;}
     padding-top: 100px;
 }*/
 .loading {
-    padding-top: 300px;
+    padding-top: 200px;
     display: none;
     width : 150px;
     position: absolute;
@@ -555,6 +555,7 @@ input {outline: none;border: 0px;}
     right: 0;
     top:0;*/
     width: 100%;
+    height: 100%;
     background: #dfdfdf;
    /* padding-bottom: 60px;*/
    /* border-left:1px solid #eee;*/
@@ -599,8 +600,10 @@ input {outline: none;border: 0px;}
     right: 0px;
     top:0px;
     padding: 10px;
+    z-index: 1000;
     cursor: pointer;
 }
+
 .addOnCon .addOn .chkTit .closedBtn i{
     font-size: 18px;
 }
@@ -612,25 +615,37 @@ input {outline: none;border: 0px;}
 .splChk{
 
 }
-.addOnIcon{
-    padding: 10px 20px 10px;
-
-}
-.addOnIcon a{
-    display: block;
-    float: right;
-    width: 20px;
-    /*
-    padding: 5px 0;*/
-    border: 1px solid #eee;
+.upBtn{
+    display: inline;
     border-radius: 5px;
     background: #fff;
+    color: #2980b9;
+    padding: 5px;
+    cursor: pointer;
+}
+.addOnIcon{
+    /*padding: 10px 20px 10px;*/
+    /*float: right;
+    padding-right: 40px;*/
+    /*padding-left: 10px;*/
+
+}
+.addOnIcon a.reBtn{
+    display: inline;
+    padding: 5px;
+    /* float: right; */
+    /* width: 20px; */
+    /* padding: 5px 0; */
+    border-radius: 5px;
+    background: #fff;
+    color: #2980b9;
 }
 .addOnIcon a:hover{
-    background: #eee;
+   /* background: #eee;*/
 }
 .addOnIcon a i{
     color: #2980b9;
+    /*padding-right: 5px;*/
 }
 .addOn .splChkInfo{
     font-weight: bold;
@@ -642,7 +657,7 @@ input {outline: none;border: 0px;}
     padding: 0 10px;
 }
 .addOn .splChkBox ul{
-    padding: 0 20px;
+    padding: 20px;
 }
 .addOn .splChkBox ul li{
     position: relative;
@@ -712,7 +727,7 @@ input {outline: none;border: 0px;}
 .addOn .beautiChkBox{
 }
 .addOn .beautiChkBox ul{
-
+    padding: 20px 0;
 }
 .addOn .beautiChkBox ul li.beautiBoxList{
     padding: 0 20px;
