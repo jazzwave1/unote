@@ -967,18 +967,20 @@
                 </div>
             </div>
             <!-- //addon main -->
-            <div id="addOnWrap" style="display:none;">
-                <!--맞춤법검사/윤문/글감리스트 영역-->
-                <div class="addOnCon">
-                    <div class="addOn">
-                    </div>
-                <!--
-                    <div class="addOn addOn2">
-                        <div id="bankSub" class="full-left-sublist listArticle">
+            <div id="addOnWrap" class="scrollStyle" style="display:none;">
+
+                    <!--맞춤법검사/윤문/글감리스트 영역-->
+                    <div class="addOnCon">
+                        <div class="addOn">
                         </div>
+                    <!--
+                        <div class="addOn addOn2">
+                            <div id="bankSub" class="full-left-sublist listArticle">
+                            </div>
+                        </div>
+                    -->
                     </div>
-                -->
-            </div>
+
         </div>
     </div>
     <!--//contents-->
@@ -1004,7 +1006,7 @@
             <input type="hidden" name= "sType" id= "sType" value=""/>
             <input type="hidden" name= "n_idx" id= "n_idx" value=""/>
             <input type="hidden" name= "sBtnType" id= "sBtnType" value=""/>
-            <textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;" placeholder="노트를 작성하세요"></textarea>
+            <textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;"></textarea>
             <!--textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; display:none;">
                 <p class="newTit" style="font-size:24pt; font-weight:bold;">소프트웨어 교육이 궁금해!</p>
                 <p class="newTxt" style="font-size:11pt; text-align: justify">
@@ -1046,7 +1048,6 @@
                     
         oEditor.run({
             fnOnAppReady: function(){
-
                 var n_idx = <?=(isset($_GET['n_idx'])) ? $_GET['n_idx'] : '""'?>;
 
                 if(n_idx > 0)
@@ -1081,12 +1082,29 @@
                 }
                 else
                 {
-                    sContent = '<span class="placeHoder" style="font-size: 16px; font-weight: bold; color:#ccc; ">글을 입력하세요</span>';
-                    oEditor.exec("PASTE_HTML", [sContent]);
+                    oEditor.exec("FOCUS");
+                    var iframe = document.getElementById('se2_iframe');
+                    var placeholder = '<span class="placeHoder" style="font-size: 16px; font-weight: bold; color:#ccc;">글을 입력하세요</span>';
+
+                    iframe.contentWindow.document.addEventListener('keydown', removePlaceholder, false);
+                    iframe.contentWindow.document.body.innerHTML = placeholder;
                 }
 
             }
         });
+
+        function removePlaceholder()
+        {
+            var sText = removeTag(oEditor.getIR());
+            if(sText == '글을 입력하세요')
+            {
+                oEditor.setIR('');
+            }
+        }
+        function removeTag( sText )
+        {
+            return sText.replace(/(<([^>]+)>)/gi, "");
+        }
 
         function pasteHTML() {
             var sHTML = "<span style='color:#FF0000;'>이미지도 같은 방식으로 삽입합니다.<\/span>";
@@ -1190,8 +1208,6 @@
             return text;
         }
 
-        // 이거도 왜 추가되는지 모르겠다
-        // oEditor.getIR();로 가져올때마다 추가됨
         function removeBrTag(text)
         {
             text = text.replace(/(.+)<p><br><\/p>$/ig, "$1");
@@ -1229,6 +1245,8 @@
 
         function submitContents(sBtnType='')
         {
+            removePlaceholder();
+
             $('#frmTitle').val($('.noteTit').children('input').val());
             $('#sBtnType').val(sBtnType);
 
@@ -1376,6 +1394,8 @@
 
         function setDetailText(sText)
         {
+            removePlaceholder();
+
             oEditor.exec("PASTE_HTML", [sText]);
 
             var text = removeBrTag(oEditor.getIR());
@@ -1395,7 +1415,7 @@
 
             'height' :  editorHeight,
             'overflow-x' : 'hidden',
-            'overflow-y' : 'scroll',
+            'overflow-y' : 'auto',
             'margin' : '0 auto',
             'border-right' : '1px solid #eee'
         });
@@ -1408,13 +1428,17 @@
 
 
         function responsiveView() {
+            wHeight = $(window).height();
+            editorHeight = wHeight - 60;
+            textareaHeight = editorHeight - 41;
+            
             $(".addOn-default").css({
                 'height' :  editorHeight,
             });
             $("#smart_editor2").css({
                 'height' :  editorHeight,
                 'overflow-x' : 'hidden',
-                'overflow-y' : 'scroll',
+                'overflow-y' : 'auto',
 
                 'border-right' : '1px solid #eee'
             });
@@ -1427,8 +1451,11 @@
 
         }
 
+
         $(window).on('load', responsiveView);
         $(window).on('resize', responsiveView);
+
+
 
         /*화면확장*/
         $(".expandBtn").on("click",function () {
