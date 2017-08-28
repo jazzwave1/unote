@@ -317,7 +317,7 @@ input {outline: none;border: 0px;}
     color: #2980b9;
     padding-top: 100px;
 }*/
-.loading {
+#editorCont .right .loading {
     padding-top: 200px;
     display: none;
     width : 150px;
@@ -330,7 +330,7 @@ input {outline: none;border: 0px;}
     transform: translateY(-50%) translateX(-50%);
 }
 
-.loading .binding {
+#editorCont .right .loading .binding {
     content : '';
     width : 27px;
     height : 4px;
@@ -338,7 +338,7 @@ input {outline: none;border: 0px;}
     margin : 0 auto;
 }
 
-.loading .pad {
+#editorCont .right .loading .pad {
     width : 15px;
     height : 18px;
     border : 2px solid #2980b9;
@@ -347,7 +347,7 @@ input {outline: none;border: 0px;}
     margin : 0 auto;
 }
 
-.loading .line {
+#editorCont .right .loading .line {
     width : 15px;
     margin-top : 4px;
     border-top : 2px solid #2980b9;
@@ -358,32 +358,32 @@ input {outline: none;border: 0px;}
     animation : writeline 1s infinite ease-in;
 }
 
-.loading .line:first-child {
+#editorCont .right .loading .line:first-child {
     margin-top : 0;
 }
 
-.loading .line.line1 {
+#editorCont .right .loading .line.line1 {
     -webkit-animation-delay: 0s;
     -moz-animation-delay: 0s;
     -o-animation-delay: 0s;
     animation-delay: 0s;
 }
 
-.loading .line.line2 {
+#editorCont .right .loading .line.line2 {
     -webkit-animation-delay: 0.1s;
     -moz-animation-delay: 0.1s;
     -o-animation-delay: 0.1s;
     animation-delay: 0.1s;
 }
 
-.loading .line.line3 {
+#editorCont .right .loading .line.line3 {
     -webkit-animation-delay: 0.2s;
     -moz-animation-delay: 0.2s;
     -o-animation-delay: 0.2s;
     animation-delay : 0.2s;
 }
 
-.loading .text {
+#editorCont .right .loading .text {
     text-align : center;
     margin-top : 10px;
     font-size : 14px;
@@ -592,6 +592,7 @@ input {outline: none;border: 0px;}
     font-size: 14px;
     padding-left: 10px;
 }
+
 .addOnCon .addOn .chkTit2{
     background: #1d9d74;
 }
@@ -615,13 +616,20 @@ input {outline: none;border: 0px;}
 .splChk{
 
 }
+.addOnBtn{
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 20px;
+}
 .upBtn{
-    display: inline;
+    display: inline-block;
     border-radius: 5px;
     background: #fff;
     color: #2980b9;
-    padding: 5px;
+    /* padding: 10px; */
     cursor: pointer;
+    padding: 10px;
+    margin-right: 10px;
 }
 .addOnIcon{
     /*padding: 10px 20px 10px;*/
@@ -631,8 +639,8 @@ input {outline: none;border: 0px;}
 
 }
 .addOnIcon a.reBtn{
-    display: inline;
-    padding: 5px;
+    display: inline-block;
+    padding: 10px;
     /* float: right; */
     /* width: 20px; */
     /* padding: 5px 0; */
@@ -655,6 +663,39 @@ input {outline: none;border: 0px;}
 .addOn .splChkInfo span{
     color: #2980b9;
     padding: 0 10px;
+}
+/*맞춤법 검사 고도화데이터*/
+.splData-wrap{
+    display: none;
+}
+.addOn .splChkBox .splData{
+    padding: 20px 20px 0;
+}
+.addOn .splChkBox .splData .spld-inner{
+    background: #fff;
+    border-radius: 5px;
+    text-align: left;
+    padding: 20px;
+}
+.splWrong-data{
+    font-size: 14px;
+}
+.splRight-data{
+    font-size: 14px;
+    font-weight: bold;
+    color: #2980b9;
+}
+.detail-data{
+    padding-top: 20px;
+}
+.detail-data .detail-tit{
+    font-weight: bold;
+}
+.detail-data .detail-txt{
+    text-align: justify;
+}
+.detail-data .detailExp{
+    padding-top: 20px;
 }
 .addOn .splChkBox ul{
     padding: 20px;
@@ -883,12 +924,12 @@ input {outline: none;border: 0px;}
     font-weight: bold;
 }
 .selCateg .selCateg-inner{
-    padding: 10px 20px 0;
+    padding: 10px 20px 10px;
 }
 
 .selCateg .selList ul li{
     float: none;
-    width: 170px;
+    width: 160px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -897,6 +938,15 @@ input {outline: none;border: 0px;}
     font-weight: bold;
     cursor: pointer;
     font-size: 14px;
+}
+.selCateg .selList .categ-default{
+    background: #eee;
+    color: #4f4f4f;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 .selCateg .selList ul li a{
     display: block;
