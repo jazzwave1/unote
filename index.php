@@ -1219,7 +1219,7 @@
             window.open('/unote/index.php');
         }
 
-        $(".addOnList>ul>li").on("click",function(){
+        $(".addOn-btn").on("click",function(){
             var listIndex = $(this).index();
 
             $(".addOn-default").hide();
@@ -1361,7 +1361,6 @@
         }
         function listArticle(sType='list', category_idx='')
         {
-            $(".dropdown").children('span').toggleClass("fa-caret-down fa-caret-up");
             $(".addOn-default").hide();
 
             $.post(
@@ -1455,6 +1454,14 @@
         $(window).on('resize', responsiveView);
 
 
+        $(document).mouseup(function (e) {
+            var container = $(".selCateg");
+            if (!container.is(e.target) && container.has(e.target).length === 0){
+                container.hide();
+                // $(".dropdown").children('span').toggleClass("fa-caret-down fa-caret-up");
+                // $(".moveCategBtn").removeClass("on");
+            }
+        });
 
         /*화면확장*/
         $(".expandBtn").on("click",function () {
