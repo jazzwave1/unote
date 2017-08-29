@@ -955,8 +955,9 @@
                                 <div class="selCateg-inner">
                                     <div class="selList">
                                         <ul>
-                                            <li class="goCateg"><a href="javascript:listArticle('list');">전체 글감</a></li>
-                                            <li class="goCateg"><a href="javascript:listArticle('bookmark');">북마크</a></li>
+                                            <li class="goCateg"><a href="javascript:listArticle('list');"><i class="fa fa-list" aria-hidden="true"></i>전체 글감</a></li>
+                                            <li class="goCateg"><a href="javascript:listArticle('bookmark');"><i class="fa fa-star-o" aria-hidden="true"></i>북마크</a></li>
+                                            <li class="categ-default">카테고리</li>
                                         </ul>
                                     </div>
                                 </div>
