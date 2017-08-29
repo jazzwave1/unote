@@ -957,7 +957,6 @@
                                         <ul>
                                             <li class="goCateg"><a href="javascript:listArticle('list');"><i class="fa fa-list" aria-hidden="true"></i>전체 글감</a></li>
                                             <li class="goCateg"><a href="javascript:listArticle('bookmark');"><i class="fa fa-star-o" aria-hidden="true"></i>북마크</a></li>
-                                            <li class="categ-default">카테고리</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1129,6 +1128,10 @@
               ,function(data, status) {
                 if (status == "success" && data.code == 1)
                 {
+                    if(data.aCategory.length>0)
+                    {
+                        $('.selList>ul').append('<li class="categ-default">카테고리</li>');
+                    }
                     for (var i=0; i<data.aCategory.length; i++) {
                         $('.selList>ul').append('<li class="goCateg"><a href="javascript:listArticle(\'category\', \''+data.aCategory[i].category_idx+'\')"><i class="fa fa-folder-open" aria-hidden="true"></i>'+data.aCategory[i].name+'</a></li>');
                     }
