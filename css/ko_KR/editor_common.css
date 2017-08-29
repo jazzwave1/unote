@@ -939,12 +939,14 @@ input {outline: none;border: 0px;}
     cursor: pointer;
     font-size: 14px;
 }
+
 .selCateg .selList .categ-default{
-    background: #eee;
-    color: #4f4f4f;
-    text-align: center;
+    background: url('/unoteapi/static/images/bg_line2.png') repeat-x 0 0;
+    color: #1d9d74;
+    text-align: left;
     font-size: 12px;
-    padding-bottom: 0px;
+    padding-top:10px;
+    padding-bottom: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
 }
