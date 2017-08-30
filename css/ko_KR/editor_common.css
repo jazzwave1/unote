@@ -619,7 +619,8 @@ input {outline: none;border: 0px;}
 .addOnBtn{
     text-align: left;
     padding-left: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .upBtn{
     display: inline-block;
