@@ -1224,7 +1224,7 @@
         }
 
         $(".addOn-btn").on("click",function(){
-            var listIndex = $(this).index();
+            var listIndex = $(this).parents().index();
 
             $(".addOn-default").hide();
 
@@ -1237,13 +1237,7 @@
             if(listIndex == 1)
             {
                 submitContents('beautiChk');
-            }        
-            // 글감 불러오기
-            // if(listIndex == 2)
-            // {
-            //     $(".addOn"+listIndex).show();
-            //     listArticle();
-            // }
+            }
         });
 
 
