@@ -317,9 +317,19 @@ input {outline: none;border: 0px;}
     color: #2980b9;
     padding-top: 100px;
 }*/
-#editorCont .right .loading {
-    padding-top: 200px;
+#editorCont .right .loadingWrap{
     display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    /*height: 100%;*/
+    background: #eee;
+    z-index:1000;
+}
+#editorCont .right .loadingWrap .loading{
+   /* padding-top: 200px;*/
+   /* display: none;*/
     width : 150px;
     position: absolute;
     top: 50%;
@@ -330,7 +340,7 @@ input {outline: none;border: 0px;}
     transform: translateY(-50%) translateX(-50%);
 }
 
-#editorCont .right .loading .binding {
+#editorCont .right .loadingWrap .loading .binding {
     content : '';
     width : 27px;
     height : 4px;
@@ -338,7 +348,7 @@ input {outline: none;border: 0px;}
     margin : 0 auto;
 }
 
-#editorCont .right .loading .pad {
+#editorCont .right .loadingWrap .loading .pad {
     width : 15px;
     height : 18px;
     border : 2px solid #2980b9;
@@ -347,7 +357,7 @@ input {outline: none;border: 0px;}
     margin : 0 auto;
 }
 
-#editorCont .right .loading .line {
+#editorCont .right .loadingWrap .loading .line {
     width : 15px;
     margin-top : 4px;
     border-top : 2px solid #2980b9;
@@ -358,32 +368,32 @@ input {outline: none;border: 0px;}
     animation : writeline 1s infinite ease-in;
 }
 
-#editorCont .right .loading .line:first-child {
+#editorCont .right .loadingWrap .loading .line:first-child {
     margin-top : 0;
 }
 
-#editorCont .right .loading .line.line1 {
+#editorCont .right .loadingWrap .loading .line.line1 {
     -webkit-animation-delay: 0s;
     -moz-animation-delay: 0s;
     -o-animation-delay: 0s;
     animation-delay: 0s;
 }
 
-#editorCont .right .loading .line.line2 {
+#editorCont .right .loadingWrap .loading .line.line2 {
     -webkit-animation-delay: 0.1s;
     -moz-animation-delay: 0.1s;
     -o-animation-delay: 0.1s;
     animation-delay: 0.1s;
 }
 
-#editorCont .right .loading .line.line3 {
+#editorCont .right .loadingWrap .loading .line.line3 {
     -webkit-animation-delay: 0.2s;
     -moz-animation-delay: 0.2s;
     -o-animation-delay: 0.2s;
     animation-delay : 0.2s;
 }
 
-#editorCont .right .loading .text {
+#editorCont .right .loadingWrap .loading .text {
     text-align : center;
     margin-top : 10px;
     font-size : 14px;

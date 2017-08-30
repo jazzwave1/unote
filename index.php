@@ -919,15 +919,17 @@
                 <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
                 <div>Loading...</div>
             </div>-->
-            <div class="loading">
-                <div class="binding"></div>
-                <div class="pad">
-                    <div class="line line1"></div>
-                    <div class="line line2"></div>
-                    <div class="line line3"></div>
-                </div>
-                <div class="text">
-                    Unote is loading...
+            <div class="loadingWrap">
+                <div class="loading">
+                    <div class="binding"></div>
+                    <div class="pad">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                    </div>
+                    <div class="text">
+                        Unote is loading...
+                    </div>
                 </div>
             </div>
             <!-- //로딩중 이미지 -->
@@ -1030,6 +1032,11 @@
 </div>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
+    var wHeight = $(window).height();
+    var loadingHeight = wHeight-60;
+    $(".loadingWrap").css({
+        'height' : loadingHeight
+    });
     var sContent = "" ;
     if(window.frameElement){
         /*jindo.$("se2_sample").style.display = "none";*/
@@ -1274,7 +1281,7 @@
         }
         function beforeSend()
         {
-            if($('#sBtnType').val() != 'save')      $('.loading').show();
+            if($('#sBtnType').val() != 'save')      $('.loadingWrap').show();
         }
         function onSuccess(json, status)
         {
@@ -1294,7 +1301,7 @@
             else if(json.sBtnType != 'save')
             {
                 setTimeout(function() {
-                   $('.loading').hide();
+                   $('.loadingWrap').hide();
                    if(json.sBtnType == 'spellChk' && json.code == '1')
                    {
                        spellChk();
