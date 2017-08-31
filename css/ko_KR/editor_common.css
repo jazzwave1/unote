@@ -778,7 +778,7 @@ input {outline: none;border: 0px;}
 
 .addOn .beautiChkBox{
 }
-.addOn .beautiChkBox ul{
+.addOn .beautiChkBox>ul{
     padding: 20px 0;
 }
 .addOn .beautiChkBox ul li.beautiBoxList{
@@ -796,21 +796,23 @@ input {outline: none;border: 0px;}
 .addOn .resultInfo p.getTxt{
     font-weight: bold;
     font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
 
 }
 .addOn .beautiChkBox .resultInfo .recomTit{
     display: inline-block;
     font-weight: bold;
-    background: #2980b9;
-    color: #fff;
+    /* background: #2980b9; */
+    color: #2980b9;
     margin: 10px 0;
-    padding: 5px;
+    /* padding: 5px; */
 }
 .addOn .beautiChkBox .resultInfo .recomTit i{
     color: #fff;
 }
 .addOn .beautiChkBox .resultInfo .recommedTxt {
-
+    font-size: 14px;
 }
 .addOn .beautiChkBox .resultInfo .recommedTxt ul li{
     padding-bottom: 5px;
