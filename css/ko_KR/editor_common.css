@@ -796,7 +796,6 @@ input {outline: none;border: 0px;}
 .addOn .resultInfo p.getTxt{
     font-weight: bold;
     font-size: 14px;
-    padding-bottom: 10px;
 
 }
 .addOn .beautiChkBox .resultInfo .recomTit{
@@ -813,6 +812,7 @@ input {outline: none;border: 0px;}
 .addOn .beautiChkBox .resultInfo .recommedTxt {
     font-size: 14px;
     border-top: 1px solid #ccc;
+    margin-top: 10px;
 }
 .addOn .beautiChkBox .resultInfo .recommedTxt ul li{
     padding-bottom: 5px;
