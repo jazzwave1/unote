@@ -1248,7 +1248,7 @@
         });
 
 
-        function submitContents(sBtnType='')
+        function submitContents(sBtnType)
         {
             removePlaceholder();
 
@@ -1364,7 +1364,7 @@
               }
             );
         }
-        function listArticle(sType='list', category_idx='')
+        function listArticle(sType, category_idx)
         {
             $(".addOn-default").hide();
 
