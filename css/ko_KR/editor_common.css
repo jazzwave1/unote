@@ -786,23 +786,36 @@ input {outline: none;border: 0px;}
 }
 .addOn .beautiChkBox .resultInfo{
     text-align: left;
-    padding: 20px;
+
     border: 1px solid #eee;
     border-radius: 5px;
     margin-bottom: 20px;
     background: #fff;
 }
-
+.addOn .resultInfo .orignTxt{
+    padding: 0 20px;
+}
+.addOn .resultInfo p{
+    font-size: 14px;
+}
 .addOn .resultInfo p.getTxt{
     /*font-weight: bold;*/
-    font-size: 14px;
+    text-align: justify;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
 
+}
+.addOn .resultInfo p.getTxt2{
+    border: 0px;
+    padding: 20px;
 }
 .addOn .beautiChkBox .resultInfo .recomTit{
     display: inline-block;
     font-weight: bold;
     /* background: #2980b9; */
-    color: #2980b9;
+    /*color: #2980b9;*/
     margin: 10px 0;
     /* padding: 5px; */
 }
@@ -812,12 +825,34 @@ input {outline: none;border: 0px;}
 .addOn .beautiChkBox .resultInfo .recommedTxt {
     font-size: 14px;
     font-weight: bold;
-    border-top: 1px solid #ccc;
+    /*border-top: 1px solid #ccc;*/
     margin-top: 10px;
-    padding-top: 10px;
+    padding: 10px 20px;
 }
+
 .addOn .beautiChkBox .resultInfo .recommedTxt ul li{
     padding-bottom: 5px;
+}
+.addOn .beautiChkBox .recommedBtn{
+    font-weight: normal;
+    padding-bottom: 20px;
+    /* float: right; */
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+.addOn .beautiChkBox .recommedBtn span{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.addOn .beautiChkBox .recommedBtn span:hover{
+    background: #fbf7ae;
+    border: 1px solid #f3eb50;
+}
+.addOn .beautiChkBox .recommedBtn span i{
+    padding-right: 5px;
 }
 /*글감리스트 addOn영역*/
 #bankSub{
