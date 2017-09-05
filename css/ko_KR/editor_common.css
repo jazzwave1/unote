@@ -851,10 +851,10 @@ input {outline: none;border: 0px;}
     background: #fbf7ae;
     border: 1px solid #f3eb50;
 }
-.addOn .beautiChkBox .recommedBtn span:hover{
+/*.addOn .beautiChkBox .recommedBtn .hideBtn:hover{
     background: #fbf7ae;
     border: 1px solid #f3eb50;
-}
+}*/
 .addOn .beautiChkBox .recommedBtn span i{
     padding-right: 5px;
 }
