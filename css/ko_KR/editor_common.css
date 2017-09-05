@@ -847,6 +847,10 @@ input {outline: none;border: 0px;}
     padding: 5px;
     cursor: pointer;
 }
+.addOn .beautiChkBox .recommedBtn span.on{
+    background: #fbf7ae;
+    border: 1px solid #f3eb50;
+}
 .addOn .beautiChkBox .recommedBtn span:hover{
     background: #fbf7ae;
     border: 1px solid #f3eb50;
