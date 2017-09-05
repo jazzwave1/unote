@@ -24,6 +24,7 @@ table{border-collapse:collapse;border-spacing:0}
 input::-ms-clear{display:none}
 input {outline: none;border: 0px;}
 *:focus {outline: none;}
+img.img_contents{ padding: 5px 0;}
 /* Hidden */
 .blind {position:absolute;left:0;top:-9999em}
 .hide{display: none;}
