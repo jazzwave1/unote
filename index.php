@@ -1203,9 +1203,44 @@
             return text;
         }
 
+        // 선택 윤문추천 문장 표시
+        function repHighlightStyle(search, text)
+        {
+            if(search){
+                var replace_style = '<span class="highlightLine">'+search+'</span>';
+                text = text.replace(new RegExp(search,'gi'), replace_style);
+            }
+            return text;
+        }
+
+        // 이전 윤문추천 문장 표시 해제
+        function repPreHighlightStyle(pre_search, text)
+        {
+            if(pre_search){
+                var pre_search_style = '<span class="highlightLine">'+pre_search+'</span>';
+                var replace_style = pre_search;
+                text = text.replace(new RegExp(pre_search_style,'gi'), replace_style);
+            }
+            return text;
+        }
+
+        function repAllLineStyle(aBeautiChk, text)
+        {
+            var search = '';
+            var search_style = '';
+            for(i=0; i<aBeautiChk.length; i++)
+            {
+                search = aBeautiChk[i].value;
+                search_style = '<span class="highlightLine">'+search+'</span>';
+                text = text.replace(new RegExp(search_style,'gi'), search);
+            }
+
+            return text;
+        }
+
         function removeStyleScript(text)
         {
-            var script = '<style>.underlineChk{text-decoration: underline; text-decoration-color:red;color:red;}.highlightChk{background:red; color:#fff;}</style>';
+            var script = '<style>.underlineChk{text-decoration: underline; text-decoration-color:red;color:red;}.highlightChk{background:red; color:#fff;}.highlightLine{background: #fbf7ae;}</style>';
             text = text.replace(new RegExp(script,'gi'), '');
 
             return text;
@@ -1257,8 +1292,10 @@
 
             var text = removeBrTag(oEditor.getIR());
             var aSplChk = document.getElementsByName('aSplChk[]');
+            var aBeautiChk = document.getElementsByName('aBeautiChk[]');
 
             text = repAllStyle(aSplChk, text);
+            text = repAllLineStyle(aBeautiChk, text);
             text = removeStyleScript(text);
             text = removeTempTag(text);
 
@@ -1357,6 +1394,9 @@
               ,function(data, status) {
                 if (status == "success" && data.code == 1)
                 {
+                    // editor 새로고침 추가 필요
+                    oEditor.setIR('');
+                    oEditor.exec("PASTE_HTML", [data.chkText]);                    
                     $('.addOn').html(data.html);
                     $("#addOnWrap").show();
                     // console.log(data.aNoteDetail); 
