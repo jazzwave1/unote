@@ -1250,6 +1250,7 @@
         {
             // 이건 도대체 왜 추가되는지 모르곘다
             text = text.replace(/<div align="" style="">(.+)<\/div>(.+|)/ig, "$1$2");
+            text = text.replace(/<div align="">(.+)<\/div>(.+|)/ig, "$1$2");
 
             return text;
         }
