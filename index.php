@@ -124,8 +124,8 @@
             <div class="edi-right">
                 <!--userInfo-->
                 <div class="userInfo clearfix">
-                    <div class="pic"><img src="images/junghun.jpg"></div>
-                    <div class="name"><a href="#"><span>정훈</span> 님 <i class="fa fa-caret-down" aria-hidden="true"></i></a></div>
+                    <div class="pic"><img src="images/lee.jpg"></div>
+                    <div class="name"><a href="#"><span>이기택</span> 님 <i class="fa fa-caret-down" aria-hidden="true"></i></a></div>
                 </div>
 
                 <!--//userInfo-->
