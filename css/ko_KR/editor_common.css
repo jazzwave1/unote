@@ -806,6 +806,10 @@ img.img_contents{ padding: 5px 0;}
 .addOn .beautiChkBox .resultInfo.on p.getTxt{
     /*background: #fbf7ae;*/
 }
+.addOn .beautiChkBox .resultInfo p.getTxt u{
+    color: #2980b9;
+    font-size: 16px;
+}
 .addOn .beautiChkBox .resultInfo.on p.getTxt u{
     color: #2980b9;
     font-size: 16px;
