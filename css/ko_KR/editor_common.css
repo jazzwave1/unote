@@ -806,19 +806,20 @@ img.img_contents{ padding: 5px 0;}
 .addOn .beautiChkBox .resultInfo.on p.getTxt{
     /*background: #fbf7ae;*/
 }
-.addOn .beautiChkBox .resultInfo p.getTxt u{
+.addOn .beautiChkBox .resultInfo p.getTxt .sentenceChk{
     color: #2980b9;
     font-size: 16px;
 }
-.addOn .beautiChkBox .resultInfo.on p.getTxt u{
-    color: #fff;
+.addOn .beautiChkBox .resultInfo.on p.getTxt .sentenceChk{
     font-size: 16px;
-    background: #2980b9;
+  /*  color: #fff;
+    background: #2980b9;*/
     text-decoration: none;
 }
 .sentenceChk{
     color: #2980b9;
     font-weight: bold;
+    font-size: 16px;
 }
 .addOn .resultInfo .orignTxt{
    /* padding: 0 20px;*/
@@ -856,7 +857,7 @@ img.img_contents{ padding: 5px 0;}
     font-weight: bold;
     /*border-top: 1px solid #ccc;*/
     /*margin-top: 10px;*/
-    /*padding: 10px 20px;*/
+   padding-top:20px;
 }
 
 .addOn .beautiChkBox .resultInfo .recommedTxt ul li{
