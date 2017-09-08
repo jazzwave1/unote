@@ -795,7 +795,7 @@ img.img_contents{ padding: 5px 0;}
     background: #fff;
 }
 .addOn .beautiChkBox .resultInfo.on{
-    border-left:5px solid #fbf7ae;
+    border-left:5px solid #2980b9;
 }
 .addOn .beautiChkBox .resultInfo .result-inner{
     padding: 20px;
@@ -803,9 +803,16 @@ img.img_contents{ padding: 5px 0;}
 .addOn .beautiChkBox .resultInfo.on .result-inner{
     padding: 20px 20px 20px 16px;
 }
-.addOn .beautiChkBox .resultInfo.on p.getTxt
-{
-    background: #fbf7ae;
+.addOn .beautiChkBox .resultInfo.on p.getTxt{
+    /*background: #fbf7ae;*/
+}
+.addOn .beautiChkBox .resultInfo.on p.getTxt u{
+    color: #2980b9;
+    font-size: 16px;
+}
+.sentenceChk{
+    color: #2980b9;
+    font-weight: bold;
 }
 .addOn .resultInfo .orignTxt{
    /* padding: 0 20px;*/
@@ -848,6 +855,7 @@ img.img_contents{ padding: 5px 0;}
 
 .addOn .beautiChkBox .resultInfo .recommedTxt ul li{
     padding-bottom: 5px;
+    font-weight: normal;
 }
 .addOn .beautiChkBox .recommedBtn{
     font-weight: normal;
