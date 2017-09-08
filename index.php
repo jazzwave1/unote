@@ -1240,7 +1240,7 @@
 
         function removeStyleScript(text)
         {
-            var script = '<style>.underlineChk{text-decoration: underline; text-decoration-color:red;color:red;}.highlightChk{background:red; color:#fff;}.highlightLine{background: #fbf7ae;}</style>';
+            var script = '<style>.underlineChk{text-decoration: underline; text-decoration-color:red;color:red;}.highlightChk{background:red; color:#fff;}.highlightLine{background:#2980b9;color:#fff;}</style>';
             text = text.replace(new RegExp(script,'gi'), '');
 
             return text;
