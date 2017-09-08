@@ -811,8 +811,10 @@ img.img_contents{ padding: 5px 0;}
     font-size: 16px;
 }
 .addOn .beautiChkBox .resultInfo.on p.getTxt u{
-    color: #2980b9;
+    color: #fff;
     font-size: 16px;
+    background: #2980b9;
+    text-decoration: none;
 }
 .sentenceChk{
     color: #2980b9;
